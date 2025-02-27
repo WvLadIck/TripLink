@@ -1,0 +1,6 @@
+name: server
+services:
+  server:
+    build: .
+    ports: [ 33333:6000 ]
+    volumes: [ .:/code ]
