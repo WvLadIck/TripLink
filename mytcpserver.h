@@ -4,21 +4,22 @@
 #include <QObject>
 #include <QTcpServer>
 #include <QTcpSocket>
+#include <QVector>
 
 class MyTcpServer : public QObject
 {
     Q_OBJECT
 public:
-    explicit MyTcpServer(QObject *parent = 0);
-
-public slots:
-    void slotNewConnection();
-    void slotServerRead();
-    void slotClientDisconnected();
+    MyTcpServer();
 
 private:
-    QTcpServer * mTcpServer;
-    QTcpSocket * mTcpSocket;
+    QTcpServer *mTcpServer;
+    QVector<QTcpSocket*> Sockets;
+
+public slots:
+    void slotNewConnection(); // Обратите внимание, что здесь убран аргумент
+    void slotServerRead();
+    void slotClientDisconnected();
 };
 
 #endif // MYTCPSERVER_H
