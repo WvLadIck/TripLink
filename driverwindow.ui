@@ -55,7 +55,7 @@ background-color: rgb(235, 220, 206);</string>
          <item row="1" column="0">
           <widget class="QLabel" name="label_from">
            <property name="text">
-            <string>Откуда едите</string>
+            <string>Откуда едете</string>
            </property>
           </widget>
          </item>
@@ -97,7 +97,7 @@ background-color: rgb(235, 220, 206);</string>
          <item row="0" column="0">
           <widget class="QLabel" name="label_where">
            <property name="text">
-            <string>Куда едите</string>
+            <string>Куда едете</string>
            </property>
           </widget>
          </item>
