@@ -12,3 +12,8 @@ FinishWindow::~FinishWindow()
 {
     delete ui;
 }
+
+void FinishWindow::on_pushButton_home_clicked()
+{
+    emit returnToMainWindow(); //  Испускаем сигнал
+}

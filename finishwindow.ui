@@ -17,16 +17,31 @@
    <string notr="true">background-color: rgb(235, 220, 206);</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
-   <item alignment="Qt::AlignmentFlag::AlignHCenter">
-    <widget class="QLabel" name="label">
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(235, 220, 206);
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(235, 220, 206);
 font: 700 25pt &quot;Linux Libertine G&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Хорошей дороги!</string>
-     </property>
-    </widget>
+       </property>
+       <property name="text">
+        <string>Хорошей дороги!</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_home">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(224, 202, 180);
+font: 700 14pt &quot;Linux Libertine G&quot;;</string>
+       </property>
+       <property name="text">
+        <string>На главный экран</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>

@@ -33,6 +33,7 @@ private slots:
     void showCarWindow();
     void handleReturnToPrevious();
     void showFinishWindow();
+    void showMainWindowFromFinish();
 
 private:
     MainWindow *Main_Window;

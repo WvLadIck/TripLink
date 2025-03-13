@@ -39,6 +39,8 @@ ManagerForm::ManagerForm(QWidget *parent)
     connect(Driver_Window, &DriverWindow::goToFinishWindow, this, &ManagerForm::showFinishWindow);
     connect(Car_Window, &CarWindow::goToFinishWindow, this, &ManagerForm::showFinishWindow);
 
+    connect(Finish_Window, &FinishWindow::returnToMainWindow, this, &ManagerForm::showMainWindowFromFinish);
+
     // Инициализируем карту соответствия окон
     windowMap[Login_Window] = Main_Window;
     windowMap[Reg_Window] = Main_Window;
@@ -146,4 +148,10 @@ void ManagerForm::handleReturnToPrevious()
 
     // Если окно не найдено в карте, возвращаемся к главному
     Main_Window->show();
+}
+
+void ManagerForm::showMainWindowFromFinish()
+{
+    Finish_Window->hide(); // Скрываем FinishWindow
+    Main_Window->show();   // Отображаем MainWindow
 }
