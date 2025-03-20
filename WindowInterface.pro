@@ -1,5 +1,5 @@
 QT       += core gui
-
+QT += network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++17
@@ -19,6 +19,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     managerform.cpp \
+    networkclient.cpp \
     registrationwindow.cpp
 
 HEADERS += \
@@ -31,6 +32,7 @@ HEADERS += \
     loginwindow.h \
     mainwindow.h \
     managerform.h \
+    networkclient.h \
     registrationwindow.h
 
 # Default rules for deployment.

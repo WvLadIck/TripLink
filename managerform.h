@@ -15,6 +15,7 @@
 #include "driverwindow.h"
 #include "carwindow.h"
 #include "finishwindow.h"
+#include "networkclient.h" // Добавляем заголовочный файл
 
 class ManagerForm : public QMainWindow
 {
@@ -34,6 +35,7 @@ private slots:
     void handleReturnToPrevious();
     void showFinishWindow();
     void showMainWindowFromFinish();
+    void onConnectionStatusChanged(bool connected); // Новый слот
 
 private:
     MainWindow *Main_Window;

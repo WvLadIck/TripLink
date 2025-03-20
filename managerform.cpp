@@ -1,4 +1,5 @@
 #include "managerform.h"
+#include "networkclient.h" // Добавляем заголовочный файл
 
 ManagerForm::ManagerForm(QWidget *parent)
     : QMainWindow(parent)
@@ -60,6 +61,14 @@ ManagerForm::ManagerForm(QWidget *parent)
     Finish_Window->hide(); // Скрываем FinishWindow
 
     this->Main_Window->show(); // Отображаем главное окно
+
+    // Инициализация и подключение NetworkClient
+    NetworkClient& client = NetworkClient::getInstance();
+    connect(&client, &NetworkClient::connectionStatusChanged, this, &ManagerForm::onConnectionStatusChanged);
+    connect(&client, &NetworkClient::error, [](const QString& message){
+        qDebug() << "Network error:" << message;
+    });
+    client.connectToServer("127.0.0.1", 6000); // Замените на адрес и порт вашего сервера
 }
 
 ManagerForm::~ManagerForm() {}
@@ -154,4 +163,16 @@ void ManagerForm::showMainWindowFromFinish()
 {
     Finish_Window->hide(); // Скрываем FinishWindow
     Main_Window->show();   // Отображаем MainWindow
+}
+
+void ManagerForm::onConnectionStatusChanged(bool connected)
+{
+    if (connected) {
+        qDebug() << "Connected to server!";
+        // Здесь можно обновить UI, например, изменить текст кнопки
+        // NetworkClient::getInstance().sendMessage("Hello from client!"); // Убрали отправку сообщения
+    } else {
+        qDebug() << "Disconnected from server!";
+        // Здесь можно обновить UI
+    }
 }
