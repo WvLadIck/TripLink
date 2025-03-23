@@ -1,5 +1,5 @@
 #include "managerform.h"
-#include "networkclient.h" // Добавляем заголовочный файл
+#include "networkclient.h"
 
 ManagerForm::ManagerForm(QWidget *parent)
     : QMainWindow(parent)
@@ -13,25 +13,25 @@ ManagerForm::ManagerForm(QWidget *parent)
     this->Driver_Window = new DriverWindow;
     this->Car_Window = new CarWindow;
     this->Finish_Window = new FinishWindow;
+    this->Feedback_Window = new Tpips; // Инициализация окна отзывов
 
     // Подключения сигналов и слотов
     connect(Main_Window, &MainWindow::loginButtonClicked, this, &ManagerForm::showLoginWindow);
     connect(Main_Window, &MainWindow::registrationButtonClicked, this, &ManagerForm::showRegistrationWindow);
-
     connect(Login_Window, &LoginWindow::returnToMainWindow, this, &ManagerForm::handleReturnToPrevious);
     connect(Reg_Window, &RegistrationWindow::returnToMainWindow, this, &ManagerForm::handleReturnToPrevious);
-
     connect(Login_Window, &LoginWindow::goToDriverCompanionWindow, this, &ManagerForm::showDriverCompanionWindow);
     connect(Reg_Window, &RegistrationWindow::goToDriverCompanionWindow, this, &ManagerForm::showDriverCompanionWindow);
-
     connect(Drive_Comp_Window, &DriverCompanionWindow::goToCompanionWindow, this, &ManagerForm::showCompanionWindow);
     connect(Drive_Comp_Window, &DriverCompanionWindow::goToDriverWindow, this, &ManagerForm::showDriverWindow);
+    connect(Drive_Comp_Window, &DriverCompanionWindow::goToFeedbackWindow, this, &ManagerForm::showFeedbackWindow); // Подключение сигнала для окна отзывов
 
     // Добавляем обработку сигнала returnToPreviousWindow для каждого окна
     connect(Drive_Comp_Window, &DriverCompanionWindow::returnToPreviousWindow, this, &ManagerForm::handleReturnToPrevious);
     connect(Companion_Window, &CompanionWindow::returnToPreviousWindow, this, &ManagerForm::handleReturnToPrevious);
     connect(Driver_Window, &DriverWindow::returnToPreviousWindow, this, &ManagerForm::handleReturnToPrevious);
     connect(Car_Window, &CarWindow::returnToPreviousWindow, this, &ManagerForm::handleReturnToPrevious);
+    connect(Feedback_Window, &Tpips::finished, this, &ManagerForm::handleReturnToPrevious); // Подключение сигнала finished для окна отзывов
 
     // Подключения для перехода к CarWindow (только от CompanionWindow)
     connect(Companion_Window, &CompanionWindow::goToCarWindow, this, &ManagerForm::showCarWindow);
@@ -49,7 +49,8 @@ ManagerForm::ManagerForm(QWidget *parent)
     windowMap[Companion_Window] = Drive_Comp_Window;
     windowMap[Driver_Window] = Drive_Comp_Window;
     windowMap[Car_Window] = Companion_Window;
-    windowMap[Finish_Window] = nullptr; // FinishWindow не имеет "предыдущего" окна
+    windowMap[Feedback_Window] = Drive_Comp_Window; // Устанавливаем предыдущее окно для окна отзывов
+    windowMap[Finish_Window] = nullptr;
 
     // Скрытие окон при запуске (кроме главного)
     Login_Window->hide();
@@ -59,7 +60,7 @@ ManagerForm::ManagerForm(QWidget *parent)
     Driver_Window->hide();
     Car_Window->hide();
     Finish_Window->hide(); // Скрываем FinishWindow
-
+    Feedback_Window->hide(); // Скрываем окно отзывов
     this->Main_Window->show(); // Отображаем главное окно
 
     // Инициализация и подключение NetworkClient
@@ -68,7 +69,7 @@ ManagerForm::ManagerForm(QWidget *parent)
     connect(&client, &NetworkClient::error, [](const QString& message){
         qDebug() << "Network error:" << message;
     });
-    client.connectToServer("127.0.0.1", 6000); // Замените на адрес и порт вашего сервера
+    client.connectToServer("127.0.0.1", 6000);
 }
 
 ManagerForm::~ManagerForm() {}
@@ -137,7 +138,6 @@ void ManagerForm::handleReturnToPrevious()
 {
     QWidget* senderWidget = qobject_cast<QWidget*>(sender());
     senderWidget->hide();
-
     //  Ищем предыдущее окно в карте
     QMap<QWidget*, QWidget*>::iterator i = windowMap.begin();
     while (i != windowMap.end()) {
@@ -154,7 +154,6 @@ void ManagerForm::handleReturnToPrevious()
         }
         ++i;
     }
-
     // Если окно не найдено в карте, возвращаемся к главному
     Main_Window->show();
 }
@@ -169,10 +168,15 @@ void ManagerForm::onConnectionStatusChanged(bool connected)
 {
     if (connected) {
         qDebug() << "Connected to server!";
-        // Здесь можно обновить UI, например, изменить текст кнопки
-        // NetworkClient::getInstance().sendMessage("Hello from client!"); // Убрали отправку сообщения
+        // NetworkClient::getInstance().sendMessage("Hello from client!");
     } else {
         qDebug() << "Disconnected from server!";
-        // Здесь можно обновить UI
     }
+}
+
+void ManagerForm::showFeedbackWindow()
+{
+    Drive_Comp_Window->hide();
+    Feedback_Window->show();
+    windowMap[Feedback_Window] = Drive_Comp_Window; // Запоминаем предыдущее окно
 }

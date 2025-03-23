@@ -19,11 +19,13 @@ signals:
     void returnToPreviousWindow();
     void goToCompanionWindow();
     void goToDriverWindow();
+    void goToFeedbackWindow();
 
 private slots:
     void on_toolButton_then0_clicked();
     void on_pushButton_companion_clicked();
     void on_pushButton_driver_clicked();
+    void on_pushButton_feetback_clicked();
 
 private:
     Ui::DriverCompanionWindow *ui;

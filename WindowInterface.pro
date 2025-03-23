@@ -13,6 +13,7 @@ SOURCES += \
     companionwindow.cpp \
     drivercompanionwindow.cpp \
     driverwindow.cpp \
+    feetback.cpp \
     finishwindow.cpp \
     function_for_client.cpp \
     loginwindow.cpp \
@@ -27,6 +28,7 @@ HEADERS += \
     companionwindow.h \
     drivercompanionwindow.h \
     driverwindow.h \
+    feetback.h \
     finishwindow.h \
     function_for_client.h \
     loginwindow.h \
@@ -45,6 +47,7 @@ FORMS += \
     companionwindow.ui \
     drivercompanionwindow.ui \
     driverwindow.ui \
+    feetback.ui \
     finishwindow.ui \
     loginwindow.ui \
     mainwindow.ui \

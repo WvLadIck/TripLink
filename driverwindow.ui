@@ -76,7 +76,7 @@ background-color: rgb(235, 220, 206);</string>
          <item row="2" column="0">
           <widget class="QLabel" name="label_time">
            <property name="text">
-            <string>Время поездки</string>
+            <string>Время и дата</string>
            </property>
           </widget>
          </item>

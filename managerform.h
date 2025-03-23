@@ -6,7 +6,6 @@
 #include <QVBoxLayout>
 #include <QWidget>
 #include <QMap>
-
 #include "mainwindow.h"
 #include "loginwindow.h"
 #include "registrationwindow.h"
@@ -15,7 +14,8 @@
 #include "driverwindow.h"
 #include "carwindow.h"
 #include "finishwindow.h"
-#include "networkclient.h" // Добавляем заголовочный файл
+#include "networkclient.h"
+#include "feetback.h"
 
 class ManagerForm : public QMainWindow
 {
@@ -36,6 +36,7 @@ private slots:
     void showFinishWindow();
     void showMainWindowFromFinish();
     void onConnectionStatusChanged(bool connected); // Новый слот
+    void showFeedbackWindow(); // Добавленный слот для окна отзывов
 
 private:
     MainWindow *Main_Window;
@@ -46,7 +47,7 @@ private:
     DriverWindow *Driver_Window;
     CarWindow *Car_Window;
     FinishWindow * Finish_Window;
-
+    Tpips *Feedback_Window; // Добавленное окно отзывов
     QMap<QWidget*, QWidget*> windowMap; // Упрощенная карта
 };
 

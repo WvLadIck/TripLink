@@ -62,6 +62,16 @@ font: 700 14pt &quot;Linux Libertine G&quot;;</string>
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_feetback">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(224, 202, 180);</string>
+         </property>
+         <property name="text">
+          <string>Отзыв и рейтинг</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </item>
      <item>

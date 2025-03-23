@@ -32,7 +32,7 @@ font: 700 14pt &quot;Linux Libertine G&quot;;</string>
      </item>
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item alignment="Qt::AlignmentFlag::AlignHCenter">
+       <item alignment="Qt::AlignHCenter">
         <widget class="QLabel" name="label_info">
          <property name="styleSheet">
           <string notr="true">font: 700 20pt &quot;Linux Libertine G&quot;;</string>
@@ -42,7 +42,7 @@ font: 700 14pt &quot;Linux Libertine G&quot;;</string>
          </property>
         </widget>
        </item>
-       <item alignment="Qt::AlignmentFlag::AlignHCenter">
+       <item alignment="Qt::AlignHCenter">
         <widget class="QLabel" name="label_conp">
          <property name="styleSheet">
           <string notr="true">font: 700 20pt &quot;Linux Libertine G&quot;;</string>
