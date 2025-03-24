@@ -5,7 +5,6 @@
 NetworkClient::NetworkClient() : socket(new QTcpSocket(this)), isConnected(false)
 {
     // Подключаем сигналы сокета к слотам NetworkClient
-
     connect(socket, &QTcpSocket::connected, this, &NetworkClient::connectedToServer);
     // При подключении сокета вызываем слот connectedToServer
     connect(socket, &QTcpSocket::disconnected, this, &NetworkClient::disconnectedFromServer);
@@ -28,6 +27,8 @@ NetworkClient::~NetworkClient()
 // Реализация метода подключения к серверу
 void NetworkClient::connectToServer(const QString& host, quint16 port)
 {
+    qDebug() << "Connecting to server:" << host << ":" << port; // Добавляем логирование
+
     // Проверяем, не подключены ли мы уже к серверу
     if (isConnected) {
         qDebug() << "Already connected to server.";
@@ -36,7 +37,6 @@ void NetworkClient::connectToServer(const QString& host, quint16 port)
 
     serverHost = host;
     serverPort = port;
-
     socket->connectToHost(host, port);
 }
 
@@ -50,7 +50,6 @@ void NetworkClient::sendMessage(const QString& message)
     }
 
     QByteArray data = message.toUtf8();
-
     socket->write(data);
     socket->flush();
 }
@@ -59,10 +58,8 @@ void NetworkClient::sendMessage(const QString& message)
 void NetworkClient::connectedToServer()
 {
     isConnected = true;
-
     // Выводим сообщение в консоль
     qDebug() << "Connected to server:" << serverHost << ":" << serverPort;
-
     // Испускаем сигнал об изменении статуса соединения
     emit connectionStatusChanged(true);
 }
@@ -72,10 +69,8 @@ void NetworkClient::disconnectedFromServer()
 {
     // Устанавливаем флаг подключения в false
     isConnected = false;
-
     // Выводим сообщение в консоль
     qDebug() << "Disconnected from server:" << serverHost << ":" << serverPort;
-
     // Испускаем сигнал об изменении статуса соединения
     emit connectionStatusChanged(false);
 }
@@ -85,7 +80,6 @@ void NetworkClient::socketError(QAbstractSocket::SocketError socketError)
 {
     // Устанавливаем флаг подключения в false
     isConnected = false;
-
     // Определяем сообщение об ошибке в зависимости от типа ошибки
     QString errorMessage;
     switch (socketError) {
@@ -99,10 +93,8 @@ void NetworkClient::socketError(QAbstractSocket::SocketError socketError)
         errorMessage = "Socket error: " + socket->errorString(); // Другая ошибка сокета
         break;
     }
-
     // Выводим сообщение об ошибке в консоль
     qDebug() << errorMessage;
-
     // Испускаем сигнал об ошибке
     emit error(errorMessage);
 }
@@ -112,11 +104,18 @@ void NetworkClient::readyRead()
 {
     // Считываем все доступные данные из сокета
     QByteArray data = socket->readAll();
-
     // Преобразуем данные в строку
     QString message = QString::fromUtf8(data);
-
     // Выводим полученное сообщение в консоль
     qDebug() << "Received:" << message;
 
+    if (message == "auth+") {
+        emit authSuccess();
+    } else if (message == "auth-") {
+        emit authFailed();
+    } else if (message == "reg+") {
+        emit regSuccess();
+    } else if (message == "reg-") {
+        emit regFailed();
+    }
 }

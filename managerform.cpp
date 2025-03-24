@@ -18,10 +18,13 @@ ManagerForm::ManagerForm(QWidget *parent)
     // Подключения сигналов и слотов
     connect(Main_Window, &MainWindow::loginButtonClicked, this, &ManagerForm::showLoginWindow);
     connect(Main_Window, &MainWindow::registrationButtonClicked, this, &ManagerForm::showRegistrationWindow);
+
     connect(Login_Window, &LoginWindow::returnToMainWindow, this, &ManagerForm::handleReturnToPrevious);
     connect(Reg_Window, &RegistrationWindow::returnToMainWindow, this, &ManagerForm::handleReturnToPrevious);
+
     connect(Login_Window, &LoginWindow::goToDriverCompanionWindow, this, &ManagerForm::showDriverCompanionWindow);
     connect(Reg_Window, &RegistrationWindow::goToDriverCompanionWindow, this, &ManagerForm::showDriverCompanionWindow);
+
     connect(Drive_Comp_Window, &DriverCompanionWindow::goToCompanionWindow, this, &ManagerForm::showCompanionWindow);
     connect(Drive_Comp_Window, &DriverCompanionWindow::goToDriverWindow, this, &ManagerForm::showDriverWindow);
     connect(Drive_Comp_Window, &DriverCompanionWindow::goToFeedbackWindow, this, &ManagerForm::showFeedbackWindow); // Подключение сигнала для окна отзывов
@@ -39,7 +42,6 @@ ManagerForm::ManagerForm(QWidget *parent)
     // Подключения для перехода к FinishWindow
     connect(Driver_Window, &DriverWindow::goToFinishWindow, this, &ManagerForm::showFinishWindow);
     connect(Car_Window, &CarWindow::goToFinishWindow, this, &ManagerForm::showFinishWindow);
-
     connect(Finish_Window, &FinishWindow::returnToMainWindow, this, &ManagerForm::showMainWindowFromFinish);
 
     // Инициализируем карту соответствия окон
@@ -61,6 +63,7 @@ ManagerForm::ManagerForm(QWidget *parent)
     Car_Window->hide();
     Finish_Window->hide(); // Скрываем FinishWindow
     Feedback_Window->hide(); // Скрываем окно отзывов
+
     this->Main_Window->show(); // Отображаем главное окно
 
     // Инициализация и подключение NetworkClient
@@ -69,7 +72,6 @@ ManagerForm::ManagerForm(QWidget *parent)
     connect(&client, &NetworkClient::error, [](const QString& message){
         qDebug() << "Network error:" << message;
     });
-    client.connectToServer("127.0.0.1", 6000);
 }
 
 ManagerForm::~ManagerForm() {}
@@ -168,7 +170,6 @@ void ManagerForm::onConnectionStatusChanged(bool connected)
 {
     if (connected) {
         qDebug() << "Connected to server!";
-        // NetworkClient::getInstance().sendMessage("Hello from client!");
     } else {
         qDebug() << "Disconnected from server!";
     }

@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "function_for_client.h"
+#include "networkclient.h" // Добавляем заголовочный файл
 
 namespace Ui {
 class RegistrationWindow;
@@ -23,8 +24,9 @@ signals:
 private slots:
     void on_toolButton_then0_clicked();
     void on_toolButton_then1_clicked();
-    //void on_pushButton_return_clicked(); //Удалено
-    //void on_pushButton_reg_clicked(); //Удалено
+    void onRegSuccess(); // Новый слот для обработки успешной регистрации
+    void onRegFailed();  // Новый слот для обработки неудачной регистрации
+    void onError(const QString& message); // Новый слот для обработки ошибок
 
 private:
     Ui::RegistrationWindow *ui;

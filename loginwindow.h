@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "function_for_client.h"
+#include "networkclient.h" // Добавляем заголовочный файл
 
 namespace Ui {
 class LoginWindow;
@@ -23,7 +24,9 @@ signals:
 private slots:
     void on_toolButton_then0_clicked();
     void on_toolButton_then1_clicked();
-
+    void onAuthSuccess(); // Новый слот для обработки успешной авторизации
+    void onAuthFailed();  // Новый слот для обработки неудачной авторизации
+    void onError(const QString& message); // Новый слот для обработки ошибок
 
 private:
     Ui::LoginWindow *ui;

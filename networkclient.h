@@ -2,12 +2,13 @@
 #define NETWORKCLIENT_H
 
 #include <QObject>
-#include <QTcpSocket>  // Класс для работы с TCP-соединениями
-#include <QHostAddress> // Класс для представления IP-адреса
+#include <QTcpSocket>
+#include <QHostAddress>
 
 class NetworkClient : public QObject
 {
     Q_OBJECT
+
 public:
     // Статический метод для получения единственного экземпляра синглтона
     static NetworkClient& getInstance()
@@ -27,6 +28,10 @@ public:
 signals:
     void connectionStatusChanged(bool connected); // Сигнал об изменении статуса соединения (подключен/отключен)
     void error(const QString& message);           // Сигнал об ошибке
+    void authSuccess(); // Сигнал об успешной авторизации
+    void authFailed();  // Сигнал о неудачной авторизации
+    void regSuccess();  // Сигнал об успешной регистрации
+    void regFailed();   // Сигнал о неудачной регистрации
 
 private slots:
     void connectedToServer();    // Слот, вызываемый при успешном подключении к серверу
