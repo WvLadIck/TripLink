@@ -18,27 +18,21 @@ ManagerForm::ManagerForm(QWidget *parent)
     // Подключения сигналов и слотов
     connect(Main_Window, &MainWindow::loginButtonClicked, this, &ManagerForm::showLoginWindow);
     connect(Main_Window, &MainWindow::registrationButtonClicked, this, &ManagerForm::showRegistrationWindow);
-
     connect(Login_Window, &LoginWindow::returnToMainWindow, this, &ManagerForm::handleReturnToPrevious);
     connect(Reg_Window, &RegistrationWindow::returnToMainWindow, this, &ManagerForm::handleReturnToPrevious);
-
     connect(Login_Window, &LoginWindow::goToDriverCompanionWindow, this, &ManagerForm::showDriverCompanionWindow);
     connect(Reg_Window, &RegistrationWindow::goToDriverCompanionWindow, this, &ManagerForm::showDriverCompanionWindow);
-
     connect(Drive_Comp_Window, &DriverCompanionWindow::goToCompanionWindow, this, &ManagerForm::showCompanionWindow);
     connect(Drive_Comp_Window, &DriverCompanionWindow::goToDriverWindow, this, &ManagerForm::showDriverWindow);
     connect(Drive_Comp_Window, &DriverCompanionWindow::goToFeedbackWindow, this, &ManagerForm::showFeedbackWindow); // Подключение сигнала для окна отзывов
-
     // Добавляем обработку сигнала returnToPreviousWindow для каждого окна
     connect(Drive_Comp_Window, &DriverCompanionWindow::returnToPreviousWindow, this, &ManagerForm::handleReturnToPrevious);
     connect(Companion_Window, &CompanionWindow::returnToPreviousWindow, this, &ManagerForm::handleReturnToPrevious);
     connect(Driver_Window, &DriverWindow::returnToPreviousWindow, this, &ManagerForm::handleReturnToPrevious);
     connect(Car_Window, &CarWindow::returnToPreviousWindow, this, &ManagerForm::handleReturnToPrevious);
     connect(Feedback_Window, &Tpips::finished, this, &ManagerForm::handleReturnToPrevious); // Подключение сигнала finished для окна отзывов
-
     // Подключения для перехода к CarWindow (только от CompanionWindow)
     connect(Companion_Window, &CompanionWindow::goToCarWindow, this, &ManagerForm::showCarWindow);
-
     // Подключения для перехода к FinishWindow
     connect(Driver_Window, &DriverWindow::goToFinishWindow, this, &ManagerForm::showFinishWindow);
     connect(Car_Window, &CarWindow::goToFinishWindow, this, &ManagerForm::showFinishWindow);
@@ -63,7 +57,6 @@ ManagerForm::ManagerForm(QWidget *parent)
     Car_Window->hide();
     Finish_Window->hide(); // Скрываем FinishWindow
     Feedback_Window->hide(); // Скрываем окно отзывов
-
     this->Main_Window->show(); // Отображаем главное окно
 
     // Инициализация и подключение NetworkClient

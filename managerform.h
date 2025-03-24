@@ -6,7 +6,6 @@
 #include <QVBoxLayout>
 #include <QWidget>
 #include <QMap>
-
 #include "mainwindow.h"
 #include "loginwindow.h"
 #include "registrationwindow.h"
@@ -49,7 +48,6 @@ private:
     CarWindow *Car_Window;
     FinishWindow * Finish_Window;
     Tpips *Feedback_Window; // Добавленное окно отзывов
-
     QMap<QWidget*, QWidget*> windowMap; // Упрощенная карта
 };
 

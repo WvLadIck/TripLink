@@ -28,13 +28,11 @@ NetworkClient::~NetworkClient()
 void NetworkClient::connectToServer(const QString& host, quint16 port)
 {
     qDebug() << "Connecting to server:" << host << ":" << port; // Добавляем логирование
-
     // Проверяем, не подключены ли мы уже к серверу
     if (isConnected) {
         qDebug() << "Already connected to server.";
         return;
     }
-
     serverHost = host;
     serverPort = port;
     socket->connectToHost(host, port);
@@ -48,7 +46,6 @@ void NetworkClient::sendMessage(const QString& message)
         emit error("Not connected to server."); // Испускаем сигнал об ошибке
         return;
     }
-
     QByteArray data = message.toUtf8();
     socket->write(data);
     socket->flush();
@@ -109,12 +106,13 @@ void NetworkClient::readyRead()
     // Выводим полученное сообщение в консоль
     qDebug() << "Received:" << message;
 
-    if (message == "auth+") {
+    if (message.startsWith("auth+")) {
         emit authSuccess();
     } else if (message == "auth-") {
         emit authFailed();
-    } else if (message == "reg+") {
-        emit regSuccess();
+    } else if (message.startsWith("reg+")) {
+        QString login = message.split("&").at(1).trimmed(); // Получаем логин из сообщения
+        emit regSuccess(login); // Испускаем сигнал с логином
     } else if (message == "reg-") {
         emit regFailed();
     }
