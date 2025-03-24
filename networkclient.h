@@ -28,7 +28,7 @@ public:
 signals:
     void connectionStatusChanged(bool connected); // Сигнал об изменении статуса соединения (подключен/отключен)
     void error(const QString& message);           // Сигнал об ошибке
-    void authSuccess(); // Сигнал об успешной авторизации
+    void authSuccess(const QString& login); // Сигнал об успешной авторизации (передаем логин)
     void authFailed();  // Сигнал о неудачной авторизации
     void regSuccess(const QString& login);  // Сигнал об успешной регистрации (передаем логин)
     void regFailed();   // Сигнал о неудачной регистрации

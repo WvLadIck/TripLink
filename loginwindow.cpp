@@ -9,9 +9,8 @@ LoginWindow::LoginWindow(QWidget *parent) :
     ui(new Ui::LoginWindow)
 {
     ui->setupUi(this);
-
     connect(ui->toolButton_then0, &QToolButton::clicked, this, &LoginWindow::on_toolButton_then0_clicked);
-    connect(ui->toolButton_then1, &QToolButton::clicked, this, &LoginWindow::on_toolButton_then1_clicked);
+    //connect(ui->toolButton_then1, &QToolButton::clicked, this, &LoginWindow::on_toolButton_then1_clicked);
 
     // Подключаемся к сигналам NetworkClient
     NetworkClient& client = NetworkClient::getInstance();
@@ -38,7 +37,7 @@ void LoginWindow::on_toolButton_then1_clicked()
     NetworkClient::getInstance().sendMessage(command);
 }
 
-void LoginWindow::onAuthSuccess()
+void LoginWindow::onAuthSuccess(const QString& login)
 {
     QMessageBox::information(this, "Success", "Authentication successful!");
     emit goToDriverCompanionWindow();

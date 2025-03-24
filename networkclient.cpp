@@ -107,7 +107,8 @@ void NetworkClient::readyRead()
     qDebug() << "Received:" << message;
 
     if (message.startsWith("auth+")) {
-        emit authSuccess();
+        QString login = message.split("&").at(1).trimmed(); // Получаем логин из сообщения
+        emit authSuccess(login); // Испускаем сигнал с логином
     } else if (message == "auth-") {
         emit authFailed();
     } else if (message.startsWith("reg+")) {
