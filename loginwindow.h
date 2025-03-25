@@ -24,7 +24,7 @@ signals:
 private slots:
     void on_toolButton_then0_clicked();
     void on_toolButton_then1_clicked();
-    void onAuthSuccess(const QString& login); // Изменяем слот для получения логина
+    void onAuthSuccess(); // Изменяем слот для получения логина
     void onAuthFailed();  // Новый слот для обработки неудачной авторизации
     void onError(const QString& message); // Новый слот для обработки ошибок
 

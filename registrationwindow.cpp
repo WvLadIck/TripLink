@@ -11,7 +11,6 @@ RegistrationWindow::RegistrationWindow(QWidget *parent) :
     ui->setupUi(this);
     connect(ui->toolButton_then0, &QToolButton::clicked, this, &RegistrationWindow::on_toolButton_then0_clicked);
     //connect(ui->toolButton_then1, &QToolButton::clicked, this, &RegistrationWindow::on_toolButton_then1_clicked);
-
     // Подключаемся к сигналам NetworkClient
     NetworkClient& client = NetworkClient::getInstance();
     connect(&client, &NetworkClient::regSuccess, this, &RegistrationWindow::onRegSuccess);
@@ -39,9 +38,8 @@ void RegistrationWindow::on_toolButton_then1_clicked()
     NetworkClient::getInstance().sendMessage(command);
 }
 
-void RegistrationWindow::onRegSuccess(const QString& login)
+void RegistrationWindow::onRegSuccess()
 {
-    QMessageBox::information(this, "Success", "Registration successful!");
     QMessageBox::information(this, "Success", "Registration successful!");
     emit goToDriverCompanionWindow();
 }

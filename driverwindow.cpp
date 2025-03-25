@@ -1,6 +1,7 @@
 #include "driverwindow.h"
 #include "ui_driverwindow.h"
 #include "networkclient.h" // Подключаем NetworkClient
+#include <QDebug>
 
 DriverWindow::DriverWindow(QWidget *parent) :
     QDialog(parent),
@@ -30,6 +31,15 @@ void DriverWindow::on_toolButton_then1_clicked()
 
     // Получаем логин текущего пользователя (предполагаем, что он сохранен в NetworkClient)
     QString login = NetworkClient::getInstance().getLogin();
+
+    // Проверяем, что логин не пустой
+    if (login.isEmpty()) {
+        qDebug() << "Login is empty! Trip not created.";
+        return; // Выходим из функции, если логин пустой
+    }
+
+    // Логируем значение логина для отладки
+    qDebug() << "Login:" << login;
 
     // Формируем команду для отправки на сервер
     QString command = QString("trip&%1&%2&%3&%4\r\n").arg(login, from, to, time);

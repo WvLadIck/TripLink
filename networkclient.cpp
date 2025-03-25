@@ -9,7 +9,7 @@ NetworkClient::NetworkClient() : socket(new QTcpSocket(this)), isConnected(false
     // При подключении сокета вызываем слот connectedToServer
     connect(socket, &QTcpSocket::disconnected, this, &NetworkClient::disconnectedFromServer);
     // При отключении сокета вызываем слот disconnectedFromServer
-    connect(socket, QOverload<QAbstractSocket::SocketError>::of(&QTcpSocket::error), this, &NetworkClient::socketError);
+    connect(socket, QOverload<QAbstractSocket::SocketError>::of(&QTcpSocket::errorOccurred), this, &NetworkClient::socketError);
     // При возникновении ошибки сокета вызываем слот socketError
     connect(socket, &QTcpSocket::readyRead, this, &NetworkClient::readyRead);
     // При поступлении данных от сервера вызываем слот readyRead
@@ -105,16 +105,16 @@ void NetworkClient::readyRead()
     QString message = QString::fromUtf8(data);
     // Выводим полученное сообщение в консоль
     qDebug() << "Received:" << message;
-
     if (message.startsWith("auth+")) {
-        QString login = message.split("&").at(1).trimmed(); // Получаем логин из сообщения
-        this->login = login; // Сохраняем логин текущего пользователя
-        emit authSuccess(login); // Испускаем сигнал с логином
+        QString login = message.split("&").at(1).trimmed();
+        this->login = login;
+        emit authSuccess();
     } else if (message == "auth-") {
         emit authFailed();
     } else if (message.startsWith("reg+")) {
-        QString login = message.split("&").at(1).trimmed(); // Получаем логин из сообщения
-        emit regSuccess(login); // Испускаем сигнал с логином
+        QString login = message.split("&").at(1).trimmed();
+        this->login = login; // Сохраняем логин после регистрации
+        emit regSuccess();
     } else if (message == "reg-") {
         emit regFailed();
     }
