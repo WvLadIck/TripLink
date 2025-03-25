@@ -25,6 +25,9 @@ public:
     void connectToServer(const QString& host, quint16 port); // Подключение к серверу
     void sendMessage(const QString& message);                 // Отправка сообщения на сервер
 
+    // Метод для получения логина текущего пользователя
+    QString getLogin() const { return login; }
+
 signals:
     void connectionStatusChanged(bool connected); // Сигнал об изменении статуса соединения (подключен/отключен)
     void error(const QString& message);           // Сигнал об ошибке
@@ -42,10 +45,12 @@ private slots:
 private:
     NetworkClient(); // Приватный конструктор, чтобы нельзя было создать экземпляр класса напрямую
     ~NetworkClient() override; // Деструктор
+
     QTcpSocket* socket;   // Указатель на сокет для обмена данными с сервером
     QString serverHost;
     quint16 serverPort;
     bool isConnected;
+    QString login; // Добавляем поле для хранения логина текущего пользователя
 };
 
 #endif // NETWORKCLIENT_H

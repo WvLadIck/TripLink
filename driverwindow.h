@@ -2,6 +2,7 @@
 #define DRIVERWINDOW_H
 
 #include <QDialog>
+#include "networkclient.h" // Добавляем заголовочный файл NetworkClient
 
 namespace Ui {
 class DriverWindow;

@@ -2,7 +2,7 @@
 #include <QDebug>
 
 // Реализация приватного конструктора класса NetworkClient
-NetworkClient::NetworkClient() : socket(new QTcpSocket(this)), isConnected(false)
+NetworkClient::NetworkClient() : socket(new QTcpSocket(this)), isConnected(false), login("")
 {
     // Подключаем сигналы сокета к слотам NetworkClient
     connect(socket, &QTcpSocket::connected, this, &NetworkClient::connectedToServer);
@@ -108,6 +108,7 @@ void NetworkClient::readyRead()
 
     if (message.startsWith("auth+")) {
         QString login = message.split("&").at(1).trimmed(); // Получаем логин из сообщения
+        this->login = login; // Сохраняем логин текущего пользователя
         emit authSuccess(login); // Испускаем сигнал с логином
     } else if (message == "auth-") {
         emit authFailed();

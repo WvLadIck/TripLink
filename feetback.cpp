@@ -3,6 +3,7 @@
 #include "networkclient.h" // Подключаем NetworkClient
 
 #include <QMessageBox>
+#include <QTimer>
 
 Tpips::Tpips(QWidget *parent) :
     QDialog(parent),
@@ -38,10 +39,15 @@ void Tpips::on_toolButton_1_clicked()
     QString ratingCommand = QString("rating&%1&%2\r\n").arg(tripId).arg(rating);
     QString reviewCommand = QString("review&%1&%2\r\n").arg(tripId).arg(review);
 
-    // Отправляем команды на сервер через NetworkClient
+    // Отправляем команду rating на сервер через NetworkClient
     NetworkClient::getInstance().sendMessage(ratingCommand);
-    NetworkClient::getInstance().sendMessage(reviewCommand);
 
-    // После отправки команды, переходим на следующее окно
-    emit goToDriverCompanionWindow();
+    // Добавляем задержку перед отправкой команды review
+    QTimer::singleShot(100, [this, reviewCommand]() {
+        // Отправляем команду review на сервер через NetworkClient
+        NetworkClient::getInstance().sendMessage(reviewCommand);
+
+        // После отправки команды, переходим на следующее окно
+        emit goToDriverCompanionWindow();
+    });
 }
