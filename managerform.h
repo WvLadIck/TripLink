@@ -6,6 +6,7 @@
 #include <QVBoxLayout>
 #include <QWidget>
 #include <QMap>
+
 #include "mainwindow.h"
 #include "loginwindow.h"
 #include "registrationwindow.h"

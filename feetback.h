@@ -2,6 +2,7 @@
 #define FEETBACK_H
 
 #include <QDialog>
+#include "networkclient.h" // Добавляем заголовочный файл NetworkClient
 
 namespace Ui {
 class Tpips;
@@ -17,6 +18,7 @@ public:
 
 signals:
     void finished(); // Сигнал для возврата
+    void goToDriverCompanionWindow(); // Сигнал для перехода в DriverCompanionWindow
 
 private slots:
     void on_toolButton_0_clicked(); // Слот для кнопки <
