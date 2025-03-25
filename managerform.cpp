@@ -42,6 +42,14 @@ ManagerForm::ManagerForm(QWidget *parent)
         Companion_Window->show();
     });
 
+    // Подключения для перехода к CarWindow (только от CompanionWindow)
+    connect(Companion_Window, &CompanionWindow::goToCarWindow, this, &ManagerForm::showCarWindow);
+    connect(Companion_Window, &CompanionWindow::tripNotFound, this, [this]() {
+        Companion_Window->show();
+    });
+
+    connect(Companion_Window, &CompanionWindow::goToDriverCompanionWindow, this, &ManagerForm::showDriverCompanionWindowFromCompanion);
+
     // Подключения для перехода к FinishWindow
     connect(Driver_Window, &DriverWindow::goToFinishWindow, this, &ManagerForm::showFinishWindow);
     connect(Car_Window, &CarWindow::goToFinishWindow, this, &ManagerForm::showFinishWindow);
@@ -108,13 +116,6 @@ void ManagerForm::showDriverCompanionWindow()
     Drive_Comp_Window->show();
 }
 
-void ManagerForm::showCompanionWindow()
-{
-    Drive_Comp_Window->hide();
-    Companion_Window->show();
-    windowMap[Companion_Window] = Drive_Comp_Window; // Запоминаем предыдущее окно
-}
-
 void ManagerForm::showDriverWindow()
 {
     Drive_Comp_Window->hide();
@@ -122,13 +123,13 @@ void ManagerForm::showDriverWindow()
     windowMap[Driver_Window] = Drive_Comp_Window; // Запоминаем предыдущее окно
 }
 
-void ManagerForm::showCarWindow(int tripId)
-{
-    Car_Window->setTripId(tripId);
-    windowMap[Car_Window] = Companion_Window; //  Устанавливаем предыдущее окно для CarWindow
-    Companion_Window->hide(); // Закрываем CompanionWindow, а не close()
-    Car_Window->show();
-}
+// void ManagerForm::showCarWindow(int tripId)
+// {
+//     Car_Window->setTripId(tripId);
+//     windowMap[Car_Window] = Companion_Window; //  Устанавливаем предыдущее окно для CarWindow
+//     Companion_Window->hide(); // Закрываем CompanionWindow, а не close()
+//     Car_Window->show();
+// }
 
 void ManagerForm::showFinishWindow()
 {
@@ -185,4 +186,41 @@ void ManagerForm::showFeedbackWindow()
     Drive_Comp_Window->hide();
     Feedback_Window->show();
     windowMap[Feedback_Window] = Drive_Comp_Window; // Запоминаем предыдущее окно
+}
+
+
+void ManagerForm::showCompanionWindow()
+{
+    Drive_Comp_Window->hide();
+    Companion_Window->show();
+    windowMap[Companion_Window] = Drive_Comp_Window; // Запоминаем предыдущее окно
+}
+
+void ManagerForm::showDriverCompanionWindowFromCompanion()
+{
+    Companion_Window->hide();
+    Drive_Comp_Window->show();
+    windowMap[Drive_Comp_Window] = Companion_Window; // Запоминаем предыдущее окно
+}
+
+void ManagerForm::showCarWindow(int tripId)
+{
+    Car_Window->setTripId(tripId);
+    windowMap[Car_Window] = Companion_Window; //  Устанавливаем предыдущее окно для CarWindow
+    Companion_Window->hide(); // Закрываем CompanionWindow, а не close()
+
+    // Получаем информацию о поездке из CompanionWindow
+    QVector<QVariantMap> trips = Companion_Window->getAvailableTrips();
+    QVariantMap tripInfo;
+    for (const auto& trip : trips) {
+        if (trip["id"].toInt() == tripId) {
+            tripInfo = trip;
+            break;
+        }
+    }
+
+    // Отображаем информацию о поездке в CarWindow
+    Car_Window->displayTripInfo(tripInfo);
+
+    Car_Window->show();
 }

@@ -17,10 +17,13 @@ public:
     explicit CompanionWindow(QWidget *parent = nullptr);
     ~CompanionWindow();
 
+    QVector<QVariantMap> getAvailableTrips() const; // Добавляем геттер
+
 signals:
     void returnToPreviousWindow();
     void goToCarWindow(int tripId); // Передаем ID поездки
     void tripNotFound();
+    void goToDriverCompanionWindow(); // Сигнал для возврата в DriverCompanionWindow
 
 public slots:
     void on_toolButton_then0_clicked();

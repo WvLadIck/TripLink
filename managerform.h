@@ -37,6 +37,7 @@ private slots:
     void showMainWindowFromFinish();
     void onConnectionStatusChanged(bool connected); // Новый слот
     void showFeedbackWindow(); // Добавленный слот для окна отзывов
+    void showDriverCompanionWindowFromCompanion();
 
 private:
     MainWindow *Main_Window;

@@ -30,34 +30,19 @@ void CarWindow::on_toolButton_then0_clicked()
 
 void CarWindow::on_toolButton_then1_clicked()
 {
-    if (currentTripId == -1) {
-        QMessageBox::warning(this, "Error", "Trip ID is not set.");
-        return;
-    }
-
-    // Получаем логин текущего пользователя
-    QString login = NetworkClient::getInstance().getLogin();
-
-    // Формируем команду для отправки на сервер
-    QString command = QString("book&%1&%2\r\n").arg(currentTripId).arg(login);
-
-    // Отправляем команду на сервер через NetworkClient
-    NetworkClient::getInstance().sendMessage(command);
-
-    // Подключаем сигнал readyRead к слоту обработки ответа
-    //connect(&NetworkClient::getInstance(), &NetworkClient::readyRead, this, &CarWindow::handleBookTripResponse); // REMOVED
-
+    emit goToFinishWindow(); // Переходим в FinishWindow при нажатии на >
 }
 
-void CarWindow::handleBookTripResponse(const QString& response)
+void CarWindow::displayTripInfo(const QVariantMap& tripInfo)
 {
-    // Отключаем сигнал readyRead, чтобы избежать повторной обработки
-    //disconnect(&NetworkClient::getInstance(), &NetworkClient::readyRead, this, &CarWindow::handleBookTripResponse); // REMOVED
+    currentTrip = tripInfo; // Сохраняем информацию о поездке
 
-    if (response == "book+\r\n") {
-        QMessageBox::information(this, "Success", "Trip booked successfully!");
-        emit goToFinishWindow();
-    } else {
-        QMessageBox::warning(this, "Error", "Failed to book trip.");
-    }
+    // Формируем строку для отображения информации о водителе и времени
+    QString info = QString("Водитель: %1\nEmail: %2\nВремя: %3")
+                       .arg(tripInfo["driver_login"].toString())
+                       .arg(tripInfo["driver_email"].toString())
+                       .arg(tripInfo["time"].toString());
+
+    // Отображаем информацию в QLabel (замените "ui->label_time" на имя вашего QLabel)
+    ui->label_time->setText(info);
 }

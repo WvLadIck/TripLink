@@ -2,6 +2,7 @@
 #define CARWINDOW_H
 
 #include <QDialog>
+#include <QVariantMap> // Добавляем для хранения информации о поездке
 
 namespace Ui {
 class CarWindow;
@@ -23,11 +24,12 @@ signals:
 public slots:
     void on_toolButton_then0_clicked();
     void on_toolButton_then1_clicked();
-    void handleBookTripResponse(const QString& response);
+    void displayTripInfo(const QVariantMap& tripInfo); // Новый слот для отображения информации
 
 private:
     Ui::CarWindow *ui;
     int currentTripId;
+    QVariantMap currentTrip; // Добавляем для хранения информации о текущей поездке
 };
 
 #endif // CARWINDOW_H

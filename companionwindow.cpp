@@ -10,12 +10,17 @@ CompanionWindow::CompanionWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     connect(ui->toolButton_then0, &QToolButton::clicked, this, &CompanionWindow::on_toolButton_then0_clicked);
-    //connect(ui->toolButton_then1, &QToolButton::clicked, this, &CompanionWindow::on_toolButton_then1_clicked);
+    connect(ui->toolButton_then1, &QToolButton::clicked, this, &CompanionWindow::on_toolButton_then1_clicked);
 }
 
 CompanionWindow::~CompanionWindow()
 {
     delete ui;
+}
+
+QVector<QVariantMap> CompanionWindow::getAvailableTrips() const
+{
+    return availableTrips;
 }
 
 void CompanionWindow::on_toolButton_then0_clicked()
@@ -40,7 +45,7 @@ void CompanionWindow::handleFindTripResponse(const QString& message)
 
     if (message == "find-\r\n") {
         QMessageBox::warning(this, "Trip not found", "No trips found for the specified locations.");
-        emit tripNotFound();
+        emit goToDriverCompanionWindow(); // Возвращаемся в DriverCompanionWindow
     } else if (message.startsWith("find+")) {
         // Обрабатываем список поездок
         QStringList tripsData = message.split("&");
@@ -58,7 +63,7 @@ void CompanionWindow::handleFindTripResponse(const QString& message)
         }
         if (availableTrips.isEmpty()) {
             QMessageBox::warning(this, "Trip not found", "No trips found for the specified locations.");
-            emit tripNotFound();
+            emit goToDriverCompanionWindow(); // Возвращаемся в DriverCompanionWindow
             return;
         }
         // Переходим к окну выбора поездки (CarWindow) и передаем ID первой поездки

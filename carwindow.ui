@@ -60,9 +60,13 @@ font: 700 14pt &quot;Linux Libertine G&quot;;</string>
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox_drive">
+        <widget class="QLabel" name="label_name">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(224, 202, 180);</string>
+          <string notr="true">background-color: rgb(235, 220, 206);
+</string>
+         </property>
+         <property name="text">
+          <string/>
          </property>
         </widget>
        </item>

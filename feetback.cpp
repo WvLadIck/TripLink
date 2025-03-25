@@ -11,7 +11,7 @@ Tpips::Tpips(QWidget *parent) :
 {
     ui->setupUi(this);
     connect(ui->toolButton_0, &QToolButton::clicked, this, &Tpips::on_toolButton_0_clicked); // Подключение для кнопки <
-    connect(ui->toolButton_1, &QToolButton::clicked, this, &Tpips::on_toolButton_1_clicked); // Подключение для кнопки >
+    //connect(ui->toolButton_1, &QToolButton::clicked, this, &Tpips::on_toolButton_1_clicked); // Подключение для кнопки >
 }
 
 Tpips::~Tpips()
