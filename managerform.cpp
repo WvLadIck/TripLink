@@ -34,8 +34,13 @@ ManagerForm::ManagerForm(QWidget *parent)
     connect(Feedback_Window, &Tpips::finished, this, &ManagerForm::handleReturnToPrevious); // Подключение сигнала finished для окна отзывов
     connect(Feedback_Window, &Tpips::goToDriverCompanionWindow, this, &ManagerForm::showDriverCompanionWindow); // Подключение сигнала для перехода в DriverCompanionWindow
 
+    connect(&NetworkClient::getInstance(), &NetworkClient::readyRead, Companion_Window, &CompanionWindow::handleFindTripResponse);
+
     // Подключения для перехода к CarWindow (только от CompanionWindow)
     connect(Companion_Window, &CompanionWindow::goToCarWindow, this, &ManagerForm::showCarWindow);
+    connect(Companion_Window, &CompanionWindow::tripNotFound, this, [this]() {
+        Companion_Window->show();
+    });
 
     // Подключения для перехода к FinishWindow
     connect(Driver_Window, &DriverWindow::goToFinishWindow, this, &ManagerForm::showFinishWindow);
@@ -61,7 +66,6 @@ ManagerForm::ManagerForm(QWidget *parent)
     Car_Window->hide();
     Finish_Window->hide(); // Скрываем FinishWindow
     Feedback_Window->hide(); // Скрываем окно отзывов
-
     this->Main_Window->show(); // Отображаем главное окно
 
     // Инициализация и подключение NetworkClient
@@ -118,9 +122,9 @@ void ManagerForm::showDriverWindow()
     windowMap[Driver_Window] = Drive_Comp_Window; // Запоминаем предыдущее окно
 }
 
-void ManagerForm::showCarWindow()
+void ManagerForm::showCarWindow(int tripId)
 {
-    // Теперь CarWindow открывается только из CompanionWindow
+    Car_Window->setTripId(tripId);
     windowMap[Car_Window] = Companion_Window; //  Устанавливаем предыдущее окно для CarWindow
     Companion_Window->hide(); // Закрываем CompanionWindow, а не close()
     Car_Window->show();

@@ -14,17 +14,20 @@ class CarWindow : public QDialog
 public:
     explicit CarWindow(QWidget *parent = nullptr);
     ~CarWindow();
+    void setTripId(int tripId);
 
 signals:
     void returnToPreviousWindow();
-    void goToFinishWindow(); //  Сигнал для перехода к FinishWindow
+    void goToFinishWindow();
 
-private slots:
+public slots:
     void on_toolButton_then0_clicked();
-    void on_toolButton_then1_clicked(); //  Теперь будет отправлять сигнал goToFinishWindow
+    void on_toolButton_then1_clicked();
+    void handleBookTripResponse(const QString& response);
 
 private:
     Ui::CarWindow *ui;
+    int currentTripId;
 };
 
 #endif // CARWINDOW_H

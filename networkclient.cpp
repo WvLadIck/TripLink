@@ -11,7 +11,10 @@ NetworkClient::NetworkClient() : socket(new QTcpSocket(this)), isConnected(false
     // При отключении сокета вызываем слот disconnectedFromServer
     connect(socket, QOverload<QAbstractSocket::SocketError>::of(&QTcpSocket::errorOccurred), this, &NetworkClient::socketError);
     // При возникновении ошибки сокета вызываем слот socketError
-    connect(socket, &QTcpSocket::readyRead, this, &NetworkClient::readyRead);
+
+    //connect(socket, &QTcpSocket::readyRead, this, &NetworkClient::readyRead); // REMOVED
+    connect(socket, &QTcpSocket::readyRead, this, &NetworkClient::_readyRead); // Подключаем к приватному слоту
+
     // При поступлении данных от сервера вызываем слот readyRead
 }
 
@@ -97,7 +100,8 @@ void NetworkClient::socketError(QAbstractSocket::SocketError socketError)
 }
 
 // Реализация слота, вызываемого при поступлении данных от сервера
-void NetworkClient::readyRead()
+//void NetworkClient::readyRead(const QString& message) // REMOVED
+void NetworkClient::_readyRead()
 {
     // Считываем все доступные данные из сокета
     QByteArray data = socket->readAll();
@@ -105,6 +109,7 @@ void NetworkClient::readyRead()
     QString message = QString::fromUtf8(data);
     // Выводим полученное сообщение в консоль
     qDebug() << "Received:" << message;
+
     if (message.startsWith("auth+")) {
         QString login = message.split("&").at(1).trimmed();
         this->login = login;
@@ -118,4 +123,6 @@ void NetworkClient::readyRead()
     } else if (message == "reg-") {
         emit regFailed();
     }
+
+    emit readyRead(message); // Изменено: передаем сообщение
 }

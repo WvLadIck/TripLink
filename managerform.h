@@ -6,7 +6,6 @@
 #include <QVBoxLayout>
 #include <QWidget>
 #include <QMap>
-
 #include "mainwindow.h"
 #include "loginwindow.h"
 #include "registrationwindow.h"
@@ -32,7 +31,7 @@ private slots:
     void showDriverCompanionWindow();
     void showCompanionWindow();
     void showDriverWindow();
-    void showCarWindow();
+    void showCarWindow(int tripId);
     void handleReturnToPrevious();
     void showFinishWindow();
     void showMainWindowFromFinish();

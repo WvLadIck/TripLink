@@ -35,16 +35,20 @@ signals:
     void authFailed();  // Сигнал о неудачной авторизации
     void regSuccess();  // Сигнал об успешной регистрации (передаем логин)
     void regFailed();   // Сигнал о неудачной регистрации
+    void readyRead(const QString& message); // Сигнал для ответа о поиске поездок
+    void bookTripResponse(const QString& response); // Сигнал для ответа о бронировании поездки
 
-private slots:
+public slots:
     void connectedToServer();    // Слот, вызываемый при успешном подключении к серверу
     void disconnectedFromServer(); // Слот, вызываемый при отключении от сервера
     void socketError(QAbstractSocket::SocketError socketError); // Слот, вызываемый при возникновении ошибки сокета
-    void readyRead();            // Слот, вызываемый при поступлении данных от сервера
+    //void readyRead(const QString& message);            // Слот, вызываемый при поступлении данных от сервера // REMOVED
+    void _readyRead(); // Added: Private slot to handle incoming data
 
 private:
     NetworkClient(); // Приватный конструктор, чтобы нельзя было создать экземпляр класса напрямую
     ~NetworkClient() override; // Деструктор
+
     QTcpSocket* socket;   // Указатель на сокет для обмена данными с сервером
     QString serverHost;
     quint16 serverPort;
