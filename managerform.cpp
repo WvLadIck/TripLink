@@ -36,11 +36,6 @@ ManagerForm::ManagerForm(QWidget *parent)
 
     connect(&NetworkClient::getInstance(), &NetworkClient::readyRead, Companion_Window, &CompanionWindow::handleFindTripResponse);
 
-    // Подключения для перехода к CarWindow (только от CompanionWindow)
-    connect(Companion_Window, &CompanionWindow::goToCarWindow, this, &ManagerForm::showCarWindow);
-    connect(Companion_Window, &CompanionWindow::tripNotFound, this, [this]() {
-        Companion_Window->show();
-    });
 
     // Подключения для перехода к CarWindow (только от CompanionWindow)
     connect(Companion_Window, &CompanionWindow::goToCarWindow, this, &ManagerForm::showCarWindow);
@@ -203,21 +198,11 @@ void ManagerForm::showDriverCompanionWindowFromCompanion()
     windowMap[Drive_Comp_Window] = Companion_Window; // Запоминаем предыдущее окно
 }
 
-void ManagerForm::showCarWindow(int tripId)
+void ManagerForm::showCarWindow(int tripId, QVariantMap tripInfo)
 {
     Car_Window->setTripId(tripId);
     windowMap[Car_Window] = Companion_Window; //  Устанавливаем предыдущее окно для CarWindow
     Companion_Window->hide(); // Закрываем CompanionWindow, а не close()
-
-    // Получаем информацию о поездке из CompanionWindow
-    QVector<QVariantMap> trips = Companion_Window->getAvailableTrips();
-    QVariantMap tripInfo;
-    for (const auto& trip : trips) {
-        if (trip["id"].toInt() == tripId) {
-            tripInfo = trip;
-            break;
-        }
-    }
 
     // Отображаем информацию о поездке в CarWindow
     Car_Window->displayTripInfo(tripInfo);

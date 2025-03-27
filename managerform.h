@@ -31,7 +31,7 @@ private slots:
     void showDriverCompanionWindow();
     void showCompanionWindow();
     void showDriverWindow();
-    void showCarWindow(int tripId);
+    void showCarWindow(int tripId, QVariantMap tripInfo);
     void handleReturnToPrevious();
     void showFinishWindow();
     void showMainWindowFromFinish();
