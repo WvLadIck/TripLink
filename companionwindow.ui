@@ -72,6 +72,16 @@ font: 700 14pt &quot;Linux Libertine G&quot;;</string>
            </property>
           </widget>
          </item>
+         <item row="2" column="1">
+          <widget class="QListWidget" name="listWidget_info"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_info">
+           <property name="text">
+            <string>Водитель, дата</string>
+           </property>
+          </widget>
+         </item>
         </layout>
        </item>
       </layout>

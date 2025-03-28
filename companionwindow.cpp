@@ -3,6 +3,7 @@
 #include "networkclient.h"
 #include <QMessageBox>
 #include <QDebug>
+#include <QListWidgetItem>
 
 CompanionWindow::CompanionWindow(QWidget *parent) :
     QDialog(parent),
@@ -11,6 +12,7 @@ CompanionWindow::CompanionWindow(QWidget *parent) :
     ui->setupUi(this);
     connect(ui->toolButton_then0, &QToolButton::clicked, this, &CompanionWindow::on_toolButton_then0_clicked);
     //connect(ui->toolButton_then1, &QToolButton::clicked, this, &CompanionWindow::on_toolButton_then1_clicked);
+    connect(ui->listWidget_info, &QListWidget::itemClicked, this, &CompanionWindow::on_listWidget_info_itemClicked); // Подключаем сигнал выбора поездки
 }
 
 CompanionWindow::~CompanionWindow()
@@ -47,15 +49,11 @@ void CompanionWindow::on_toolButton_then1_clicked()
         connect(&NetworkClient::getInstance(), &NetworkClient::readyRead, this, &CompanionWindow::handleFindTripResponse);
         isSearchPerformed = true; // Устанавливаем состояние
     } else {
-        // Бронируем первую найденную поездку
-        if (availableTrips.isEmpty()) {
-            QMessageBox::warning(this, "Ошибка", "Нет доступных поездок.");
-            emit goToDriverCompanionWindow();
+        // Бронируем выбранную поездку
+        if (selectedTripId == -1) {
+            QMessageBox::warning(this, "Ошибка", "Пожалуйста, выберите поездку из списка.");
             return;
         }
-
-        // Получаем ID первой поездки
-        selectedTripId = availableTrips[0]["id"].toInt();
 
         // Получаем логин текущего пользователя
         QString login = NetworkClient::getInstance().getLogin();
@@ -87,10 +85,12 @@ void CompanionWindow::handleFindTripResponse(const QString& message)
         emit goToDriverCompanionWindow(); // Возвращаемся в DriverCompanionWindow
         availableTrips.clear();
         isSearchPerformed = false; // Сбрасываем состояние
+        ui->listWidget_info->clear(); // Очищаем список поездок
     } else if (message.startsWith("find+")) {
         // Обрабатываем список поездок
         QStringList tripsData = message.split("&");
         availableTrips.clear();
+        ui->listWidget_info->clear(); // Очищаем список поездок
 
         for (int i = 1; i < tripsData.size(); ++i) {
             QStringList tripInfo = tripsData[i].split("$");
@@ -101,6 +101,12 @@ void CompanionWindow::handleFindTripResponse(const QString& message)
                 trip["driver_email"] = tripInfo[2];
                 trip["time"] = tripInfo[3];
                 availableTrips.append(trip);
+
+                // Добавляем информацию о поездке в QListWidget
+                QString itemText = QString("Водитель: %1, Время: %2").arg(trip["driver_login"].toString(), trip["time"].toString());
+                QListWidgetItem *item = new QListWidgetItem(itemText);
+                item->setData(Qt::UserRole, trip["id"].toInt()); // Сохраняем ID поездки в data
+                ui->listWidget_info->addItem(item);
             }
         }
 
@@ -109,6 +115,7 @@ void CompanionWindow::handleFindTripResponse(const QString& message)
             emit goToDriverCompanionWindow(); // Возвращаемся в DriverCompanionWindow
             availableTrips.clear();
             isSearchPerformed = false; // Сбрасываем состояние
+            ui->listWidget_info->clear(); // Очищаем список поездок
             return;
         }
     }
@@ -134,11 +141,21 @@ void CompanionWindow::handleBookTripResponse(const QString& message)
         // Переходим в CarWindow и передаем информацию о поездке
         emit goToCarWindow(selectedTripId, tripInfo);
         isSearchPerformed = false; // Сбрасываем состояние
+        selectedTripId = -1; // Сбрасываем ID выбранной поездки
+        ui->listWidget_info->clear(); // Очищаем список поездок
     } else if (message == "book_already_booked\r\n") {
         QMessageBox::warning(this, "Ошибка", "Эта поездка уже забронирована другим пользователем.");
         isSearchPerformed = false;
+        selectedTripId = -1; // Сбрасываем ID выбранной поездки
     } else {
         QMessageBox::warning(this, "Ошибка", "Не удалось забронировать поездку.");
         isSearchPerformed = false; // Сбрасываем состояние
+        selectedTripId = -1; // Сбрасываем ID выбранной поездки
     }
+}
+
+void CompanionWindow::on_listWidget_info_itemClicked(QListWidgetItem *item)
+{
+    selectedTripId = item->data(Qt::UserRole).toInt();
+    qDebug() << "Выбрана поездка с ID:" << selectedTripId;
 }

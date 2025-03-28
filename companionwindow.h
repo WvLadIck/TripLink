@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QVector>
 #include <QVariantMap>
+#include <QListWidgetItem> // Добавляем этот заголовочный файл
 
 namespace Ui {
 class CompanionWindow;
@@ -30,6 +31,7 @@ public slots:
     void on_toolButton_then1_clicked();
     void handleFindTripResponse(const QString& message);
     void handleBookTripResponse(const QString& message); // Новый слот для обработки ответа о бронировании
+    void on_listWidget_info_itemClicked(QListWidgetItem *item); // Новый слот для выбора поездки
 
 private:
     Ui::CompanionWindow *ui;
