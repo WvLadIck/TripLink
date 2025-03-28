@@ -1,0 +1,17 @@
+<map id="client/mainwindow.cpp" name="client/mainwindow.cpp">
+<area shape="rect" id="Node000001" title="Файл реализации класса MainWindow." alt="" coords="127,5,298,31"/>
+<area shape="rect" id="Node000002" href="$mainwindow_8h.html" title="Заголовочный файл класса MainWindow, реализующего главное окно приложения." alt="" coords="5,79,121,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,33,101,75,99,70,188,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="145,79,280,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="215,31,215,65,210,65,210,31"/>
+<area shape="rect" id="Node000005" href="$networkclient_8h.html" title="Заголовочный файл класса RegistrationWindow для работы с сетевым клиентом." alt="" coords="305,79,427,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="238,28,330,70,328,75,236,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="26,152,101,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="66,104,66,138,61,138,61,104"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="219,152,294,177"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="350,106,288,147,285,142,347,102"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="318,152,414,177"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="369,104,369,138,363,138,363,104"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="438,152,553,177"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="388,102,463,143,461,147,386,106"/>
+</map>

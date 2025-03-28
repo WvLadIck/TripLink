@@ -1,0 +1,19 @@
+# сервер
+# Doxygen Configuration for Server
+
+PROJECT_NAME           = "TripLink_Server"
+OUTPUT_DIRECTORY       = /home/xsenia/Загрузки/triplink1/server
+INPUT                  = server/main.cpp \
+                         server/database.cpp \
+                         server/mytcpserver.cpp \
+                         server/serverfunction.cpp \
+                         server/database.h \
+                         server/mytcpserver.h \
+                         server/serverfunction.h
+EXCLUDE                = client  # Исключаем клиентскую часть из документации
+RECURSIVE              = YES
+FILE_PATTERNS          = *.cpp *.h
+OUTPUT_LANGUAGE        = Russian
+GENERATE_LATEX         = YES  # Отключаем LaTeX, если не нужно
+GENERATE_PDF           = YES
+EXTRACT_ALL            = YES

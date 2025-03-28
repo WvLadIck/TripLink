@@ -1,0 +1,9 @@
+<map id="client/drivercompanionwindow.cpp" name="client/drivercompanionwindow.cpp">
+<area shape="rect" id="Node000001" title="Файл реализации класса DriverCompanionWindow." alt="" coords="91,5,339,31"/>
+<area shape="rect" id="Node000002" href="$drivercompanionwindow_8h.html" title="Заголовочный файл класса DriverCompanionWindow, реализующего окно выбора роли (пассажир,..." alt="" coords="5,79,199,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,33,133,74,130,69,196,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="223,79,435,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="235,28,300,69,297,74,232,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="65,152,139,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,104,105,138,99,138,99,104"/>
+</map>

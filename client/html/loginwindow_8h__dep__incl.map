@@ -1,0 +1,11 @@
+<map id="client/loginwindow.h" name="client/loginwindow.h">
+<area shape="rect" id="Node000001" title="Заголовочный файл класса LoginWindow, реализующего окно авторизации." alt="" coords="108,5,263,31"/>
+<area shape="rect" id="Node000002" href="$loginwindow_8cpp.html" title="Файл реализации класса LoginWindow." alt="" coords="5,79,176,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,41,108,81,105,76,158,37"/>
+<area shape="rect" id="Node000003" href="$managerform_8h.html" title="Заголовочный файл класса ManagerForm для управления окнами приложения." alt="" coords="200,79,363,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="213,37,267,76,264,81,210,41"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html" title="Главный файл приложения." alt="" coords="132,152,255,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="258,115,209,154,206,150,255,110"/>
+<area shape="rect" id="Node000005" href="$managerform_8cpp.html" title="Файл реализации класса ManagerForm." alt="" coords="279,152,457,177"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="307,110,356,150,352,154,304,115"/>
+</map>

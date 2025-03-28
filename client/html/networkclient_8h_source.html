@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TripLink_client: Исходный файл client/networkclient.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TripLink_client
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_db3a54907829b36871118d03417739cd.html">client</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">networkclient.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="networkclient_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef NETWORKCLIENT_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define NETWORKCLIENT_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;QTcpSocket&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;QHostAddress&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classNetworkClient.html">   20</a></span><span class="keyword">class </span><a class="code hl_class" href="classNetworkClient.html">NetworkClient</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    Q_OBJECT</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classNetworkClient.html#a9852760a84b2074043eba832071798d0">   29</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classNetworkClient.html">NetworkClient</a>&amp; <a class="code hl_function" href="classNetworkClient.html#a9852760a84b2074043eba832071798d0">getInstance</a>()</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">static</span> <a class="code hl_class" href="classNetworkClient.html">NetworkClient</a> instance;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// Запрещаем создание копий и присваивание, чтобы гарантировать единственность экземпляра</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classNetworkClient.html#ad18b6e8b1377abd789b4294df830282b">   36</a></span>    <a class="code hl_function" href="classNetworkClient.html#ad18b6e8b1377abd789b4294df830282b">NetworkClient</a>(<a class="code hl_class" href="classNetworkClient.html">NetworkClient</a> <span class="keyword">const</span>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classNetworkClient.html#a60a5d47b96c16d854185f9120e80ea2e">   37</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classNetworkClient.html#a60a5d47b96c16d854185f9120e80ea2e">operator=</a>(<a class="code hl_class" href="classNetworkClient.html">NetworkClient</a> <span class="keyword">const</span>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classNetworkClient.html#a5ff2605be8106593166e016519d9a0e7">connectToServer</a>(<span class="keyword">const</span> QString&amp; host, quint16 port);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classNetworkClient.html#ac55e43713a29b4fbcef0dfddd9320c45">sendMessage</a>(<span class="keyword">const</span> QString&amp; message);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classNetworkClient.html#a3cbe207ef90b98c9de737786b4357842">   55</a></span>    QString <a class="code hl_function" href="classNetworkClient.html#a3cbe207ef90b98c9de737786b4357842">getLogin</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> login; }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    signals:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classNetworkClient.html#a4144fba137fa52b99892853c7528bbe7">   62</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="classNetworkClient.html#a4144fba137fa52b99892853c7528bbe7">connectionStatusChanged</a>(<span class="keywordtype">bool</span> connected);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classNetworkClient.html#add75bc92fa1a7d79ce818f91bf692de4">   68</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="classNetworkClient.html#add75bc92fa1a7d79ce818f91bf692de4">error</a>(<span class="keyword">const</span> QString&amp; message);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classNetworkClient.html#aec57aaac8331db9d2dd2e953ab9d4434">   73</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="classNetworkClient.html#aec57aaac8331db9d2dd2e953ab9d4434">authSuccess</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classNetworkClient.html#a840913d5e36b404d4ae4f04dc18016fd">   78</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="classNetworkClient.html#a840913d5e36b404d4ae4f04dc18016fd">authFailed</a>();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classNetworkClient.html#a80557e4d0542b79173fffb579038500c">   83</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="classNetworkClient.html#a80557e4d0542b79173fffb579038500c">regSuccess</a>();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classNetworkClient.html#a385977696d6bf75c319619e661113b58">   88</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="classNetworkClient.html#a385977696d6bf75c319619e661113b58">regFailed</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classNetworkClient.html#ad8b93f513be55936a097393dfa567604">   94</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="classNetworkClient.html#ad8b93f513be55936a097393dfa567604">readyRead</a>(<span class="keyword">const</span> QString&amp; message);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classNetworkClient.html#aba098280cf27cab72b124d33f19f5285">  100</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="classNetworkClient.html#aba098280cf27cab72b124d33f19f5285">bookTripResponse</a>(<span class="keyword">const</span> QString&amp; response);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">public</span> slots:</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classNetworkClient.html#adebf692b4c60cae505178b2e7b5f5fbe">connectedToServer</a>();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classNetworkClient.html#ad161fa522af4aac5ca3db380b945c255">disconnectedFromServer</a>();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classNetworkClient.html#a0539ef0e17cf9dd07dbcc0fbd3878099">socketError</a>(QAbstractSocket::SocketError <a class="code hl_slot" href="classNetworkClient.html#a0539ef0e17cf9dd07dbcc0fbd3878099">socketError</a>);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classNetworkClient.html#a147cf730aad3c496ae7beefc82d4c640">_readyRead</a>();</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <a class="code hl_class" href="classNetworkClient.html">NetworkClient</a>();</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <a class="code hl_class" href="classNetworkClient.html">~NetworkClient</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    QTcpSocket* socket; </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    QString serverHost; </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    quint16 serverPort; </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordtype">bool</span> isConnected; </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    QString login; </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>};</div>
+</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="preprocessor">#endif </span><span class="comment">// NETWORKCLIENT_H</span></div>
+<div class="ttc" id="aclassNetworkClient_html"><div class="ttname"><a href="classNetworkClient.html">NetworkClient</a></div><div class="ttdoc">Класс для работы с сетевым клиентом.</div><div class="ttdef"><b>Definition</b> networkclient.h:21</div></div>
+<div class="ttc" id="aclassNetworkClient_html_a0539ef0e17cf9dd07dbcc0fbd3878099"><div class="ttname"><a href="classNetworkClient.html#a0539ef0e17cf9dd07dbcc0fbd3878099">NetworkClient::socketError</a></div><div class="ttdeci">void socketError(QAbstractSocket::SocketError socketError)</div><div class="ttdoc">Слот для обработки ошибки сокета.</div><div class="ttdef"><b>Definition</b> networkclient.cpp:84</div></div>
+<div class="ttc" id="aclassNetworkClient_html_a147cf730aad3c496ae7beefc82d4c640"><div class="ttname"><a href="classNetworkClient.html#a147cf730aad3c496ae7beefc82d4c640">NetworkClient::_readyRead</a></div><div class="ttdeci">void _readyRead()</div><div class="ttdoc">Слот для обработки входящих данных от сервера.</div><div class="ttdef"><b>Definition</b> networkclient.cpp:109</div></div>
+<div class="ttc" id="aclassNetworkClient_html_a385977696d6bf75c319619e661113b58"><div class="ttname"><a href="classNetworkClient.html#a385977696d6bf75c319619e661113b58">NetworkClient::regFailed</a></div><div class="ttdeci">void regFailed()</div><div class="ttdoc">Сигнал о неудачной регистрации.</div></div>
+<div class="ttc" id="aclassNetworkClient_html_a3cbe207ef90b98c9de737786b4357842"><div class="ttname"><a href="classNetworkClient.html#a3cbe207ef90b98c9de737786b4357842">NetworkClient::getLogin</a></div><div class="ttdeci">QString getLogin() const</div><div class="ttdoc">Метод для получения логина текущего пользователя.</div><div class="ttdef"><b>Definition</b> networkclient.h:55</div></div>
+<div class="ttc" id="aclassNetworkClient_html_a4144fba137fa52b99892853c7528bbe7"><div class="ttname"><a href="classNetworkClient.html#a4144fba137fa52b99892853c7528bbe7">NetworkClient::connectionStatusChanged</a></div><div class="ttdeci">void connectionStatusChanged(bool connected)</div><div class="ttdoc">Сигнал о статусе соединения.</div></div>
+<div class="ttc" id="aclassNetworkClient_html_a5ff2605be8106593166e016519d9a0e7"><div class="ttname"><a href="classNetworkClient.html#a5ff2605be8106593166e016519d9a0e7">NetworkClient::connectToServer</a></div><div class="ttdeci">void connectToServer(const QString &amp;host, quint16 port)</div><div class="ttdoc">Метод для подключения к серверу.</div><div class="ttdef"><b>Definition</b> networkclient.cpp:36</div></div>
+<div class="ttc" id="aclassNetworkClient_html_a60a5d47b96c16d854185f9120e80ea2e"><div class="ttname"><a href="classNetworkClient.html#a60a5d47b96c16d854185f9120e80ea2e">NetworkClient::operator=</a></div><div class="ttdeci">void operator=(NetworkClient const &amp;)=delete</div></div>
+<div class="ttc" id="aclassNetworkClient_html_a80557e4d0542b79173fffb579038500c"><div class="ttname"><a href="classNetworkClient.html#a80557e4d0542b79173fffb579038500c">NetworkClient::regSuccess</a></div><div class="ttdeci">void regSuccess()</div><div class="ttdoc">Сигнал об успешной регистрации.</div></div>
+<div class="ttc" id="aclassNetworkClient_html_a840913d5e36b404d4ae4f04dc18016fd"><div class="ttname"><a href="classNetworkClient.html#a840913d5e36b404d4ae4f04dc18016fd">NetworkClient::authFailed</a></div><div class="ttdeci">void authFailed()</div><div class="ttdoc">Сигнал о неудачной авторизации.</div></div>
+<div class="ttc" id="aclassNetworkClient_html_a9852760a84b2074043eba832071798d0"><div class="ttname"><a href="classNetworkClient.html#a9852760a84b2074043eba832071798d0">NetworkClient::getInstance</a></div><div class="ttdeci">static NetworkClient &amp; getInstance()</div><div class="ttdoc">Метод для получения экземпляра синглтона.</div><div class="ttdef"><b>Definition</b> networkclient.h:29</div></div>
+<div class="ttc" id="aclassNetworkClient_html_aba098280cf27cab72b124d33f19f5285"><div class="ttname"><a href="classNetworkClient.html#aba098280cf27cab72b124d33f19f5285">NetworkClient::bookTripResponse</a></div><div class="ttdeci">void bookTripResponse(const QString &amp;response)</div><div class="ttdoc">Сигнал для получения ответа на запрос о бронировании поездки.</div></div>
+<div class="ttc" id="aclassNetworkClient_html_ac55e43713a29b4fbcef0dfddd9320c45"><div class="ttname"><a href="classNetworkClient.html#ac55e43713a29b4fbcef0dfddd9320c45">NetworkClient::sendMessage</a></div><div class="ttdeci">void sendMessage(const QString &amp;message)</div><div class="ttdoc">Метод для отправки сообщения на сервер.</div><div class="ttdef"><b>Definition</b> networkclient.cpp:50</div></div>
+<div class="ttc" id="aclassNetworkClient_html_ad161fa522af4aac5ca3db380b945c255"><div class="ttname"><a href="classNetworkClient.html#ad161fa522af4aac5ca3db380b945c255">NetworkClient::disconnectedFromServer</a></div><div class="ttdeci">void disconnectedFromServer()</div><div class="ttdoc">Слот, вызываемый при отключении от сервера.</div><div class="ttdef"><b>Definition</b> networkclient.cpp:73</div></div>
+<div class="ttc" id="aclassNetworkClient_html_ad18b6e8b1377abd789b4294df830282b"><div class="ttname"><a href="classNetworkClient.html#ad18b6e8b1377abd789b4294df830282b">NetworkClient::NetworkClient</a></div><div class="ttdeci">NetworkClient(NetworkClient const &amp;)=delete</div></div>
+<div class="ttc" id="aclassNetworkClient_html_ad8b93f513be55936a097393dfa567604"><div class="ttname"><a href="classNetworkClient.html#ad8b93f513be55936a097393dfa567604">NetworkClient::readyRead</a></div><div class="ttdeci">void readyRead(const QString &amp;message)</div><div class="ttdoc">Сигнал для получения сообщения от сервера.</div></div>
+<div class="ttc" id="aclassNetworkClient_html_add75bc92fa1a7d79ce818f91bf692de4"><div class="ttname"><a href="classNetworkClient.html#add75bc92fa1a7d79ce818f91bf692de4">NetworkClient::error</a></div><div class="ttdeci">void error(const QString &amp;message)</div><div class="ttdoc">Сигнал об ошибке.</div></div>
+<div class="ttc" id="aclassNetworkClient_html_adebf692b4c60cae505178b2e7b5f5fbe"><div class="ttname"><a href="classNetworkClient.html#adebf692b4c60cae505178b2e7b5f5fbe">NetworkClient::connectedToServer</a></div><div class="ttdeci">void connectedToServer()</div><div class="ttdoc">Слот, вызываемый при успешном подключении к серверу.</div><div class="ttdef"><b>Definition</b> networkclient.cpp:63</div></div>
+<div class="ttc" id="aclassNetworkClient_html_aec57aaac8331db9d2dd2e953ab9d4434"><div class="ttname"><a href="classNetworkClient.html#aec57aaac8331db9d2dd2e953ab9d4434">NetworkClient::authSuccess</a></div><div class="ttdeci">void authSuccess()</div><div class="ttdoc">Сигнал об успешной авторизации.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

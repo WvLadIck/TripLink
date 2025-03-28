@@ -1,0 +1,11 @@
+<map id="client/feetback.h" name="client/feetback.h">
+<area shape="rect" id="Node000001" title="Заголовочный файл класса Tpips, реализующего возможность оставления отзывов и рейтинга поездок." alt="" coords="103,5,233,31"/>
+<area shape="rect" id="Node000002" href="$feetback_8cpp.html" title="Файл реализации класса Tpips." alt="" coords="5,79,152,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,41,95,81,92,76,141,37"/>
+<area shape="rect" id="Node000003" href="$managerform_8h.html" title="Заголовочный файл класса ManagerForm для управления окнами приложения." alt="" coords="176,79,339,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="195,37,244,76,241,81,191,41"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html" title="Главный файл приложения." alt="" coords="108,152,231,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="234,115,185,154,182,150,231,110"/>
+<area shape="rect" id="Node000005" href="$managerform_8cpp.html" title="Файл реализации класса ManagerForm." alt="" coords="255,152,433,177"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="283,110,332,150,328,154,280,115"/>
+</map>

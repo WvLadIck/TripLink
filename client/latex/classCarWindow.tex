@@ -1,0 +1,166 @@
+\doxysection{Класс Car\+Window}
+\hypertarget{classCarWindow}{}\label{classCarWindow}\index{CarWindow@{CarWindow}}
+
+
+Класс \doxylink{classCarWindow}{Car\+Window} представляет окно с информацией о поездках. Окно отображает информацию о доступных поездках и предоставляет возможность выбрать поездку.  
+
+
+
+
+{\ttfamily \#include $<$carwindow.\+h$>$}
+
+
+
+Граф наследования\+:Car\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{classCarWindow__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Car\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{classCarWindow__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCarWindow_acfe48561f8e8f6281fe27a0eb3d7b4f1}{on\+\_\+tool\+Button\+\_\+then0\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик события нажатия на кнопку "{}then0"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCarWindow_a54fc1f091135e0b433b70910c6386de6}{on\+\_\+tool\+Button\+\_\+then1\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик события нажатия на кнопку "{}then1"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCarWindow_a919733ce60fc7d32f14c15449f04d026}{display\+Trip\+Info}} (const QVariant\+Map \&trip\+Info)
+\begin{DoxyCompactList}\small\item\em Слот для отображения информации о поездке. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Сигналы}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCarWindow_a14576f6e8e74c746119fb8903cc41212}{return\+To\+Previous\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Сигнал для возврата на предыдущий экран. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCarWindow_ae8ef9d63e5c7e5520dd1dcbcac74bb52}{go\+To\+Finish\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Сигнал для перехода на экран завершения. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCarWindow_a58b52eba7a5bfcdb7f053d26b7faa2fe}{Car\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор \doxylink{classCarWindow}{Car\+Window}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCarWindow_a7010526a236f38c21190c94022e37706}{\texorpdfstring{$\sim$}{\string~}\+Car\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор \doxylink{classCarWindow}{Car\+Window}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCarWindow_ad7ff9427aafce97ab47115659aa518fe}{set\+Trip\+Id}} (int trip\+Id)
+\begin{DoxyCompactList}\small\item\em Установить ID поездки. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс \doxylink{classCarWindow}{Car\+Window} представляет окно с информацией о поездках. Окно отображает информацию о доступных поездках и предоставляет возможность выбрать поездку. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classCarWindow_a58b52eba7a5bfcdb7f053d26b7faa2fe}\label{classCarWindow_a58b52eba7a5bfcdb7f053d26b7faa2fe} 
+\index{CarWindow@{CarWindow}!CarWindow@{CarWindow}}
+\index{CarWindow@{CarWindow}!CarWindow@{CarWindow}}
+\doxysubsubsection{\texorpdfstring{CarWindow()}{CarWindow()}}
+{\footnotesize\ttfamily Car\+Window\+::\+Car\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор \doxylink{classCarWindow}{Car\+Window}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em parent} & Указатель на родительский виджет. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCarWindow_a7010526a236f38c21190c94022e37706}\label{classCarWindow_a7010526a236f38c21190c94022e37706} 
+\index{CarWindow@{CarWindow}!````~CarWindow@{\texorpdfstring{$\sim$}{\string~}CarWindow}}
+\index{````~CarWindow@{\texorpdfstring{$\sim$}{\string~}CarWindow}!CarWindow@{CarWindow}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CarWindow()}{\string~CarWindow()}}
+{\footnotesize\ttfamily Car\+Window\+::\texorpdfstring{$\sim$}{\string~}\+Car\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор \doxylink{classCarWindow}{Car\+Window}. 
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classCarWindow_a919733ce60fc7d32f14c15449f04d026}\label{classCarWindow_a919733ce60fc7d32f14c15449f04d026} 
+\index{CarWindow@{CarWindow}!displayTripInfo@{displayTripInfo}}
+\index{displayTripInfo@{displayTripInfo}!CarWindow@{CarWindow}}
+\doxysubsubsection{\texorpdfstring{displayTripInfo}{displayTripInfo}}
+{\footnotesize\ttfamily void Car\+Window\+::display\+Trip\+Info (\begin{DoxyParamCaption}\item[{const QVariant\+Map \&}]{trip\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Слот для отображения информации о поездке. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em trip\+Info} & Информация о поездке. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCarWindow_ae8ef9d63e5c7e5520dd1dcbcac74bb52}\label{classCarWindow_ae8ef9d63e5c7e5520dd1dcbcac74bb52} 
+\index{CarWindow@{CarWindow}!goToFinishWindow@{goToFinishWindow}}
+\index{goToFinishWindow@{goToFinishWindow}!CarWindow@{CarWindow}}
+\doxysubsubsection{\texorpdfstring{goToFinishWindow}{goToFinishWindow}}
+{\footnotesize\ttfamily void Car\+Window\+::go\+To\+Finish\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал для перехода на экран завершения. 
+
+\Hypertarget{classCarWindow_acfe48561f8e8f6281fe27a0eb3d7b4f1}\label{classCarWindow_acfe48561f8e8f6281fe27a0eb3d7b4f1} 
+\index{CarWindow@{CarWindow}!on\_toolButton\_then0\_clicked@{on\_toolButton\_then0\_clicked}}
+\index{on\_toolButton\_then0\_clicked@{on\_toolButton\_then0\_clicked}!CarWindow@{CarWindow}}
+\doxysubsubsection{\texorpdfstring{on\_toolButton\_then0\_clicked}{on\_toolButton\_then0\_clicked}}
+{\footnotesize\ttfamily void Car\+Window\+::on\+\_\+tool\+Button\+\_\+then0\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Обработчик события нажатия на кнопку "{}then0"{}. 
+
+\Hypertarget{classCarWindow_a54fc1f091135e0b433b70910c6386de6}\label{classCarWindow_a54fc1f091135e0b433b70910c6386de6} 
+\index{CarWindow@{CarWindow}!on\_toolButton\_then1\_clicked@{on\_toolButton\_then1\_clicked}}
+\index{on\_toolButton\_then1\_clicked@{on\_toolButton\_then1\_clicked}!CarWindow@{CarWindow}}
+\doxysubsubsection{\texorpdfstring{on\_toolButton\_then1\_clicked}{on\_toolButton\_then1\_clicked}}
+{\footnotesize\ttfamily void Car\+Window\+::on\+\_\+tool\+Button\+\_\+then1\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Обработчик события нажатия на кнопку "{}then1"{}. 
+
+\Hypertarget{classCarWindow_a14576f6e8e74c746119fb8903cc41212}\label{classCarWindow_a14576f6e8e74c746119fb8903cc41212} 
+\index{CarWindow@{CarWindow}!returnToPreviousWindow@{returnToPreviousWindow}}
+\index{returnToPreviousWindow@{returnToPreviousWindow}!CarWindow@{CarWindow}}
+\doxysubsubsection{\texorpdfstring{returnToPreviousWindow}{returnToPreviousWindow}}
+{\footnotesize\ttfamily void Car\+Window\+::return\+To\+Previous\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал для возврата на предыдущий экран. 
+
+\Hypertarget{classCarWindow_ad7ff9427aafce97ab47115659aa518fe}\label{classCarWindow_ad7ff9427aafce97ab47115659aa518fe} 
+\index{CarWindow@{CarWindow}!setTripId@{setTripId}}
+\index{setTripId@{setTripId}!CarWindow@{CarWindow}}
+\doxysubsubsection{\texorpdfstring{setTripId()}{setTripId()}}
+{\footnotesize\ttfamily void Car\+Window\+::set\+Trip\+Id (\begin{DoxyParamCaption}\item[{int}]{trip\+Id }\end{DoxyParamCaption})}
+
+
+
+Установить ID поездки. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em trip\+Id} & ID поездки. \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+client/\mbox{\hyperlink{carwindow_8h}{carwindow.\+h}}\item 
+client/\mbox{\hyperlink{carwindow_8cpp}{carwindow.\+cpp}}\end{DoxyCompactItemize}

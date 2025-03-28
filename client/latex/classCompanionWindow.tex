@@ -1,0 +1,229 @@
+\doxysection{Класс Companion\+Window}
+\hypertarget{classCompanionWindow}{}\label{classCompanionWindow}\index{CompanionWindow@{CompanionWindow}}
+
+
+Класс \doxylink{classCompanionWindow}{Companion\+Window} представляет окно для выбора и бронирования поездок пассажиром. Окно позволяет искать доступные поездки, выбирать их и бронировать.  
+
+
+
+
+{\ttfamily \#include $<$companionwindow.\+h$>$}
+
+
+
+Граф наследования\+:Companion\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{classCompanionWindow__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Companion\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{classCompanionWindow__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCompanionWindow_a9c7fee83de24cf72c73ab6e9b2248836}{on\+\_\+tool\+Button\+\_\+then0\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик события нажатия на кнопку "{}then0"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCompanionWindow_ad2876dba6cf1ffd997f0b74e1792f973}{on\+\_\+tool\+Button\+\_\+then1\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик события нажатия на кнопку "{}then1"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCompanionWindow_ae241ef6924aebe8e59c15accee482417}{handle\+Find\+Trip\+Response}} (const QString \&message)
+\begin{DoxyCompactList}\small\item\em Слот для обработки ответа на запрос о поиске поездки. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCompanionWindow_a563f6dc55400ebff4b34831cca40273f}{handle\+Book\+Trip\+Response}} (const QString \&message)
+\begin{DoxyCompactList}\small\item\em Слот для обработки ответа на запрос о бронировании поездки. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCompanionWindow_aa5c2a52dfc305796b13588c4baee4b7d}{on\+\_\+list\+Widget\+\_\+info\+\_\+item\+Clicked}} (QList\+Widget\+Item \texorpdfstring{$\ast$}{*}item)
+\begin{DoxyCompactList}\small\item\em Обработчик события выбора поездки из списка. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Сигналы}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCompanionWindow_ae856e27fe3e6f1482be4da723e7d5d41}{return\+To\+Previous\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Сигнал для возврата на предыдущий экран. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCompanionWindow_a7f0e217846a5c14758e6d06ee6adacbf}{go\+To\+Car\+Window}} (int trip\+Id, QVariant\+Map trip\+Info)
+\begin{DoxyCompactList}\small\item\em Сигнал для перехода на экран с информацией о выбранной поездке. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCompanionWindow_aecfbf5c4869960defc7c74c7f17d00bd}{trip\+Not\+Found}} ()
+\begin{DoxyCompactList}\small\item\em Сигнал, если поездка не найдена. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCompanionWindow_a437a2c6253e5850b805bc7cb055fb01e}{go\+To\+Driver\+Companion\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Сигнал для возврата на экран \doxylink{classDriverCompanionWindow}{Driver\+Companion\+Window}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCompanionWindow_aa8a7516dac4b70087018d53e1fa98c72}{Companion\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор \doxylink{classCompanionWindow}{Companion\+Window}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCompanionWindow_a2f121c68f394c63bcad01494891f691c}{\texorpdfstring{$\sim$}{\string~}\+Companion\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор \doxylink{classCompanionWindow}{Companion\+Window}. \end{DoxyCompactList}\item 
+QVector$<$ QVariant\+Map $>$ \mbox{\hyperlink{classCompanionWindow_aee468e7b45a2320f78c3b285be067162}{get\+Available\+Trips}} () const
+\begin{DoxyCompactList}\small\item\em Получить доступные поездки. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс \doxylink{classCompanionWindow}{Companion\+Window} представляет окно для выбора и бронирования поездок пассажиром. Окно позволяет искать доступные поездки, выбирать их и бронировать. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classCompanionWindow_aa8a7516dac4b70087018d53e1fa98c72}\label{classCompanionWindow_aa8a7516dac4b70087018d53e1fa98c72} 
+\index{CompanionWindow@{CompanionWindow}!CompanionWindow@{CompanionWindow}}
+\index{CompanionWindow@{CompanionWindow}!CompanionWindow@{CompanionWindow}}
+\doxysubsubsection{\texorpdfstring{CompanionWindow()}{CompanionWindow()}}
+{\footnotesize\ttfamily Companion\+Window\+::\+Companion\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор \doxylink{classCompanionWindow}{Companion\+Window}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em parent} & Указатель на родительский виджет. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCompanionWindow_a2f121c68f394c63bcad01494891f691c}\label{classCompanionWindow_a2f121c68f394c63bcad01494891f691c} 
+\index{CompanionWindow@{CompanionWindow}!````~CompanionWindow@{\texorpdfstring{$\sim$}{\string~}CompanionWindow}}
+\index{````~CompanionWindow@{\texorpdfstring{$\sim$}{\string~}CompanionWindow}!CompanionWindow@{CompanionWindow}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CompanionWindow()}{\string~CompanionWindow()}}
+{\footnotesize\ttfamily Companion\+Window\+::\texorpdfstring{$\sim$}{\string~}\+Companion\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор \doxylink{classCompanionWindow}{Companion\+Window}. 
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classCompanionWindow_aee468e7b45a2320f78c3b285be067162}\label{classCompanionWindow_aee468e7b45a2320f78c3b285be067162} 
+\index{CompanionWindow@{CompanionWindow}!getAvailableTrips@{getAvailableTrips}}
+\index{getAvailableTrips@{getAvailableTrips}!CompanionWindow@{CompanionWindow}}
+\doxysubsubsection{\texorpdfstring{getAvailableTrips()}{getAvailableTrips()}}
+{\footnotesize\ttfamily QVector$<$ QVariant\+Map $>$ Companion\+Window\+::get\+Available\+Trips (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Получить доступные поездки. 
+
+\begin{DoxyReturn}{Возвращает}
+Вектор с данными доступных поездок. 
+\end{DoxyReturn}
+\Hypertarget{classCompanionWindow_a7f0e217846a5c14758e6d06ee6adacbf}\label{classCompanionWindow_a7f0e217846a5c14758e6d06ee6adacbf} 
+\index{CompanionWindow@{CompanionWindow}!goToCarWindow@{goToCarWindow}}
+\index{goToCarWindow@{goToCarWindow}!CompanionWindow@{CompanionWindow}}
+\doxysubsubsection{\texorpdfstring{goToCarWindow}{goToCarWindow}}
+{\footnotesize\ttfamily void Companion\+Window\+::go\+To\+Car\+Window (\begin{DoxyParamCaption}\item[{int}]{trip\+Id,  }\item[{QVariant\+Map}]{trip\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал для перехода на экран с информацией о выбранной поездке. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em trip\+Id} & ID выбранной поездки. \\
+\hline
+{\em trip\+Info} & Информация о поездке. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCompanionWindow_a437a2c6253e5850b805bc7cb055fb01e}\label{classCompanionWindow_a437a2c6253e5850b805bc7cb055fb01e} 
+\index{CompanionWindow@{CompanionWindow}!goToDriverCompanionWindow@{goToDriverCompanionWindow}}
+\index{goToDriverCompanionWindow@{goToDriverCompanionWindow}!CompanionWindow@{CompanionWindow}}
+\doxysubsubsection{\texorpdfstring{goToDriverCompanionWindow}{goToDriverCompanionWindow}}
+{\footnotesize\ttfamily void Companion\+Window\+::go\+To\+Driver\+Companion\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал для возврата на экран \doxylink{classDriverCompanionWindow}{Driver\+Companion\+Window}. 
+
+\Hypertarget{classCompanionWindow_a563f6dc55400ebff4b34831cca40273f}\label{classCompanionWindow_a563f6dc55400ebff4b34831cca40273f} 
+\index{CompanionWindow@{CompanionWindow}!handleBookTripResponse@{handleBookTripResponse}}
+\index{handleBookTripResponse@{handleBookTripResponse}!CompanionWindow@{CompanionWindow}}
+\doxysubsubsection{\texorpdfstring{handleBookTripResponse}{handleBookTripResponse}}
+{\footnotesize\ttfamily void Companion\+Window\+::handle\+Book\+Trip\+Response (\begin{DoxyParamCaption}\item[{const QString \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Слот для обработки ответа на запрос о бронировании поездки. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Ответ от сервера. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCompanionWindow_ae241ef6924aebe8e59c15accee482417}\label{classCompanionWindow_ae241ef6924aebe8e59c15accee482417} 
+\index{CompanionWindow@{CompanionWindow}!handleFindTripResponse@{handleFindTripResponse}}
+\index{handleFindTripResponse@{handleFindTripResponse}!CompanionWindow@{CompanionWindow}}
+\doxysubsubsection{\texorpdfstring{handleFindTripResponse}{handleFindTripResponse}}
+{\footnotesize\ttfamily void Companion\+Window\+::handle\+Find\+Trip\+Response (\begin{DoxyParamCaption}\item[{const QString \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Слот для обработки ответа на запрос о поиске поездки. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Ответ от сервера. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCompanionWindow_aa5c2a52dfc305796b13588c4baee4b7d}\label{classCompanionWindow_aa5c2a52dfc305796b13588c4baee4b7d} 
+\index{CompanionWindow@{CompanionWindow}!on\_listWidget\_info\_itemClicked@{on\_listWidget\_info\_itemClicked}}
+\index{on\_listWidget\_info\_itemClicked@{on\_listWidget\_info\_itemClicked}!CompanionWindow@{CompanionWindow}}
+\doxysubsubsection{\texorpdfstring{on\_listWidget\_info\_itemClicked}{on\_listWidget\_info\_itemClicked}}
+{\footnotesize\ttfamily void Companion\+Window\+::on\+\_\+list\+Widget\+\_\+info\+\_\+item\+Clicked (\begin{DoxyParamCaption}\item[{QList\+Widget\+Item \texorpdfstring{$\ast$}{*}}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Обработчик события выбора поездки из списка. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em item} & Элемент списка, соответствующий выбранной поездке. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCompanionWindow_a9c7fee83de24cf72c73ab6e9b2248836}\label{classCompanionWindow_a9c7fee83de24cf72c73ab6e9b2248836} 
+\index{CompanionWindow@{CompanionWindow}!on\_toolButton\_then0\_clicked@{on\_toolButton\_then0\_clicked}}
+\index{on\_toolButton\_then0\_clicked@{on\_toolButton\_then0\_clicked}!CompanionWindow@{CompanionWindow}}
+\doxysubsubsection{\texorpdfstring{on\_toolButton\_then0\_clicked}{on\_toolButton\_then0\_clicked}}
+{\footnotesize\ttfamily void Companion\+Window\+::on\+\_\+tool\+Button\+\_\+then0\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Обработчик события нажатия на кнопку "{}then0"{}. 
+
+\Hypertarget{classCompanionWindow_ad2876dba6cf1ffd997f0b74e1792f973}\label{classCompanionWindow_ad2876dba6cf1ffd997f0b74e1792f973} 
+\index{CompanionWindow@{CompanionWindow}!on\_toolButton\_then1\_clicked@{on\_toolButton\_then1\_clicked}}
+\index{on\_toolButton\_then1\_clicked@{on\_toolButton\_then1\_clicked}!CompanionWindow@{CompanionWindow}}
+\doxysubsubsection{\texorpdfstring{on\_toolButton\_then1\_clicked}{on\_toolButton\_then1\_clicked}}
+{\footnotesize\ttfamily void Companion\+Window\+::on\+\_\+tool\+Button\+\_\+then1\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Обработчик события нажатия на кнопку "{}then1"{}. 
+
+\Hypertarget{classCompanionWindow_ae856e27fe3e6f1482be4da723e7d5d41}\label{classCompanionWindow_ae856e27fe3e6f1482be4da723e7d5d41} 
+\index{CompanionWindow@{CompanionWindow}!returnToPreviousWindow@{returnToPreviousWindow}}
+\index{returnToPreviousWindow@{returnToPreviousWindow}!CompanionWindow@{CompanionWindow}}
+\doxysubsubsection{\texorpdfstring{returnToPreviousWindow}{returnToPreviousWindow}}
+{\footnotesize\ttfamily void Companion\+Window\+::return\+To\+Previous\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал для возврата на предыдущий экран. 
+
+\Hypertarget{classCompanionWindow_aecfbf5c4869960defc7c74c7f17d00bd}\label{classCompanionWindow_aecfbf5c4869960defc7c74c7f17d00bd} 
+\index{CompanionWindow@{CompanionWindow}!tripNotFound@{tripNotFound}}
+\index{tripNotFound@{tripNotFound}!CompanionWindow@{CompanionWindow}}
+\doxysubsubsection{\texorpdfstring{tripNotFound}{tripNotFound}}
+{\footnotesize\ttfamily void Companion\+Window\+::trip\+Not\+Found (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал, если поездка не найдена. 
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+client/\mbox{\hyperlink{companionwindow_8h}{companionwindow.\+h}}\item 
+client/\mbox{\hyperlink{companionwindow_8cpp}{companionwindow.\+cpp}}\end{DoxyCompactItemize}

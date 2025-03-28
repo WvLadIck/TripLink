@@ -1,0 +1,11 @@
+<map id="client/finishwindow.h" name="client/finishwindow.h">
+<area shape="rect" id="Node000001" title="Заголовочный файл класса FinishWindow, реализующего окно завершения." alt="" coords="109,5,267,31"/>
+<area shape="rect" id="Node000002" href="$finishwindow_8cpp.html" title="Файл реализации класса FinishWindow." alt="" coords="5,79,179,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,41,109,81,106,76,160,37"/>
+<area shape="rect" id="Node000003" href="$managerform_8h.html" title="Заголовочный файл класса ManagerForm для управления окнами приложения." alt="" coords="203,79,365,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="216,37,270,76,267,81,213,41"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html" title="Главный файл приложения." alt="" coords="135,152,257,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="261,115,212,154,209,150,258,110"/>
+<area shape="rect" id="Node000005" href="$managerform_8cpp.html" title="Файл реализации класса ManagerForm." alt="" coords="281,152,460,177"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="310,110,358,150,355,154,307,115"/>
+</map>

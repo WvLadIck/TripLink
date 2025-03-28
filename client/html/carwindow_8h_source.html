@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TripLink_client: Исходный файл client/carwindow.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TripLink_client
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_db3a54907829b36871118d03417739cd.html">client</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">carwindow.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="carwindow_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef CARWINDOW_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define CARWINDOW_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;QDialog&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;QVariantMap&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="namespaceUi.html">   12</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceUi.html">Ui</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span><a class="code hl_class" href="classCarWindow.html">CarWindow</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
+</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classCarWindow.html">   20</a></span><span class="keyword">class </span><a class="code hl_class" href="classCarWindow.html">CarWindow</a> : <span class="keyword">public</span> QDialog</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    Q_OBJECT</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classCarWindow.html">CarWindow</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_function" href="classCarWindow.html#a7010526a236f38c21190c94022e37706">~CarWindow</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCarWindow.html#ad7ff9427aafce97ab47115659aa518fe">setTripId</a>(<span class="keywordtype">int</span> tripId);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>signals:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classCarWindow.html#a14576f6e8e74c746119fb8903cc41212">   46</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="classCarWindow.html#a14576f6e8e74c746119fb8903cc41212">returnToPreviousWindow</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classCarWindow.html#ae8ef9d63e5c7e5520dd1dcbcac74bb52">   51</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="classCarWindow.html#ae8ef9d63e5c7e5520dd1dcbcac74bb52">goToFinishWindow</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">public</span> slots:</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classCarWindow.html#acfe48561f8e8f6281fe27a0eb3d7b4f1">on_toolButton_then0_clicked</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classCarWindow.html#a54fc1f091135e0b433b70910c6386de6">on_toolButton_then1_clicked</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classCarWindow.html#a919733ce60fc7d32f14c15449f04d026">displayTripInfo</a>(<span class="keyword">const</span> QVariantMap&amp; tripInfo);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    Ui::CarWindow *ui; </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">int</span> currentTripId; </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    QVariantMap currentTrip; </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>};</div>
+</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif </span><span class="comment">// CARWINDOW_H</span></div>
+<div class="ttc" id="aclassCarWindow_html"><div class="ttname"><a href="classCarWindow.html">CarWindow</a></div><div class="ttdoc">Класс CarWindow представляет окно с информацией о поездках. Окно отображает информацию о доступных по...</div><div class="ttdef"><b>Definition</b> carwindow.h:21</div></div>
+<div class="ttc" id="aclassCarWindow_html_a14576f6e8e74c746119fb8903cc41212"><div class="ttname"><a href="classCarWindow.html#a14576f6e8e74c746119fb8903cc41212">CarWindow::returnToPreviousWindow</a></div><div class="ttdeci">void returnToPreviousWindow()</div><div class="ttdoc">Сигнал для возврата на предыдущий экран.</div></div>
+<div class="ttc" id="aclassCarWindow_html_a54fc1f091135e0b433b70910c6386de6"><div class="ttname"><a href="classCarWindow.html#a54fc1f091135e0b433b70910c6386de6">CarWindow::on_toolButton_then1_clicked</a></div><div class="ttdeci">void on_toolButton_then1_clicked()</div><div class="ttdoc">Обработчик события нажатия на кнопку &quot;then1&quot;.</div><div class="ttdef"><b>Definition</b> carwindow.cpp:36</div></div>
+<div class="ttc" id="aclassCarWindow_html_a7010526a236f38c21190c94022e37706"><div class="ttname"><a href="classCarWindow.html#a7010526a236f38c21190c94022e37706">CarWindow::~CarWindow</a></div><div class="ttdeci">~CarWindow()</div><div class="ttdoc">Деструктор CarWindow.</div><div class="ttdef"><b>Definition</b> carwindow.cpp:21</div></div>
+<div class="ttc" id="aclassCarWindow_html_a919733ce60fc7d32f14c15449f04d026"><div class="ttname"><a href="classCarWindow.html#a919733ce60fc7d32f14c15449f04d026">CarWindow::displayTripInfo</a></div><div class="ttdeci">void displayTripInfo(const QVariantMap &amp;tripInfo)</div><div class="ttdoc">Слот для отображения информации о поездке.</div><div class="ttdef"><b>Definition</b> carwindow.cpp:41</div></div>
+<div class="ttc" id="aclassCarWindow_html_acfe48561f8e8f6281fe27a0eb3d7b4f1"><div class="ttname"><a href="classCarWindow.html#acfe48561f8e8f6281fe27a0eb3d7b4f1">CarWindow::on_toolButton_then0_clicked</a></div><div class="ttdeci">void on_toolButton_then0_clicked()</div><div class="ttdoc">Обработчик события нажатия на кнопку &quot;then0&quot;.</div><div class="ttdef"><b>Definition</b> carwindow.cpp:31</div></div>
+<div class="ttc" id="aclassCarWindow_html_ad7ff9427aafce97ab47115659aa518fe"><div class="ttname"><a href="classCarWindow.html#ad7ff9427aafce97ab47115659aa518fe">CarWindow::setTripId</a></div><div class="ttdeci">void setTripId(int tripId)</div><div class="ttdoc">Установить ID поездки.</div><div class="ttdef"><b>Definition</b> carwindow.cpp:26</div></div>
+<div class="ttc" id="aclassCarWindow_html_ae8ef9d63e5c7e5520dd1dcbcac74bb52"><div class="ttname"><a href="classCarWindow.html#ae8ef9d63e5c7e5520dd1dcbcac74bb52">CarWindow::goToFinishWindow</a></div><div class="ttdeci">void goToFinishWindow()</div><div class="ttdoc">Сигнал для перехода на экран завершения.</div></div>
+<div class="ttc" id="anamespaceUi_html"><div class="ttname"><a href="namespaceUi.html">Ui</a></div><div class="ttdef"><b>Definition</b> carwindow.h:12</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

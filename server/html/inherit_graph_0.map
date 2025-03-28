@@ -1,0 +1,7 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,31,80,56"/>
+<area shape="rect" id="Node000001" href="$classDatabase.html" title="Класс для управления базой данных, реализующий паттерн Singleton." alt="" coords="139,5,223,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="93,31,138,23,139,28,94,37"/>
+<area shape="rect" id="Node000002" href="$classMyTcpServer.html" title="Класс, реализующий TCP&#45;сервер для обработки входящих соединений и команд." alt="" coords="128,55,233,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="94,49,128,56,127,61,93,55"/>
+</map>

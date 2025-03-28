@@ -1,0 +1,11 @@
+<map id="client/companionwindow.h" name="client/companionwindow.h">
+<area shape="rect" id="Node000001" title="Заголовочный файл класса CompanionWindow, реализующего окно для выбора и бронирования поездок пассажи..." alt="" coords="119,5,313,31"/>
+<area shape="rect" id="Node000002" href="$companionwindow_8cpp.html" title="Файл реализации класса CompanionWindow." alt="" coords="5,79,216,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,41,129,81,126,76,186,36"/>
+<area shape="rect" id="Node000003" href="$managerform_8h.html" title="Заголовочный файл класса ManagerForm для управления окнами приложения." alt="" coords="240,79,403,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="246,36,306,76,303,81,243,41"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html" title="Главный файл приложения." alt="" coords="172,152,295,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="298,115,249,154,246,150,295,110"/>
+<area shape="rect" id="Node000005" href="$managerform_8cpp.html" title="Файл реализации класса ManagerForm." alt="" coords="319,152,497,177"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="347,110,396,150,392,154,344,115"/>
+</map>

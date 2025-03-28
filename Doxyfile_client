@@ -1,0 +1,38 @@
+# клиент
+# Doxygen Configuration for Client
+
+PROJECT_NAME           = "TripLink_client"
+OUTPUT_DIRECTORY       = /home/xsenia/Загрузки/triplink1/client
+INPUT                  = client/main.cpp \
+                         client/carwindow.h \
+                         client/companionwindow.h \
+                         client/drivercompanionwindow.h \
+                         client/driverwindow.h \
+                         client/feetback.h \
+                         client/finishwindow.h \
+                         client/function for client.h \
+                         client/loginwindow.h \
+                         client/mainwindow.h \
+                         client/managerform.h \
+                         client/networkclient.h \
+                         client/registrationwindow.h \
+                         client/carwindow.cpp \
+                         client/companionwindow.cpp \
+                         client/drivercompanionwindow.cpp \
+                         client/driverwindow.cpp \
+                         client/feetback.cpp \
+                         client/finishwindow.cpp \
+                         client/cfunction for client.cpp \
+                         client/loginwindow.cpp \
+                         client/main.cpp \
+                         client/mainwindow.cpp \
+                         client/managerform.cpp \
+                         client/networkclient.cpp \
+                         client/registrationwindow.cpp 
+EXCLUDE                = server  # Исключаем серверную часть из документации
+RECURSIVE              = YES
+FILE_PATTERNS          = *.cpp *.h
+OUTPUT_LANGUAGE        = Russian
+GENERATE_LATEX         = YES  # Отключаем LaTeX, если не нужно
+GENERATE_PDF           = YES
+EXTRACT_ALL            = YES

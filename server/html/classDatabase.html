@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TripLink_Server: Класс Database</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TripLink_Server
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="classDatabase-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс Database</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс для управления базой данных, реализующий паттерн Singleton.  
+ <a href="classDatabase.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="database_8h_source.html">database.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:Database:</div>
+<div class="dyncontent">
+<div class="center"><img src="classDatabase__inherit__graph.png" border="0" usemap="#aDatabase_inherit__map" alt="Inheritance graph"/></div>
+<map name="aDatabase_inherit__map" id="aDatabase_inherit__map">
+<area shape="rect" title="Класс для управления базой данных, реализующий паттерн Singleton." alt="" coords="5,79,89,104"/>
+<area shape="rect" title=" " alt="" coords="10,5,85,31"/>
+<area shape="poly" title=" " alt="" coords="50,44,50,79,45,79,45,44"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса Database:</div>
+<div class="dyncontent">
+<div class="center"><img src="classDatabase__coll__graph.png" border="0" usemap="#aDatabase_coll__map" alt="Collaboration graph"/></div>
+<map name="aDatabase_coll__map" id="aDatabase_coll__map">
+<area shape="rect" title="Класс для управления базой данных, реализующий паттерн Singleton." alt="" coords="5,79,89,104"/>
+<area shape="rect" title=" " alt="" coords="10,5,85,31"/>
+<area shape="poly" title=" " alt="" coords="50,44,50,79,45,79,45,44"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a091473d455385669f50b33fad862f8a1" id="r_a091473d455385669f50b33fad862f8a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a091473d455385669f50b33fad862f8a1">createTable</a> ()</td></tr>
+<tr class="memdesc:a091473d455385669f50b33fad862f8a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает таблицы в базе данных, если они не существуют.  <br /></td></tr>
+<tr class="separator:a091473d455385669f50b33fad862f8a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cd4a79a6dd05e5d3365982868f86481" id="r_a3cd4a79a6dd05e5d3365982868f86481"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a3cd4a79a6dd05e5d3365982868f86481">addUser</a> (const QStringList &amp;userData)</td></tr>
+<tr class="memdesc:a3cd4a79a6dd05e5d3365982868f86481"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет нового пользователя в базу данных.  <br /></td></tr>
+<tr class="separator:a3cd4a79a6dd05e5d3365982868f86481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5141df0641c934f8585da0f7e8758534" id="r_a5141df0641c934f8585da0f7e8758534"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a5141df0641c934f8585da0f7e8758534">checkUser</a> (const QString &amp;login, const QString &amp;password)</td></tr>
+<tr class="memdesc:a5141df0641c934f8585da0f7e8758534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет существование пользователя в базе данных.  <br /></td></tr>
+<tr class="separator:a5141df0641c934f8585da0f7e8758534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb3e1fb6a98f55ffa0e908ca59694f70" id="r_acb3e1fb6a98f55ffa0e908ca59694f70"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#acb3e1fb6a98f55ffa0e908ca59694f70">saveTrip</a> (int userId, const QString &amp;from, const QString &amp;to, const QString &amp;time)</td></tr>
+<tr class="memdesc:acb3e1fb6a98f55ffa0e908ca59694f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сохраняет поездку в базе данных.  <br /></td></tr>
+<tr class="separator:acb3e1fb6a98f55ffa0e908ca59694f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55dbad86be2125985b673dde5bbb2ebf" id="r_a55dbad86be2125985b673dde5bbb2ebf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a55dbad86be2125985b673dde5bbb2ebf">saveRating</a> (int tripId, int rating)</td></tr>
+<tr class="memdesc:a55dbad86be2125985b673dde5bbb2ebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сохраняет рейтинг поездки.  <br /></td></tr>
+<tr class="separator:a55dbad86be2125985b673dde5bbb2ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87ed9d859a43e25239c66f9c90452655" id="r_a87ed9d859a43e25239c66f9c90452655"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a87ed9d859a43e25239c66f9c90452655">saveReview</a> (int tripId, const QString &amp;review)</td></tr>
+<tr class="memdesc:a87ed9d859a43e25239c66f9c90452655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сохраняет отзыв о поездке.  <br /></td></tr>
+<tr class="separator:a87ed9d859a43e25239c66f9c90452655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02e0977418eb243fcf18e96c2ffc22db" id="r_a02e0977418eb243fcf18e96c2ffc22db"><td class="memItemLeft" align="right" valign="top">QVector&lt; QVariant &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a02e0977418eb243fcf18e96c2ffc22db">getTrips</a> (const QString &amp;login)</td></tr>
+<tr class="memdesc:a02e0977418eb243fcf18e96c2ffc22db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает список поездок пользователя по его логину.  <br /></td></tr>
+<tr class="separator:a02e0977418eb243fcf18e96c2ffc22db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a046e93d7dbe62aa858ffbef3b638f9cf" id="r_a046e93d7dbe62aa858ffbef3b638f9cf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a046e93d7dbe62aa858ffbef3b638f9cf">getUserRating</a> (int userId)</td></tr>
+<tr class="memdesc:a046e93d7dbe62aa858ffbef3b638f9cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает средний рейтинг пользователя.  <br /></td></tr>
+<tr class="separator:a046e93d7dbe62aa858ffbef3b638f9cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10bf487b8e4b7f15c3e79d55a1783d36" id="r_a10bf487b8e4b7f15c3e79d55a1783d36"><td class="memItemLeft" align="right" valign="top">QVector&lt; QVariantMap &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a10bf487b8e4b7f15c3e79d55a1783d36">findTrips</a> (const QString &amp;from, const QString &amp;to)</td></tr>
+<tr class="memdesc:a10bf487b8e4b7f15c3e79d55a1783d36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ищет поездки по заданным местам отправления и назначения.  <br /></td></tr>
+<tr class="separator:a10bf487b8e4b7f15c3e79d55a1783d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a897bd65ae4a9a1009a6c2d4579db768a" id="r_a897bd65ae4a9a1009a6c2d4579db768a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a897bd65ae4a9a1009a6c2d4579db768a">bookTrip</a> (int tripId, const QString &amp;passengerLogin)</td></tr>
+<tr class="memdesc:a897bd65ae4a9a1009a6c2d4579db768a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Бронирует поездку для пассажира.  <br /></td></tr>
+<tr class="separator:a897bd65ae4a9a1009a6c2d4579db768a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:aa04e547554cc34fa4b6c5a9390021eab" id="r_aa04e547554cc34fa4b6c5a9390021eab"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classDatabase.html">Database</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#aa04e547554cc34fa4b6c5a9390021eab">getInstance</a> ()</td></tr>
+<tr class="memdesc:aa04e547554cc34fa4b6c5a9390021eab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает единственный экземпляр класса <a class="el" href="classDatabase.html" title="Класс для управления базой данных, реализующий паттерн Singleton.">Database</a>.  <br /></td></tr>
+<tr class="separator:aa04e547554cc34fa4b6c5a9390021eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс для управления базой данных, реализующий паттерн Singleton. </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a3cd4a79a6dd05e5d3365982868f86481" name="a3cd4a79a6dd05e5d3365982868f86481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cd4a79a6dd05e5d3365982868f86481">&#9670;&#160;</a></span>addUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Database::addUser </td>
+          <td>(</td>
+          <td class="paramtype">const QStringList &amp;&#160;</td>
+          <td class="paramname"><em>userData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет нового пользователя в базу данных. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userData</td><td>Список данных пользователя (логин, пароль, email). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если пользователь успешно добавлен, false в случае ошибки. </dd></dl>
+
+</div>
+</div>
+<a id="a897bd65ae4a9a1009a6c2d4579db768a" name="a897bd65ae4a9a1009a6c2d4579db768a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a897bd65ae4a9a1009a6c2d4579db768a">&#9670;&#160;</a></span>bookTrip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Database::bookTrip </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tripId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>passengerLogin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Бронирует поездку для пассажира. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tripId</td><td>ID поездки. </td></tr>
+    <tr><td class="paramname">passengerLogin</td><td>Логин пассажира. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если бронирование успешно, false в случае ошибки. </dd></dl>
+
+</div>
+</div>
+<a id="a5141df0641c934f8585da0f7e8758534" name="a5141df0641c934f8585da0f7e8758534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5141df0641c934f8585da0f7e8758534">&#9670;&#160;</a></span>checkUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Database::checkUser </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>login</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет существование пользователя в базе данных. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">login</td><td>Логин пользователя. </td></tr>
+    <tr><td class="paramname">password</td><td>Пароль пользователя. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если пользователь найден, false в противном случае. </dd></dl>
+
+</div>
+</div>
+<a id="a091473d455385669f50b33fad862f8a1" name="a091473d455385669f50b33fad862f8a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a091473d455385669f50b33fad862f8a1">&#9670;&#160;</a></span>createTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Database::createTable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создает таблицы в базе данных, если они не существуют. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если таблицы успешно созданы, false в случае ошибки. </dd></dl>
+
+</div>
+</div>
+<a id="a10bf487b8e4b7f15c3e79d55a1783d36" name="a10bf487b8e4b7f15c3e79d55a1783d36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10bf487b8e4b7f15c3e79d55a1783d36">&#9670;&#160;</a></span>findTrips()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt; QVariantMap &gt; Database::findTrips </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>to</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ищет поездки по заданным местам отправления и назначения. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">from</td><td>Место отправления. </td></tr>
+    <tr><td class="paramname">to</td><td>Место назначения. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Вектор найденных поездок в виде QVariantMap. </dd></dl>
+
+</div>
+</div>
+<a id="aa04e547554cc34fa4b6c5a9390021eab" name="aa04e547554cc34fa4b6c5a9390021eab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa04e547554cc34fa4b6c5a9390021eab">&#9670;&#160;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDatabase.html">Database</a> &amp; Database::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получает единственный экземпляр класса <a class="el" href="classDatabase.html" title="Класс для управления базой данных, реализующий паттерн Singleton.">Database</a>. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ссылка на экземпляр класса <a class="el" href="classDatabase.html" title="Класс для управления базой данных, реализующий паттерн Singleton.">Database</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a02e0977418eb243fcf18e96c2ffc22db" name="a02e0977418eb243fcf18e96c2ffc22db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02e0977418eb243fcf18e96c2ffc22db">&#9670;&#160;</a></span>getTrips()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt; QVariant &gt; Database::getTrips </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>login</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получает список поездок пользователя по его логину. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">login</td><td>Логин пользователя. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Вектор поездок, представленный в виде QVariant. </dd></dl>
+
+</div>
+</div>
+<a id="a046e93d7dbe62aa858ffbef3b638f9cf" name="a046e93d7dbe62aa858ffbef3b638f9cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a046e93d7dbe62aa858ffbef3b638f9cf">&#9670;&#160;</a></span>getUserRating()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Database::getUserRating </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>userId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получает средний рейтинг пользователя. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userId</td><td>ID пользователя. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Средний рейтинг пользователя или 0.0 в случае ошибки. </dd></dl>
+
+</div>
+</div>
+<a id="a55dbad86be2125985b673dde5bbb2ebf" name="a55dbad86be2125985b673dde5bbb2ebf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55dbad86be2125985b673dde5bbb2ebf">&#9670;&#160;</a></span>saveRating()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Database::saveRating </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tripId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rating</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сохраняет рейтинг поездки. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tripId</td><td>ID поездки. </td></tr>
+    <tr><td class="paramname">rating</td><td>Оценка поездки (число). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если рейтинг успешно сохранен, false в случае ошибки. </dd></dl>
+
+</div>
+</div>
+<a id="a87ed9d859a43e25239c66f9c90452655" name="a87ed9d859a43e25239c66f9c90452655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87ed9d859a43e25239c66f9c90452655">&#9670;&#160;</a></span>saveReview()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Database::saveReview </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tripId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>review</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сохраняет отзыв о поездке. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tripId</td><td>ID поездки. </td></tr>
+    <tr><td class="paramname">review</td><td>Текст отзыва. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если отзыв успешно сохранен, false в случае ошибки. </dd></dl>
+
+</div>
+</div>
+<a id="acb3e1fb6a98f55ffa0e908ca59694f70" name="acb3e1fb6a98f55ffa0e908ca59694f70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb3e1fb6a98f55ffa0e908ca59694f70">&#9670;&#160;</a></span>saveTrip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Database::saveTrip </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>userId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>time</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сохраняет поездку в базе данных. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userId</td><td>ID пользователя (водителя). </td></tr>
+    <tr><td class="paramname">from</td><td>Место отправления. </td></tr>
+    <tr><td class="paramname">to</td><td>Место назначения. </td></tr>
+    <tr><td class="paramname">time</td><td>Время отправления. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если поездка успешно сохранена, false в случае ошибки. </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>server/<a class="el" href="database_8h_source.html">database.h</a></li>
+<li>server/<a class="el" href="database_8cpp.html">database.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

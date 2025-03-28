@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TripLink_Server: Исходный файл server/serverfunction.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TripLink_Server
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">serverfunction.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="serverfunction_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor"> #ifndef SERVERFUNCTION_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor"> #define SERVERFUNCTION_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor"> #include &lt;QTcpSocket&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor"> #include &lt;QString&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classServerFunction.html">   16</a></span> <span class="keyword">class </span><a class="code hl_class" href="classServerFunction.html">ServerFunction</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classServerFunction.html#a0a758b72fd0f7df5576f5d0b63720eea">handleAuth</a>(QTcpSocket* socket, <span class="keyword">const</span> QString&amp; message);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classServerFunction.html#a9707690e7f554c44a8c4d5842c43e7e0">handleReg</a>(QTcpSocket* socket, <span class="keyword">const</span> QString&amp; message);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classServerFunction.html#a3cdb0d09fdd06d124ecda300ebdcca57">handleStat</a>(QTcpSocket* socket, <span class="keyword">const</span> QString&amp; message);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classServerFunction.html#adb153e9319a7d5f9329db2086ebd0a43">handleCheck</a>(QTcpSocket* socket, <span class="keyword">const</span> QString&amp; message);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classServerFunction.html#a570b30c4a6407e92c2f8e7b184930bb9">handleTrip</a>(QTcpSocket* socket, <span class="keyword">const</span> QString&amp; message);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classServerFunction.html#aca0eeab85e50ebc2c2f42aee40c4bc9c">handleRating</a>(QTcpSocket* socket, <span class="keyword">const</span> QString&amp; message);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classServerFunction.html#a46b6f764ff2f46dd1ba2dc69c035ad8d">handleReview</a>(QTcpSocket* socket, <span class="keyword">const</span> QString&amp; message);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classServerFunction.html#a2d3bad251fae20ec931e7d6162dab139">handleFindTrip</a>(QTcpSocket* socket, <span class="keyword">const</span> QString&amp; message);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classServerFunction.html#a63f670cbd0db56c140b2cb1cde38257b">handleBookTrip</a>(QTcpSocket* socket, <span class="keyword">const</span> QString&amp; message);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> };</div>
+</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor"> #endif </span><span class="comment">// SERVERFUNCTION_H</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="ttc" id="aclassServerFunction_html"><div class="ttname"><a href="classServerFunction.html">ServerFunction</a></div><div class="ttdoc">Класс, содержащий статические методы для обработки команд, получаемых сервером.</div><div class="ttdef"><b>Definition</b> serverfunction.h:17</div></div>
+<div class="ttc" id="aclassServerFunction_html_a0a758b72fd0f7df5576f5d0b63720eea"><div class="ttname"><a href="classServerFunction.html#a0a758b72fd0f7df5576f5d0b63720eea">ServerFunction::handleAuth</a></div><div class="ttdeci">static void handleAuth(QTcpSocket *socket, const QString &amp;message)</div><div class="ttdoc">Обрабатывает команду аутентификации пользователя.</div><div class="ttdef"><b>Definition</b> serverfunction.cpp:10</div></div>
+<div class="ttc" id="aclassServerFunction_html_a2d3bad251fae20ec931e7d6162dab139"><div class="ttname"><a href="classServerFunction.html#a2d3bad251fae20ec931e7d6162dab139">ServerFunction::handleFindTrip</a></div><div class="ttdeci">static void handleFindTrip(QTcpSocket *socket, const QString &amp;message)</div><div class="ttdoc">Обрабатывает команду поиска поездок по заданным направлениям.</div><div class="ttdef"><b>Definition</b> serverfunction.cpp:158</div></div>
+<div class="ttc" id="aclassServerFunction_html_a3cdb0d09fdd06d124ecda300ebdcca57"><div class="ttname"><a href="classServerFunction.html#a3cdb0d09fdd06d124ecda300ebdcca57">ServerFunction::handleStat</a></div><div class="ttdeci">static void handleStat(QTcpSocket *socket, const QString &amp;message)</div><div class="ttdoc">Обрабатывает команду получения статистики поездок пользователя.</div><div class="ttdef"><b>Definition</b> serverfunction.cpp:49</div></div>
+<div class="ttc" id="aclassServerFunction_html_a46b6f764ff2f46dd1ba2dc69c035ad8d"><div class="ttname"><a href="classServerFunction.html#a46b6f764ff2f46dd1ba2dc69c035ad8d">ServerFunction::handleReview</a></div><div class="ttdeci">static void handleReview(QTcpSocket *socket, const QString &amp;message)</div><div class="ttdoc">Обрабатывает команду сохранения отзыва о поездке.</div><div class="ttdef"><b>Definition</b> serverfunction.cpp:138</div></div>
+<div class="ttc" id="aclassServerFunction_html_a570b30c4a6407e92c2f8e7b184930bb9"><div class="ttname"><a href="classServerFunction.html#a570b30c4a6407e92c2f8e7b184930bb9">ServerFunction::handleTrip</a></div><div class="ttdeci">static void handleTrip(QTcpSocket *socket, const QString &amp;message)</div><div class="ttdoc">Обрабатывает команду создания поездки.</div><div class="ttdef"><b>Definition</b> serverfunction.cpp:80</div></div>
+<div class="ttc" id="aclassServerFunction_html_a63f670cbd0db56c140b2cb1cde38257b"><div class="ttname"><a href="classServerFunction.html#a63f670cbd0db56c140b2cb1cde38257b">ServerFunction::handleBookTrip</a></div><div class="ttdeci">static void handleBookTrip(QTcpSocket *socket, const QString &amp;message)</div><div class="ttdoc">Обрабатывает команду бронирования поездки.</div><div class="ttdef"><b>Definition</b> serverfunction.cpp:186</div></div>
+<div class="ttc" id="aclassServerFunction_html_a9707690e7f554c44a8c4d5842c43e7e0"><div class="ttname"><a href="classServerFunction.html#a9707690e7f554c44a8c4d5842c43e7e0">ServerFunction::handleReg</a></div><div class="ttdeci">static void handleReg(QTcpSocket *socket, const QString &amp;message)</div><div class="ttdoc">Обрабатывает команду регистрации нового пользователя.</div><div class="ttdef"><b>Definition</b> serverfunction.cpp:30</div></div>
+<div class="ttc" id="aclassServerFunction_html_aca0eeab85e50ebc2c2f42aee40c4bc9c"><div class="ttname"><a href="classServerFunction.html#aca0eeab85e50ebc2c2f42aee40c4bc9c">ServerFunction::handleRating</a></div><div class="ttdeci">static void handleRating(QTcpSocket *socket, const QString &amp;message)</div><div class="ttdoc">Обрабатывает команду сохранения рейтинга поездки.</div><div class="ttdef"><b>Definition</b> serverfunction.cpp:116</div></div>
+<div class="ttc" id="aclassServerFunction_html_adb153e9319a7d5f9329db2086ebd0a43"><div class="ttname"><a href="classServerFunction.html#adb153e9319a7d5f9329db2086ebd0a43">ServerFunction::handleCheck</a></div><div class="ttdeci">static void handleCheck(QTcpSocket *socket, const QString &amp;message)</div><div class="ttdoc">Обрабатывает команду проверки задания.</div><div class="ttdef"><b>Definition</b> serverfunction.cpp:67</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

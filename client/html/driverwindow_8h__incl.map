@@ -1,0 +1,13 @@
+<map id="client/driverwindow.h" name="client/driverwindow.h">
+<area shape="rect" id="Node000001" title="Заголовочный файл класса DriverWindow, реализующего окно для водителя." alt="" coords="23,5,185,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,80,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,33,64,70,60,66,92,29"/>
+<area shape="rect" id="Node000003" href="$networkclient_8h.html" title="Заголовочный файл класса RegistrationWindow для работы с сетевым клиентом." alt="" coords="104,79,227,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="116,29,148,66,144,70,112,33"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="19,152,93,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="149,106,87,147,84,142,146,102"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="117,152,213,177"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="168,104,168,138,163,138,163,104"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="237,152,352,177"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="187,102,262,143,260,147,185,106"/>
+</map>

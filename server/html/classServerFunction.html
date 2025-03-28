@@ -1,0 +1,532 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TripLink_Server: Класс ServerFunction</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TripLink_Server
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="classServerFunction-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс ServerFunction</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс, содержащий статические методы для обработки команд, получаемых сервером.  
+ <a href="classServerFunction.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="serverfunction_8h_source.html">serverfunction.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a0a758b72fd0f7df5576f5d0b63720eea" id="r_a0a758b72fd0f7df5576f5d0b63720eea"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerFunction.html#a0a758b72fd0f7df5576f5d0b63720eea">handleAuth</a> (QTcpSocket *socket, const QString &amp;message)</td></tr>
+<tr class="memdesc:a0a758b72fd0f7df5576f5d0b63720eea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает команду аутентификации пользователя.  <br /></td></tr>
+<tr class="separator:a0a758b72fd0f7df5576f5d0b63720eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9707690e7f554c44a8c4d5842c43e7e0" id="r_a9707690e7f554c44a8c4d5842c43e7e0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerFunction.html#a9707690e7f554c44a8c4d5842c43e7e0">handleReg</a> (QTcpSocket *socket, const QString &amp;message)</td></tr>
+<tr class="memdesc:a9707690e7f554c44a8c4d5842c43e7e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает команду регистрации нового пользователя.  <br /></td></tr>
+<tr class="separator:a9707690e7f554c44a8c4d5842c43e7e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cdb0d09fdd06d124ecda300ebdcca57" id="r_a3cdb0d09fdd06d124ecda300ebdcca57"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerFunction.html#a3cdb0d09fdd06d124ecda300ebdcca57">handleStat</a> (QTcpSocket *socket, const QString &amp;message)</td></tr>
+<tr class="memdesc:a3cdb0d09fdd06d124ecda300ebdcca57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает команду получения статистики поездок пользователя.  <br /></td></tr>
+<tr class="separator:a3cdb0d09fdd06d124ecda300ebdcca57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb153e9319a7d5f9329db2086ebd0a43" id="r_adb153e9319a7d5f9329db2086ebd0a43"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerFunction.html#adb153e9319a7d5f9329db2086ebd0a43">handleCheck</a> (QTcpSocket *socket, const QString &amp;message)</td></tr>
+<tr class="memdesc:adb153e9319a7d5f9329db2086ebd0a43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает команду проверки задания.  <br /></td></tr>
+<tr class="separator:adb153e9319a7d5f9329db2086ebd0a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a570b30c4a6407e92c2f8e7b184930bb9" id="r_a570b30c4a6407e92c2f8e7b184930bb9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerFunction.html#a570b30c4a6407e92c2f8e7b184930bb9">handleTrip</a> (QTcpSocket *socket, const QString &amp;message)</td></tr>
+<tr class="memdesc:a570b30c4a6407e92c2f8e7b184930bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает команду создания поездки.  <br /></td></tr>
+<tr class="separator:a570b30c4a6407e92c2f8e7b184930bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca0eeab85e50ebc2c2f42aee40c4bc9c" id="r_aca0eeab85e50ebc2c2f42aee40c4bc9c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerFunction.html#aca0eeab85e50ebc2c2f42aee40c4bc9c">handleRating</a> (QTcpSocket *socket, const QString &amp;message)</td></tr>
+<tr class="memdesc:aca0eeab85e50ebc2c2f42aee40c4bc9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает команду сохранения рейтинга поездки.  <br /></td></tr>
+<tr class="separator:aca0eeab85e50ebc2c2f42aee40c4bc9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46b6f764ff2f46dd1ba2dc69c035ad8d" id="r_a46b6f764ff2f46dd1ba2dc69c035ad8d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerFunction.html#a46b6f764ff2f46dd1ba2dc69c035ad8d">handleReview</a> (QTcpSocket *socket, const QString &amp;message)</td></tr>
+<tr class="memdesc:a46b6f764ff2f46dd1ba2dc69c035ad8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает команду сохранения отзыва о поездке.  <br /></td></tr>
+<tr class="separator:a46b6f764ff2f46dd1ba2dc69c035ad8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d3bad251fae20ec931e7d6162dab139" id="r_a2d3bad251fae20ec931e7d6162dab139"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerFunction.html#a2d3bad251fae20ec931e7d6162dab139">handleFindTrip</a> (QTcpSocket *socket, const QString &amp;message)</td></tr>
+<tr class="memdesc:a2d3bad251fae20ec931e7d6162dab139"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает команду поиска поездок по заданным направлениям.  <br /></td></tr>
+<tr class="separator:a2d3bad251fae20ec931e7d6162dab139"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63f670cbd0db56c140b2cb1cde38257b" id="r_a63f670cbd0db56c140b2cb1cde38257b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerFunction.html#a63f670cbd0db56c140b2cb1cde38257b">handleBookTrip</a> (QTcpSocket *socket, const QString &amp;message)</td></tr>
+<tr class="memdesc:a63f670cbd0db56c140b2cb1cde38257b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает команду бронирования поездки.  <br /></td></tr>
+<tr class="separator:a63f670cbd0db56c140b2cb1cde38257b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс, содержащий статические методы для обработки команд, получаемых сервером. </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a0a758b72fd0f7df5576f5d0b63720eea" name="a0a758b72fd0f7df5576f5d0b63720eea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a758b72fd0f7df5576f5d0b63720eea">&#9670;&#160;</a></span>handleAuth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ServerFunction::handleAuth </td>
+          <td>(</td>
+          <td class="paramtype">QTcpSocket *&#160;</td>
+          <td class="paramname"><em>socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обрабатывает команду аутентификации пользователя. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">socket</td><td>Указатель на сокет клиента. </td></tr>
+    <tr><td class="paramname">message</td><td>Сообщение с данными для аутентификации. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a63f670cbd0db56c140b2cb1cde38257b" name="a63f670cbd0db56c140b2cb1cde38257b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63f670cbd0db56c140b2cb1cde38257b">&#9670;&#160;</a></span>handleBookTrip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ServerFunction::handleBookTrip </td>
+          <td>(</td>
+          <td class="paramtype">QTcpSocket *&#160;</td>
+          <td class="paramname"><em>socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обрабатывает команду бронирования поездки. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">socket</td><td>Указатель на сокет клиента. </td></tr>
+    <tr><td class="paramname">message</td><td>Сообщение с ID поездки и логином пассажира. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adb153e9319a7d5f9329db2086ebd0a43" name="adb153e9319a7d5f9329db2086ebd0a43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb153e9319a7d5f9329db2086ebd0a43">&#9670;&#160;</a></span>handleCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ServerFunction::handleCheck </td>
+          <td>(</td>
+          <td class="paramtype">QTcpSocket *&#160;</td>
+          <td class="paramname"><em>socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обрабатывает команду проверки задания. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">socket</td><td>Указатель на сокет клиента. </td></tr>
+    <tr><td class="paramname">message</td><td>Сообщение с параметрами проверки. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2d3bad251fae20ec931e7d6162dab139" name="a2d3bad251fae20ec931e7d6162dab139"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d3bad251fae20ec931e7d6162dab139">&#9670;&#160;</a></span>handleFindTrip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ServerFunction::handleFindTrip </td>
+          <td>(</td>
+          <td class="paramtype">QTcpSocket *&#160;</td>
+          <td class="paramname"><em>socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обрабатывает команду поиска поездок по заданным направлениям. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">socket</td><td>Указатель на сокет клиента. </td></tr>
+    <tr><td class="paramname">message</td><td>Сообщение с пунктами отправления и назначения. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aca0eeab85e50ebc2c2f42aee40c4bc9c" name="aca0eeab85e50ebc2c2f42aee40c4bc9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca0eeab85e50ebc2c2f42aee40c4bc9c">&#9670;&#160;</a></span>handleRating()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ServerFunction::handleRating </td>
+          <td>(</td>
+          <td class="paramtype">QTcpSocket *&#160;</td>
+          <td class="paramname"><em>socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обрабатывает команду сохранения рейтинга поездки. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">socket</td><td>Указатель на сокет клиента. </td></tr>
+    <tr><td class="paramname">message</td><td>Сообщение с ID поездки и рейтингом. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9707690e7f554c44a8c4d5842c43e7e0" name="a9707690e7f554c44a8c4d5842c43e7e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9707690e7f554c44a8c4d5842c43e7e0">&#9670;&#160;</a></span>handleReg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ServerFunction::handleReg </td>
+          <td>(</td>
+          <td class="paramtype">QTcpSocket *&#160;</td>
+          <td class="paramname"><em>socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обрабатывает команду регистрации нового пользователя. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">socket</td><td>Указатель на сокет клиента. </td></tr>
+    <tr><td class="paramname">message</td><td>Сообщение с данными для регистрации. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a46b6f764ff2f46dd1ba2dc69c035ad8d" name="a46b6f764ff2f46dd1ba2dc69c035ad8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46b6f764ff2f46dd1ba2dc69c035ad8d">&#9670;&#160;</a></span>handleReview()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ServerFunction::handleReview </td>
+          <td>(</td>
+          <td class="paramtype">QTcpSocket *&#160;</td>
+          <td class="paramname"><em>socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обрабатывает команду сохранения отзыва о поездке. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">socket</td><td>Указатель на сокет клиента. </td></tr>
+    <tr><td class="paramname">message</td><td>Сообщение с ID поездки и отзывом. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3cdb0d09fdd06d124ecda300ebdcca57" name="a3cdb0d09fdd06d124ecda300ebdcca57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cdb0d09fdd06d124ecda300ebdcca57">&#9670;&#160;</a></span>handleStat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ServerFunction::handleStat </td>
+          <td>(</td>
+          <td class="paramtype">QTcpSocket *&#160;</td>
+          <td class="paramname"><em>socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обрабатывает команду получения статистики поездок пользователя. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">socket</td><td>Указатель на сокет клиента. </td></tr>
+    <tr><td class="paramname">message</td><td>Сообщение с логином пользователя. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a570b30c4a6407e92c2f8e7b184930bb9" name="a570b30c4a6407e92c2f8e7b184930bb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a570b30c4a6407e92c2f8e7b184930bb9">&#9670;&#160;</a></span>handleTrip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ServerFunction::handleTrip </td>
+          <td>(</td>
+          <td class="paramtype">QTcpSocket *&#160;</td>
+          <td class="paramname"><em>socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обрабатывает команду создания поездки. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">socket</td><td>Указатель на сокет клиента. </td></tr>
+    <tr><td class="paramname">message</td><td>Сообщение с данными о поездке. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>server/<a class="el" href="serverfunction_8h_source.html">serverfunction.h</a></li>
+<li>server/<a class="el" href="serverfunction_8cpp.html">serverfunction.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

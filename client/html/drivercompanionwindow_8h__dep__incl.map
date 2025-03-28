@@ -1,0 +1,11 @@
+<map id="client/drivercompanionwindow.h" name="client/drivercompanionwindow.h">
+<area shape="rect" id="Node000001" title="Заголовочный файл класса DriverCompanionWindow, реализующего окно выбора роли (пассажир,..." alt="" coords="127,5,361,31"/>
+<area shape="rect" id="Node000002" href="$drivercompanionwindow_8cpp.html" title="Файл реализации класса DriverCompanionWindow." alt="" coords="5,79,253,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,40,149,81,147,76,213,35"/>
+<area shape="rect" id="Node000003" href="$managerform_8h.html" title="Заголовочный файл класса ManagerForm для управления окнами приложения." alt="" coords="277,79,440,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="275,35,341,76,339,81,272,40"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html" title="Главный файл приложения." alt="" coords="209,152,332,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="336,115,287,154,283,150,332,110"/>
+<area shape="rect" id="Node000005" href="$managerform_8cpp.html" title="Файл реализации класса ManagerForm." alt="" coords="356,152,535,177"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="385,110,433,150,429,154,381,115"/>
+</map>

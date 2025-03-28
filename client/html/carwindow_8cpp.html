@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TripLink_client: Файл client/carwindow.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TripLink_client
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_db3a54907829b36871118d03417739cd.html">client</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Файл carwindow.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Файл реализации класса <a class="el" href="classCarWindow.html" title="Класс CarWindow представляет окно с информацией о поездках. Окно отображает информацию о доступных по...">CarWindow</a>.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="carwindow_8h_source.html">carwindow.h</a>&quot;</code><br />
+<code>#include &quot;ui_carwindow.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="networkclient_8h_source.html">networkclient.h</a>&quot;</code><br />
+<code>#include &lt;QMessageBox&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для carwindow.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="carwindow_8cpp__incl.png" border="0" usemap="#aclient_2carwindow_8cpp" alt=""/></div>
+<map name="aclient_2carwindow_8cpp" id="aclient_2carwindow_8cpp">
+<area shape="rect" title="Файл реализации класса CarWindow." alt="" coords="258,5,417,31"/>
+<area shape="rect" href="carwindow_8h.html" title="Заголовочный файл класса CarWindow, реализующего окно с информацией о доступных поездках." alt="" coords="75,79,178,104"/>
+<area shape="poly" title=" " alt="" coords="304,33,174,77,173,72,303,28"/>
+<area shape="rect" title=" " alt="" coords="203,79,325,104"/>
+<area shape="poly" title=" " alt="" coords="327,33,288,71,284,67,323,29"/>
+<area shape="rect" href="networkclient_8h.html" title="Заголовочный файл класса RegistrationWindow для работы с сетевым клиентом." alt="" coords="349,79,472,104"/>
+<area shape="poly" title=" " alt="" coords="351,29,391,67,387,71,348,33"/>
+<area shape="rect" title=" " alt="" coords="496,79,611,104"/>
+<area shape="poly" title=" " alt="" coords="373,28,506,72,505,77,371,33"/>
+<area shape="rect" title=" " alt="" coords="5,152,80,177"/>
+<area shape="poly" title=" " alt="" coords="115,106,69,145,65,141,111,102"/>
+<area shape="rect" title=" " alt="" coords="104,152,211,177"/>
+<area shape="poly" title=" " alt="" coords="134,103,149,139,145,141,129,105"/>
+<area shape="rect" title=" " alt="" coords="264,152,339,177"/>
+<area shape="poly" title=" " alt="" coords="395,106,332,147,329,142,392,102"/>
+<area shape="rect" title=" " alt="" coords="363,152,459,177"/>
+<area shape="poly" title=" " alt="" coords="413,104,413,138,408,138,408,104"/>
+<area shape="rect" title=" " alt="" coords="483,152,597,177"/>
+<area shape="poly" title=" " alt="" coords="433,102,508,143,505,147,430,106"/>
+</map>
+</div>
+</div><a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Файл реализации класса <a class="el" href="classCarWindow.html" title="Класс CarWindow представляет окно с информацией о поездках. Окно отображает информацию о доступных по...">CarWindow</a>. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

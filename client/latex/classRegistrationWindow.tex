@@ -1,0 +1,107 @@
+\doxysection{Класс Registration\+Window}
+\hypertarget{classRegistrationWindow}{}\label{classRegistrationWindow}\index{RegistrationWindow@{RegistrationWindow}}
+
+
+Класс окна регистрации пользователя.  
+
+
+
+
+{\ttfamily \#include $<$registrationwindow.\+h$>$}
+
+
+
+Граф наследования\+:Registration\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classRegistrationWindow__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Registration\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classRegistrationWindow__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Сигналы}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRegistrationWindow_ad4f1825917c7b8551fc2263b163ee632}{return\+To\+Main\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Сигнал для возврата на главное окно. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRegistrationWindow_a2debfae9bfa16b33bec7431bef35ae7b}{go\+To\+Driver\+Companion\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Сигнал для перехода в окно водителя-\/сопутника. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRegistrationWindow_ab7750bb97fc0bbb37ca59e6986edca83}{Registration\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRegistrationWindow_acff90e767180d33a169745f5418b8eb1}{\texorpdfstring{$\sim$}{\string~}\+Registration\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс окна регистрации пользователя. 
+
+Этот класс реализует окно, которое позволяет пользователю зарегистрироваться в системе. Он включает обработку ввода логина, пароля и email, а также взаимодействует с сервером для выполнения регистрации. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classRegistrationWindow_ab7750bb97fc0bbb37ca59e6986edca83}\label{classRegistrationWindow_ab7750bb97fc0bbb37ca59e6986edca83} 
+\index{RegistrationWindow@{RegistrationWindow}!RegistrationWindow@{RegistrationWindow}}
+\index{RegistrationWindow@{RegistrationWindow}!RegistrationWindow@{RegistrationWindow}}
+\doxysubsubsection{\texorpdfstring{RegistrationWindow()}{RegistrationWindow()}}
+{\footnotesize\ttfamily Registration\+Window\+::\+Registration\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em parent} & Родительский элемент (по умолчанию nullptr). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRegistrationWindow_acff90e767180d33a169745f5418b8eb1}\label{classRegistrationWindow_acff90e767180d33a169745f5418b8eb1} 
+\index{RegistrationWindow@{RegistrationWindow}!````~RegistrationWindow@{\texorpdfstring{$\sim$}{\string~}RegistrationWindow}}
+\index{````~RegistrationWindow@{\texorpdfstring{$\sim$}{\string~}RegistrationWindow}!RegistrationWindow@{RegistrationWindow}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RegistrationWindow()}{\string~RegistrationWindow()}}
+{\footnotesize\ttfamily Registration\+Window\+::\texorpdfstring{$\sim$}{\string~}\+Registration\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор. 
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classRegistrationWindow_a2debfae9bfa16b33bec7431bef35ae7b}\label{classRegistrationWindow_a2debfae9bfa16b33bec7431bef35ae7b} 
+\index{RegistrationWindow@{RegistrationWindow}!goToDriverCompanionWindow@{goToDriverCompanionWindow}}
+\index{goToDriverCompanionWindow@{goToDriverCompanionWindow}!RegistrationWindow@{RegistrationWindow}}
+\doxysubsubsection{\texorpdfstring{goToDriverCompanionWindow}{goToDriverCompanionWindow}}
+{\footnotesize\ttfamily void Registration\+Window\+::go\+To\+Driver\+Companion\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал для перехода в окно водителя-\/сопутника. 
+
+\Hypertarget{classRegistrationWindow_ad4f1825917c7b8551fc2263b163ee632}\label{classRegistrationWindow_ad4f1825917c7b8551fc2263b163ee632} 
+\index{RegistrationWindow@{RegistrationWindow}!returnToMainWindow@{returnToMainWindow}}
+\index{returnToMainWindow@{returnToMainWindow}!RegistrationWindow@{RegistrationWindow}}
+\doxysubsubsection{\texorpdfstring{returnToMainWindow}{returnToMainWindow}}
+{\footnotesize\ttfamily void Registration\+Window\+::return\+To\+Main\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал для возврата на главное окно. 
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+client/\mbox{\hyperlink{registrationwindow_8h}{registrationwindow.\+h}}\item 
+client/\mbox{\hyperlink{registrationwindow_8cpp}{registrationwindow.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="client/finishwindow.cpp" name="client/finishwindow.cpp">
+<area shape="rect" id="Node000001" title="Файл реализации класса FinishWindow." alt="" coords="54,5,227,31"/>
+<area shape="rect" id="Node000002" href="$finishwindow_8h.html" title="Заголовочный файл класса FinishWindow, реализующего окно завершения." alt="" coords="5,79,124,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,33,89,71,85,67,127,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="148,79,285,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="155,29,196,67,192,71,151,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="27,152,102,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="67,104,67,138,62,138,62,104"/>
+</map>

@@ -1,0 +1,107 @@
+\doxysection{Класс Main\+Window}
+\hypertarget{classMainWindow}{}\label{classMainWindow}\index{MainWindow@{MainWindow}}
+
+
+Класс главного окна приложения.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+
+
+Граф наследования\+:Main\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classMainWindow__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Main\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classMainWindow__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Сигналы}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMainWindow_a6f28338717c3078dec81605f959d8bae}{login\+Button\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em Сигнал, генерируемый при нажатии кнопки входа. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainWindow_a5bb650415d9c306bad6fdcbb68b8ebc5}{registration\+Button\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em Сигнал, генерируемый при нажатии кнопки регистрации. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMainWindow_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{classMainWindow}{Main\+Window}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}{\texorpdfstring{$\sim$}{\string~}\+Main\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор класса \doxylink{classMainWindow}{Main\+Window}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс главного окна приложения. 
+
+Этот класс реализует главное окно приложения с двумя кнопками\+: для входа и для регистрации. При нажатии на соответствующие кнопки генерируются сигналы для перехода к окнам авторизации или регистрации. Также устанавливается соединение с сервером при инициализации окна. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classMainWindow_a996c5a2b6f77944776856f08ec30858d}\label{classMainWindow_a996c5a2b6f77944776856f08ec30858d} 
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор класса \doxylink{classMainWindow}{Main\+Window}. 
+
+Создает главное окно приложения, инициализирует элементы интерфейса и устанавливает соединение с сервером. 
+\begin{DoxyParams}{Аргументы}
+{\em parent} & Родительский элемент (по умолчанию nullptr). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}\label{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7} 
+\index{MainWindow@{MainWindow}!````~MainWindow@{\texorpdfstring{$\sim$}{\string~}MainWindow}}
+\index{````~MainWindow@{\texorpdfstring{$\sim$}{\string~}MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MainWindow()}{\string~MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\texorpdfstring{$\sim$}{\string~}\+Main\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор класса \doxylink{classMainWindow}{Main\+Window}. 
+
+Освобождает ресурсы, связанные с интерфейсом главного окна. 
+
+\doxysubsection{Методы}
+\Hypertarget{classMainWindow_a6f28338717c3078dec81605f959d8bae}\label{classMainWindow_a6f28338717c3078dec81605f959d8bae} 
+\index{MainWindow@{MainWindow}!loginButtonClicked@{loginButtonClicked}}
+\index{loginButtonClicked@{loginButtonClicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{loginButtonClicked}{loginButtonClicked}}
+{\footnotesize\ttfamily void Main\+Window\+::login\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал, генерируемый при нажатии кнопки входа. 
+
+\Hypertarget{classMainWindow_a5bb650415d9c306bad6fdcbb68b8ebc5}\label{classMainWindow_a5bb650415d9c306bad6fdcbb68b8ebc5} 
+\index{MainWindow@{MainWindow}!registrationButtonClicked@{registrationButtonClicked}}
+\index{registrationButtonClicked@{registrationButtonClicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{registrationButtonClicked}{registrationButtonClicked}}
+{\footnotesize\ttfamily void Main\+Window\+::registration\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал, генерируемый при нажатии кнопки регистрации. 
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+client/\mbox{\hyperlink{mainwindow_8h}{mainwindow.\+h}}\item 
+client/\mbox{\hyperlink{mainwindow_8cpp}{mainwindow.\+cpp}}\end{DoxyCompactItemize}

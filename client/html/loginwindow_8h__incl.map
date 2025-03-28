@@ -1,0 +1,15 @@
+<map id="client/loginwindow.h" name="client/loginwindow.h">
+<area shape="rect" id="Node000001" title="Заголовочный файл класса LoginWindow, реализующего окно авторизации." alt="" coords="104,5,259,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,80,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,33,79,75,76,70,158,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="104,79,259,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,31,184,65,179,65,179,31"/>
+<area shape="rect" id="Node000004" href="$networkclient_8h.html" title="Заголовочный файл класса RegistrationWindow для работы с сетевым клиентом." alt="" coords="283,79,405,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="209,28,306,71,304,75,206,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="197,152,272,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="328,106,266,147,263,142,325,102"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="296,152,392,177"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="347,104,347,138,341,138,341,104"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="416,152,531,177"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="366,102,441,143,439,147,364,106"/>
+</map>

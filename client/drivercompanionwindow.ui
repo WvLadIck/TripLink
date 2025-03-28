@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DriverCompanionWindow</class>
+ <widget class="QDialog" name="DriverCompanionWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(235, 220, 206);
+font: 700 14pt &quot;Linux Libertine G&quot;;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QToolButton" name="toolButton_then0">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(235, 220, 206);</string>
+       </property>
+       <property name="text">
+        <string>&lt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item alignment="Qt::AlignHCenter">
+        <widget class="QLabel" name="label_whois">
+         <property name="styleSheet">
+          <string notr="true">font: 700 20pt &quot;Linux Libertine G&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Кем вы являетесь?</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_companion">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(224, 202, 180);</string>
+         </property>
+         <property name="text">
+          <string>Пассажир</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_driver">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(224, 202, 180);</string>
+         </property>
+         <property name="text">
+          <string>Водитель</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_feetback">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(224, 202, 180);</string>
+         </property>
+         <property name="text">
+          <string>Отзыв и рейтинг</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButton_then1">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(235, 220, 206);</string>
+       </property>
+       <property name="text">
+        <string>&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

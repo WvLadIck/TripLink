@@ -1,0 +1,7 @@
+<map id="client/managerform.h" name="client/managerform.h">
+<area shape="rect" id="Node000001" title="Заголовочный файл класса ManagerForm для управления окнами приложения." alt="" coords="72,5,235,31"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html" title="Главный файл приложения." alt="" coords="5,79,128,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,41,83,81,79,76,127,37"/>
+<area shape="rect" id="Node000003" href="$managerform_8cpp.html" title="Файл реализации класса ManagerForm." alt="" coords="152,79,331,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,37,229,76,225,81,176,41"/>
+</map>

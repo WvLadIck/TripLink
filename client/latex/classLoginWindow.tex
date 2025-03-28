@@ -1,0 +1,107 @@
+\doxysection{Класс Login\+Window}
+\hypertarget{classLoginWindow}{}\label{classLoginWindow}\index{LoginWindow@{LoginWindow}}
+
+
+Класс окна авторизации.  
+
+
+
+
+{\ttfamily \#include $<$loginwindow.\+h$>$}
+
+
+
+Граф наследования\+:Login\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{classLoginWindow__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Login\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{classLoginWindow__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Сигналы}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classLoginWindow_a12e532b1b28e026dd57faf209ef60fe9}{return\+To\+Main\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Сигнал для возврата в главное окно. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLoginWindow_aa6cb8df63910ed39b2ca776fb5526585}{go\+To\+Driver\+Companion\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Сигнал для перехода к окну "{}\+Driver\+Companion\+Window"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLoginWindow_aa4c04d26b299de00156bbf3c32b2a082}{Login\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{classLoginWindow}{Login\+Window}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLoginWindow_a0c49fe788dcce29aa50e7d974e1ad158}{\texorpdfstring{$\sim$}{\string~}\+Login\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор класса \doxylink{classLoginWindow}{Login\+Window}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс окна авторизации. 
+
+Этот класс реализует окно авторизации, которое позволяет пользователю вводить логин и пароль. После успешной или неудачной авторизации генерируются соответствующие сигналы. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classLoginWindow_aa4c04d26b299de00156bbf3c32b2a082}\label{classLoginWindow_aa4c04d26b299de00156bbf3c32b2a082} 
+\index{LoginWindow@{LoginWindow}!LoginWindow@{LoginWindow}}
+\index{LoginWindow@{LoginWindow}!LoginWindow@{LoginWindow}}
+\doxysubsubsection{\texorpdfstring{LoginWindow()}{LoginWindow()}}
+{\footnotesize\ttfamily Login\+Window\+::\+Login\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор класса \doxylink{classLoginWindow}{Login\+Window}. 
+
+Инициализирует интерфейс и подключает сигналы для обработки событий авторизации. 
+\begin{DoxyParams}{Аргументы}
+{\em parent} & Родительский элемент (по умолчанию nullptr). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classLoginWindow_a0c49fe788dcce29aa50e7d974e1ad158}\label{classLoginWindow_a0c49fe788dcce29aa50e7d974e1ad158} 
+\index{LoginWindow@{LoginWindow}!````~LoginWindow@{\texorpdfstring{$\sim$}{\string~}LoginWindow}}
+\index{````~LoginWindow@{\texorpdfstring{$\sim$}{\string~}LoginWindow}!LoginWindow@{LoginWindow}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LoginWindow()}{\string~LoginWindow()}}
+{\footnotesize\ttfamily Login\+Window\+::\texorpdfstring{$\sim$}{\string~}\+Login\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор класса \doxylink{classLoginWindow}{Login\+Window}. 
+
+Освобождает ресурсы, связанные с интерфейсом окна. 
+
+\doxysubsection{Методы}
+\Hypertarget{classLoginWindow_aa6cb8df63910ed39b2ca776fb5526585}\label{classLoginWindow_aa6cb8df63910ed39b2ca776fb5526585} 
+\index{LoginWindow@{LoginWindow}!goToDriverCompanionWindow@{goToDriverCompanionWindow}}
+\index{goToDriverCompanionWindow@{goToDriverCompanionWindow}!LoginWindow@{LoginWindow}}
+\doxysubsubsection{\texorpdfstring{goToDriverCompanionWindow}{goToDriverCompanionWindow}}
+{\footnotesize\ttfamily void Login\+Window\+::go\+To\+Driver\+Companion\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал для перехода к окну "{}\+Driver\+Companion\+Window"{}. 
+
+\Hypertarget{classLoginWindow_a12e532b1b28e026dd57faf209ef60fe9}\label{classLoginWindow_a12e532b1b28e026dd57faf209ef60fe9} 
+\index{LoginWindow@{LoginWindow}!returnToMainWindow@{returnToMainWindow}}
+\index{returnToMainWindow@{returnToMainWindow}!LoginWindow@{LoginWindow}}
+\doxysubsubsection{\texorpdfstring{returnToMainWindow}{returnToMainWindow}}
+{\footnotesize\ttfamily void Login\+Window\+::return\+To\+Main\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал для возврата в главное окно. 
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+client/\mbox{\hyperlink{loginwindow_8h}{loginwindow.\+h}}\item 
+client/\mbox{\hyperlink{loginwindow_8cpp}{loginwindow.\+cpp}}\end{DoxyCompactItemize}

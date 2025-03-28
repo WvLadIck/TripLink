@@ -1,0 +1,109 @@
+\doxysection{Класс Driver\+Window}
+\hypertarget{classDriverWindow}{}\label{classDriverWindow}\index{DriverWindow@{DriverWindow}}
+
+
+Класс для представления окна водителя.  
+
+
+
+
+{\ttfamily \#include $<$driverwindow.\+h$>$}
+
+
+
+Граф наследования\+:Driver\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classDriverWindow__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Driver\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classDriverWindow__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Сигналы}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDriverWindow_a6adffbe6f49d3c1b36cf50d309df9475}{return\+To\+Previous\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Сигнал для возвращения на предыдущее окно. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDriverWindow_a73150b85e74105e01b022590a90a61bf}{go\+To\+Finish\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Сигнал для перехода на окно завершения. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDriverWindow_a8b1ea00677940d136f472840e6540c9d}{Driver\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{classDriverWindow}{Driver\+Window}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDriverWindow_a9cb58a4ad42f43ef009adaf6d30b7ab1}{\texorpdfstring{$\sim$}{\string~}\+Driver\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор класса \doxylink{classDriverWindow}{Driver\+Window}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для представления окна водителя. 
+
+Этот класс реализует окно водителя, позволяя ему создавать поездки и отправлять данные на сервер. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classDriverWindow_a8b1ea00677940d136f472840e6540c9d}\label{classDriverWindow_a8b1ea00677940d136f472840e6540c9d} 
+\index{DriverWindow@{DriverWindow}!DriverWindow@{DriverWindow}}
+\index{DriverWindow@{DriverWindow}!DriverWindow@{DriverWindow}}
+\doxysubsubsection{\texorpdfstring{DriverWindow()}{DriverWindow()}}
+{\footnotesize\ttfamily Driver\+Window\+::\+Driver\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор класса \doxylink{classDriverWindow}{Driver\+Window}. 
+
+Инициализирует окно водителя.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em parent} & Указатель на родительский виджет (по умолчанию nullptr). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDriverWindow_a9cb58a4ad42f43ef009adaf6d30b7ab1}\label{classDriverWindow_a9cb58a4ad42f43ef009adaf6d30b7ab1} 
+\index{DriverWindow@{DriverWindow}!````~DriverWindow@{\texorpdfstring{$\sim$}{\string~}DriverWindow}}
+\index{````~DriverWindow@{\texorpdfstring{$\sim$}{\string~}DriverWindow}!DriverWindow@{DriverWindow}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DriverWindow()}{\string~DriverWindow()}}
+{\footnotesize\ttfamily Driver\+Window\+::\texorpdfstring{$\sim$}{\string~}\+Driver\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор класса \doxylink{classDriverWindow}{Driver\+Window}. 
+
+Удаляет все ресурсы, связанные с окном водителя. 
+
+\doxysubsection{Методы}
+\Hypertarget{classDriverWindow_a73150b85e74105e01b022590a90a61bf}\label{classDriverWindow_a73150b85e74105e01b022590a90a61bf} 
+\index{DriverWindow@{DriverWindow}!goToFinishWindow@{goToFinishWindow}}
+\index{goToFinishWindow@{goToFinishWindow}!DriverWindow@{DriverWindow}}
+\doxysubsubsection{\texorpdfstring{goToFinishWindow}{goToFinishWindow}}
+{\footnotesize\ttfamily void Driver\+Window\+::go\+To\+Finish\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал для перехода на окно завершения. 
+
+\Hypertarget{classDriverWindow_a6adffbe6f49d3c1b36cf50d309df9475}\label{classDriverWindow_a6adffbe6f49d3c1b36cf50d309df9475} 
+\index{DriverWindow@{DriverWindow}!returnToPreviousWindow@{returnToPreviousWindow}}
+\index{returnToPreviousWindow@{returnToPreviousWindow}!DriverWindow@{DriverWindow}}
+\doxysubsubsection{\texorpdfstring{returnToPreviousWindow}{returnToPreviousWindow}}
+{\footnotesize\ttfamily void Driver\+Window\+::return\+To\+Previous\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал для возвращения на предыдущее окно. 
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+client/\mbox{\hyperlink{driverwindow_8h}{driverwindow.\+h}}\item 
+client/\mbox{\hyperlink{driverwindow_8cpp}{driverwindow.\+cpp}}\end{DoxyCompactItemize}

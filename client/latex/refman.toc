@@ -1,0 +1,183 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {russian}{}\relax 
+\contentsline {chapter}{\numberline {1}Алфавитный указатель пространств имен}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Пространства имен}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Иерархический список классов}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Иерархия классов}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Алфавитный указатель классов}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Классы}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Список файлов}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Файлы}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Пространства имен}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Пространство имен Ui}{9}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Классы}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Класс Car\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window}{11}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Подробное описание}{12}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Конструктор(ы)}{12}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}CarWindow()}{12}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}$\sim $CarWindow()}{12}{subsubsection.6.1.2.2}%
+\contentsline {subsection}{\numberline {6.1.3}Методы}{13}{subsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.3.1}displayTripInfo}{13}{subsubsection.6.1.3.1}%
+\contentsline {subsubsection}{\numberline {6.1.3.2}goToFinishWindow}{13}{subsubsection.6.1.3.2}%
+\contentsline {subsubsection}{\numberline {6.1.3.3}on\_toolButton\_then0\_clicked}{13}{subsubsection.6.1.3.3}%
+\contentsline {subsubsection}{\numberline {6.1.3.4}on\_toolButton\_then1\_clicked}{13}{subsubsection.6.1.3.4}%
+\contentsline {subsubsection}{\numberline {6.1.3.5}returnToPreviousWindow}{13}{subsubsection.6.1.3.5}%
+\contentsline {subsubsection}{\numberline {6.1.3.6}setTripId()}{13}{subsubsection.6.1.3.6}%
+\contentsline {section}{\numberline {6.2}Класс Companion\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window}{14}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Подробное описание}{15}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Конструктор(ы)}{15}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}CompanionWindow()}{15}{subsubsection.6.2.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2.2}$\sim $CompanionWindow()}{16}{subsubsection.6.2.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Методы}{16}{subsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.3.1}getAvailableTrips()}{16}{subsubsection.6.2.3.1}%
+\contentsline {subsubsection}{\numberline {6.2.3.2}goToCarWindow}{16}{subsubsection.6.2.3.2}%
+\contentsline {subsubsection}{\numberline {6.2.3.3}goToDriverCompanionWindow}{16}{subsubsection.6.2.3.3}%
+\contentsline {subsubsection}{\numberline {6.2.3.4}handleBookTripResponse}{16}{subsubsection.6.2.3.4}%
+\contentsline {subsubsection}{\numberline {6.2.3.5}handleFindTripResponse}{17}{subsubsection.6.2.3.5}%
+\contentsline {subsubsection}{\numberline {6.2.3.6}on\_listWidget\_info\_itemClicked}{17}{subsubsection.6.2.3.6}%
+\contentsline {subsubsection}{\numberline {6.2.3.7}on\_toolButton\_then0\_clicked}{17}{subsubsection.6.2.3.7}%
+\contentsline {subsubsection}{\numberline {6.2.3.8}on\_toolButton\_then1\_clicked}{17}{subsubsection.6.2.3.8}%
+\contentsline {subsubsection}{\numberline {6.2.3.9}returnToPreviousWindow}{17}{subsubsection.6.2.3.9}%
+\contentsline {subsubsection}{\numberline {6.2.3.10}tripNotFound}{18}{subsubsection.6.2.3.10}%
+\contentsline {section}{\numberline {6.3}Класс Driver\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Companion\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window}{18}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Подробное описание}{19}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Конструктор(ы)}{19}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}DriverCompanionWindow()}{19}{subsubsection.6.3.2.1}%
+\contentsline {subsubsection}{\numberline {6.3.2.2}$\sim $DriverCompanionWindow()}{19}{subsubsection.6.3.2.2}%
+\contentsline {subsection}{\numberline {6.3.3}Методы}{19}{subsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.1}goToCompanionWindow}{19}{subsubsection.6.3.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.3.2}goToDriverWindow}{20}{subsubsection.6.3.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3.3}goToFeedbackWindow}{20}{subsubsection.6.3.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.4}returnToPreviousWindow}{20}{subsubsection.6.3.3.4}%
+\contentsline {section}{\numberline {6.4}Класс Driver\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window}{20}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Подробное описание}{21}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Конструктор(ы)}{21}{subsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.1}DriverWindow()}{21}{subsubsection.6.4.2.1}%
+\contentsline {subsubsection}{\numberline {6.4.2.2}$\sim $DriverWindow()}{22}{subsubsection.6.4.2.2}%
+\contentsline {subsection}{\numberline {6.4.3}Методы}{22}{subsection.6.4.3}%
+\contentsline {subsubsection}{\numberline {6.4.3.1}goToFinishWindow}{22}{subsubsection.6.4.3.1}%
+\contentsline {subsubsection}{\numberline {6.4.3.2}returnToPreviousWindow}{22}{subsubsection.6.4.3.2}%
+\contentsline {section}{\numberline {6.5}Класс Finish\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window}{22}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Подробное описание}{23}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Конструктор(ы)}{23}{subsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.1}FinishWindow()}{23}{subsubsection.6.5.2.1}%
+\contentsline {subsubsection}{\numberline {6.5.2.2}$\sim $FinishWindow()}{24}{subsubsection.6.5.2.2}%
+\contentsline {subsection}{\numberline {6.5.3}Методы}{24}{subsection.6.5.3}%
+\contentsline {subsubsection}{\numberline {6.5.3.1}returnToMainWindow}{24}{subsubsection.6.5.3.1}%
+\contentsline {section}{\numberline {6.6}Класс Login\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window}{24}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Подробное описание}{25}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Конструктор(ы)}{25}{subsection.6.6.2}%
+\contentsline {subsubsection}{\numberline {6.6.2.1}LoginWindow()}{25}{subsubsection.6.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.6.2.2}$\sim $LoginWindow()}{25}{subsubsection.6.6.2.2}%
+\contentsline {subsection}{\numberline {6.6.3}Методы}{25}{subsection.6.6.3}%
+\contentsline {subsubsection}{\numberline {6.6.3.1}goToDriverCompanionWindow}{25}{subsubsection.6.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.6.3.2}returnToMainWindow}{26}{subsubsection.6.6.3.2}%
+\contentsline {section}{\numberline {6.7}Класс Main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window}{26}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Подробное описание}{27}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Конструктор(ы)}{27}{subsection.6.7.2}%
+\contentsline {subsubsection}{\numberline {6.7.2.1}MainWindow()}{27}{subsubsection.6.7.2.1}%
+\contentsline {subsubsection}{\numberline {6.7.2.2}$\sim $MainWindow()}{27}{subsubsection.6.7.2.2}%
+\contentsline {subsection}{\numberline {6.7.3}Методы}{28}{subsection.6.7.3}%
+\contentsline {subsubsection}{\numberline {6.7.3.1}loginButtonClicked}{28}{subsubsection.6.7.3.1}%
+\contentsline {subsubsection}{\numberline {6.7.3.2}registrationButtonClicked}{28}{subsubsection.6.7.3.2}%
+\contentsline {section}{\numberline {6.8}Класс Manager\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Form}{28}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Подробное описание}{28}{subsection.6.8.1}%
+\contentsline {section}{\numberline {6.9}Класс Network\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Client}{29}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Подробное описание}{30}{subsection.6.9.1}%
+\contentsline {subsection}{\numberline {6.9.2}Конструктор(ы)}{30}{subsection.6.9.2}%
+\contentsline {subsubsection}{\numberline {6.9.2.1}NetworkClient()}{30}{subsubsection.6.9.2.1}%
+\contentsline {subsection}{\numberline {6.9.3}Методы}{31}{subsection.6.9.3}%
+\contentsline {subsubsection}{\numberline {6.9.3.1}\_readyRead}{31}{subsubsection.6.9.3.1}%
+\contentsline {subsubsection}{\numberline {6.9.3.2}authFailed}{31}{subsubsection.6.9.3.2}%
+\contentsline {subsubsection}{\numberline {6.9.3.3}authSuccess}{31}{subsubsection.6.9.3.3}%
+\contentsline {subsubsection}{\numberline {6.9.3.4}bookTripResponse}{31}{subsubsection.6.9.3.4}%
+\contentsline {subsubsection}{\numberline {6.9.3.5}connectedToServer}{31}{subsubsection.6.9.3.5}%
+\contentsline {subsubsection}{\numberline {6.9.3.6}connectionStatusChanged}{31}{subsubsection.6.9.3.6}%
+\contentsline {subsubsection}{\numberline {6.9.3.7}connectToServer()}{32}{subsubsection.6.9.3.7}%
+\contentsline {subsubsection}{\numberline {6.9.3.8}disconnectedFromServer}{32}{subsubsection.6.9.3.8}%
+\contentsline {subsubsection}{\numberline {6.9.3.9}error}{32}{subsubsection.6.9.3.9}%
+\contentsline {subsubsection}{\numberline {6.9.3.10}getInstance()}{32}{subsubsection.6.9.3.10}%
+\contentsline {subsubsection}{\numberline {6.9.3.11}getLogin()}{32}{subsubsection.6.9.3.11}%
+\contentsline {subsubsection}{\numberline {6.9.3.12}operator=()}{33}{subsubsection.6.9.3.12}%
+\contentsline {subsubsection}{\numberline {6.9.3.13}readyRead}{33}{subsubsection.6.9.3.13}%
+\contentsline {subsubsection}{\numberline {6.9.3.14}regFailed}{33}{subsubsection.6.9.3.14}%
+\contentsline {subsubsection}{\numberline {6.9.3.15}regSuccess}{33}{subsubsection.6.9.3.15}%
+\contentsline {subsubsection}{\numberline {6.9.3.16}sendMessage()}{33}{subsubsection.6.9.3.16}%
+\contentsline {subsubsection}{\numberline {6.9.3.17}socketError}{33}{subsubsection.6.9.3.17}%
+\contentsline {section}{\numberline {6.10}Класс Registration\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window}{34}{section.6.10}%
+\contentsline {subsection}{\numberline {6.10.1}Подробное описание}{35}{subsection.6.10.1}%
+\contentsline {subsection}{\numberline {6.10.2}Конструктор(ы)}{35}{subsection.6.10.2}%
+\contentsline {subsubsection}{\numberline {6.10.2.1}RegistrationWindow()}{35}{subsubsection.6.10.2.1}%
+\contentsline {subsubsection}{\numberline {6.10.2.2}$\sim $RegistrationWindow()}{35}{subsubsection.6.10.2.2}%
+\contentsline {subsection}{\numberline {6.10.3}Методы}{35}{subsection.6.10.3}%
+\contentsline {subsubsection}{\numberline {6.10.3.1}goToDriverCompanionWindow}{35}{subsubsection.6.10.3.1}%
+\contentsline {subsubsection}{\numberline {6.10.3.2}returnToMainWindow}{35}{subsubsection.6.10.3.2}%
+\contentsline {section}{\numberline {6.11}Класс Tpips}{36}{section.6.11}%
+\contentsline {subsection}{\numberline {6.11.1}Подробное описание}{37}{subsection.6.11.1}%
+\contentsline {subsection}{\numberline {6.11.2}Конструктор(ы)}{37}{subsection.6.11.2}%
+\contentsline {subsubsection}{\numberline {6.11.2.1}Tpips()}{37}{subsubsection.6.11.2.1}%
+\contentsline {subsubsection}{\numberline {6.11.2.2}$\sim $Tpips()}{37}{subsubsection.6.11.2.2}%
+\contentsline {subsection}{\numberline {6.11.3}Методы}{37}{subsection.6.11.3}%
+\contentsline {subsubsection}{\numberline {6.11.3.1}finished}{37}{subsubsection.6.11.3.1}%
+\contentsline {subsubsection}{\numberline {6.11.3.2}goToDriverCompanionWindow}{37}{subsubsection.6.11.3.2}%
+\contentsline {chapter}{\numberline {7}Файлы}{39}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Файл client/carwindow.cpp}{39}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Подробное описание}{39}{subsection.7.1.1}%
+\contentsline {section}{\numberline {7.2}Файл client/carwindow.h}{39}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Подробное описание}{40}{subsection.7.2.1}%
+\contentsline {section}{\numberline {7.3}carwindow.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{41}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Файл client/companionwindow.cpp}{41}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Подробное описание}{41}{subsection.7.4.1}%
+\contentsline {section}{\numberline {7.5}Файл client/companionwindow.h}{42}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Подробное описание}{42}{subsection.7.5.1}%
+\contentsline {section}{\numberline {7.6}companionwindow.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{43}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Файл client/drivercompanionwindow.cpp}{43}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}Подробное описание}{44}{subsection.7.7.1}%
+\contentsline {section}{\numberline {7.8}Файл client/drivercompanionwindow.h}{44}{section.7.8}%
+\contentsline {subsection}{\numberline {7.8.1}Подробное описание}{45}{subsection.7.8.1}%
+\contentsline {section}{\numberline {7.9}drivercompanionwindow.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{45}{section.7.9}%
+\contentsline {section}{\numberline {7.10}Файл client/driverwindow.cpp}{46}{section.7.10}%
+\contentsline {subsection}{\numberline {7.10.1}Подробное описание}{46}{subsection.7.10.1}%
+\contentsline {section}{\numberline {7.11}Файл client/driverwindow.h}{47}{section.7.11}%
+\contentsline {subsection}{\numberline {7.11.1}Подробное описание}{48}{subsection.7.11.1}%
+\contentsline {section}{\numberline {7.12}driverwindow.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{48}{section.7.12}%
+\contentsline {section}{\numberline {7.13}Файл client/feetback.cpp}{48}{section.7.13}%
+\contentsline {subsection}{\numberline {7.13.1}Подробное описание}{49}{subsection.7.13.1}%
+\contentsline {section}{\numberline {7.14}Файл client/feetback.h}{49}{section.7.14}%
+\contentsline {subsection}{\numberline {7.14.1}Подробное описание}{50}{subsection.7.14.1}%
+\contentsline {section}{\numberline {7.15}feetback.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{50}{section.7.15}%
+\contentsline {section}{\numberline {7.16}Файл client/finishwindow.cpp}{51}{section.7.16}%
+\contentsline {subsection}{\numberline {7.16.1}Подробное описание}{51}{subsection.7.16.1}%
+\contentsline {section}{\numberline {7.17}Файл client/finishwindow.h}{51}{section.7.17}%
+\contentsline {subsection}{\numberline {7.17.1}Подробное описание}{52}{subsection.7.17.1}%
+\contentsline {section}{\numberline {7.18}finishwindow.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{53}{section.7.18}%
+\contentsline {section}{\numberline {7.19}Файл client/loginwindow.cpp}{53}{section.7.19}%
+\contentsline {subsection}{\numberline {7.19.1}Подробное описание}{53}{subsection.7.19.1}%
+\contentsline {section}{\numberline {7.20}Файл client/loginwindow.h}{54}{section.7.20}%
+\contentsline {subsection}{\numberline {7.20.1}Подробное описание}{54}{subsection.7.20.1}%
+\contentsline {section}{\numberline {7.21}loginwindow.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{55}{section.7.21}%
+\contentsline {section}{\numberline {7.22}Файл client/main.cpp}{55}{section.7.22}%
+\contentsline {subsection}{\numberline {7.22.1}Подробное описание}{56}{subsection.7.22.1}%
+\contentsline {subsection}{\numberline {7.22.2}Функции}{56}{subsection.7.22.2}%
+\contentsline {subsubsection}{\numberline {7.22.2.1}main()}{56}{subsubsection.7.22.2.1}%
+\contentsline {section}{\numberline {7.23}Файл client/mainwindow.cpp}{56}{section.7.23}%
+\contentsline {subsection}{\numberline {7.23.1}Подробное описание}{56}{subsection.7.23.1}%
+\contentsline {section}{\numberline {7.24}Файл client/mainwindow.h}{57}{section.7.24}%
+\contentsline {subsection}{\numberline {7.24.1}Подробное описание}{57}{subsection.7.24.1}%
+\contentsline {section}{\numberline {7.25}mainwindow.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{58}{section.7.25}%
+\contentsline {section}{\numberline {7.26}Файл client/managerform.cpp}{58}{section.7.26}%
+\contentsline {subsection}{\numberline {7.26.1}Подробное описание}{58}{subsection.7.26.1}%
+\contentsline {section}{\numberline {7.27}Файл client/managerform.h}{59}{section.7.27}%
+\contentsline {subsection}{\numberline {7.27.1}Подробное описание}{59}{subsection.7.27.1}%
+\contentsline {section}{\numberline {7.28}managerform.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{59}{section.7.28}%
+\contentsline {section}{\numberline {7.29}Файл client/networkclient.cpp}{60}{section.7.29}%
+\contentsline {subsection}{\numberline {7.29.1}Подробное описание}{61}{subsection.7.29.1}%
+\contentsline {section}{\numberline {7.30}Файл client/networkclient.h}{61}{section.7.30}%
+\contentsline {subsection}{\numberline {7.30.1}Подробное описание}{62}{subsection.7.30.1}%
+\contentsline {section}{\numberline {7.31}networkclient.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{62}{section.7.31}%
+\contentsline {section}{\numberline {7.32}Файл client/registrationwindow.cpp}{63}{section.7.32}%
+\contentsline {subsection}{\numberline {7.32.1}Подробное описание}{63}{subsection.7.32.1}%
+\contentsline {section}{\numberline {7.33}Файл client/registrationwindow.h}{63}{section.7.33}%
+\contentsline {subsection}{\numberline {7.33.1}Подробное описание}{64}{subsection.7.33.1}%
+\contentsline {section}{\numberline {7.34}registrationwindow.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{64}{section.7.34}%
+\contentsline {chapter}{{\cyrillictext \CYRP \cyrr \cyre \cyrd \cyrm \cyre \cyrt \cyrn \cyrery \cyrishrt \ \cyru \cyrk \cyra \cyrz \cyra \cyrt \cyre \cyrl \cyrsftsn }}{67}{section*.99}%

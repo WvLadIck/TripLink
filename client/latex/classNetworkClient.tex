@@ -1,0 +1,311 @@
+\doxysection{Класс Network\+Client}
+\hypertarget{classNetworkClient}{}\label{classNetworkClient}\index{NetworkClient@{NetworkClient}}
+
+
+Класс для работы с сетевым клиентом.  
+
+
+
+
+{\ttfamily \#include $<$networkclient.\+h$>$}
+
+
+
+Граф наследования\+:Network\+Client\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classNetworkClient__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Network\+Client\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classNetworkClient__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classNetworkClient_adebf692b4c60cae505178b2e7b5f5fbe}{connected\+To\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Слот, вызываемый при успешном подключении к серверу. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetworkClient_ad161fa522af4aac5ca3db380b945c255}{disconnected\+From\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Слот, вызываемый при отключении от сервера. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetworkClient_a0539ef0e17cf9dd07dbcc0fbd3878099}{socket\+Error}} (QAbstract\+Socket\+::\+Socket\+Error socket\+Error)
+\begin{DoxyCompactList}\small\item\em Слот для обработки ошибки сокета. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetworkClient_a147cf730aad3c496ae7beefc82d4c640}{\+\_\+ready\+Read}} ()
+\begin{DoxyCompactList}\small\item\em Слот для обработки входящих данных от сервера. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Сигналы}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classNetworkClient_a4144fba137fa52b99892853c7528bbe7}{connection\+Status\+Changed}} (bool connected)
+\begin{DoxyCompactList}\small\item\em Сигнал о статусе соединения. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetworkClient_add75bc92fa1a7d79ce818f91bf692de4}{error}} (const QString \&message)
+\begin{DoxyCompactList}\small\item\em Сигнал об ошибке. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetworkClient_aec57aaac8331db9d2dd2e953ab9d4434}{auth\+Success}} ()
+\begin{DoxyCompactList}\small\item\em Сигнал об успешной авторизации. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetworkClient_a840913d5e36b404d4ae4f04dc18016fd}{auth\+Failed}} ()
+\begin{DoxyCompactList}\small\item\em Сигнал о неудачной авторизации. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetworkClient_a80557e4d0542b79173fffb579038500c}{reg\+Success}} ()
+\begin{DoxyCompactList}\small\item\em Сигнал об успешной регистрации. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetworkClient_a385977696d6bf75c319619e661113b58}{reg\+Failed}} ()
+\begin{DoxyCompactList}\small\item\em Сигнал о неудачной регистрации. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetworkClient_ad8b93f513be55936a097393dfa567604}{ready\+Read}} (const QString \&message)
+\begin{DoxyCompactList}\small\item\em Сигнал для получения сообщения от сервера. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetworkClient_aba098280cf27cab72b124d33f19f5285}{book\+Trip\+Response}} (const QString \&response)
+\begin{DoxyCompactList}\small\item\em Сигнал для получения ответа на запрос о бронировании поездки. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNetworkClient_ad18b6e8b1377abd789b4294df830282b}{Network\+Client}} (\mbox{\hyperlink{classNetworkClient}{Network\+Client}} const \&)=delete
+\item 
+void \mbox{\hyperlink{classNetworkClient_a60a5d47b96c16d854185f9120e80ea2e}{operator=}} (\mbox{\hyperlink{classNetworkClient}{Network\+Client}} const \&)=delete
+\item 
+void \mbox{\hyperlink{classNetworkClient_a5ff2605be8106593166e016519d9a0e7}{connect\+To\+Server}} (const QString \&host, quint16 port)
+\begin{DoxyCompactList}\small\item\em Метод для подключения к серверу. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNetworkClient_ac55e43713a29b4fbcef0dfddd9320c45}{send\+Message}} (const QString \&message)
+\begin{DoxyCompactList}\small\item\em Метод для отправки сообщения на сервер. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classNetworkClient_a3cbe207ef90b98c9de737786b4357842}{get\+Login}} () const
+\begin{DoxyCompactList}\small\item\em Метод для получения логина текущего пользователя. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classNetworkClient}{Network\+Client}} \& \mbox{\hyperlink{classNetworkClient_a9852760a84b2074043eba832071798d0}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Метод для получения экземпляра синглтона. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для работы с сетевым клиентом. 
+
+Этот класс реализует взаимодействие с сервером через TCP-\/сокет. Он реализует синглтон, обеспечивая наличие только одного экземпляра класса в процессе. Основные функции\+: подключение к серверу, отправка сообщений, обработка ошибок, получение данных. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classNetworkClient_ad18b6e8b1377abd789b4294df830282b}\label{classNetworkClient_ad18b6e8b1377abd789b4294df830282b} 
+\index{NetworkClient@{NetworkClient}!NetworkClient@{NetworkClient}}
+\index{NetworkClient@{NetworkClient}!NetworkClient@{NetworkClient}}
+\doxysubsubsection{\texorpdfstring{NetworkClient()}{NetworkClient()}}
+{\footnotesize\ttfamily Network\+Client\+::\+Network\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNetworkClient}{Network\+Client}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classNetworkClient_a147cf730aad3c496ae7beefc82d4c640}\label{classNetworkClient_a147cf730aad3c496ae7beefc82d4c640} 
+\index{NetworkClient@{NetworkClient}!\_readyRead@{\_readyRead}}
+\index{\_readyRead@{\_readyRead}!NetworkClient@{NetworkClient}}
+\doxysubsubsection{\texorpdfstring{\_readyRead}{\_readyRead}}
+{\footnotesize\ttfamily void Network\+Client\+::\+\_\+ready\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Слот для обработки входящих данных от сервера. 
+
+\Hypertarget{classNetworkClient_a840913d5e36b404d4ae4f04dc18016fd}\label{classNetworkClient_a840913d5e36b404d4ae4f04dc18016fd} 
+\index{NetworkClient@{NetworkClient}!authFailed@{authFailed}}
+\index{authFailed@{authFailed}!NetworkClient@{NetworkClient}}
+\doxysubsubsection{\texorpdfstring{authFailed}{authFailed}}
+{\footnotesize\ttfamily void Network\+Client\+::auth\+Failed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал о неудачной авторизации. 
+
+\Hypertarget{classNetworkClient_aec57aaac8331db9d2dd2e953ab9d4434}\label{classNetworkClient_aec57aaac8331db9d2dd2e953ab9d4434} 
+\index{NetworkClient@{NetworkClient}!authSuccess@{authSuccess}}
+\index{authSuccess@{authSuccess}!NetworkClient@{NetworkClient}}
+\doxysubsubsection{\texorpdfstring{authSuccess}{authSuccess}}
+{\footnotesize\ttfamily void Network\+Client\+::auth\+Success (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал об успешной авторизации. 
+
+\Hypertarget{classNetworkClient_aba098280cf27cab72b124d33f19f5285}\label{classNetworkClient_aba098280cf27cab72b124d33f19f5285} 
+\index{NetworkClient@{NetworkClient}!bookTripResponse@{bookTripResponse}}
+\index{bookTripResponse@{bookTripResponse}!NetworkClient@{NetworkClient}}
+\doxysubsubsection{\texorpdfstring{bookTripResponse}{bookTripResponse}}
+{\footnotesize\ttfamily void Network\+Client\+::book\+Trip\+Response (\begin{DoxyParamCaption}\item[{const QString \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал для получения ответа на запрос о бронировании поездки. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em response} & Ответ сервера. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classNetworkClient_adebf692b4c60cae505178b2e7b5f5fbe}\label{classNetworkClient_adebf692b4c60cae505178b2e7b5f5fbe} 
+\index{NetworkClient@{NetworkClient}!connectedToServer@{connectedToServer}}
+\index{connectedToServer@{connectedToServer}!NetworkClient@{NetworkClient}}
+\doxysubsubsection{\texorpdfstring{connectedToServer}{connectedToServer}}
+{\footnotesize\ttfamily void Network\+Client\+::connected\+To\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Слот, вызываемый при успешном подключении к серверу. 
+
+\Hypertarget{classNetworkClient_a4144fba137fa52b99892853c7528bbe7}\label{classNetworkClient_a4144fba137fa52b99892853c7528bbe7} 
+\index{NetworkClient@{NetworkClient}!connectionStatusChanged@{connectionStatusChanged}}
+\index{connectionStatusChanged@{connectionStatusChanged}!NetworkClient@{NetworkClient}}
+\doxysubsubsection{\texorpdfstring{connectionStatusChanged}{connectionStatusChanged}}
+{\footnotesize\ttfamily void Network\+Client\+::connection\+Status\+Changed (\begin{DoxyParamCaption}\item[{bool}]{connected }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал о статусе соединения. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em connected} & Статус подключения (true -\/ подключено, false -\/ отключено). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classNetworkClient_a5ff2605be8106593166e016519d9a0e7}\label{classNetworkClient_a5ff2605be8106593166e016519d9a0e7} 
+\index{NetworkClient@{NetworkClient}!connectToServer@{connectToServer}}
+\index{connectToServer@{connectToServer}!NetworkClient@{NetworkClient}}
+\doxysubsubsection{\texorpdfstring{connectToServer()}{connectToServer()}}
+{\footnotesize\ttfamily void Network\+Client\+::connect\+To\+Server (\begin{DoxyParamCaption}\item[{const QString \&}]{host,  }\item[{quint16}]{port }\end{DoxyParamCaption})}
+
+
+
+Метод для подключения к серверу. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em host} & Адрес хоста. \\
+\hline
+{\em port} & Порт для подключения. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classNetworkClient_ad161fa522af4aac5ca3db380b945c255}\label{classNetworkClient_ad161fa522af4aac5ca3db380b945c255} 
+\index{NetworkClient@{NetworkClient}!disconnectedFromServer@{disconnectedFromServer}}
+\index{disconnectedFromServer@{disconnectedFromServer}!NetworkClient@{NetworkClient}}
+\doxysubsubsection{\texorpdfstring{disconnectedFromServer}{disconnectedFromServer}}
+{\footnotesize\ttfamily void Network\+Client\+::disconnected\+From\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Слот, вызываемый при отключении от сервера. 
+
+\Hypertarget{classNetworkClient_add75bc92fa1a7d79ce818f91bf692de4}\label{classNetworkClient_add75bc92fa1a7d79ce818f91bf692de4} 
+\index{NetworkClient@{NetworkClient}!error@{error}}
+\index{error@{error}!NetworkClient@{NetworkClient}}
+\doxysubsubsection{\texorpdfstring{error}{error}}
+{\footnotesize\ttfamily void Network\+Client\+::error (\begin{DoxyParamCaption}\item[{const QString \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал об ошибке. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Сообщение об ошибке. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classNetworkClient_a9852760a84b2074043eba832071798d0}\label{classNetworkClient_a9852760a84b2074043eba832071798d0} 
+\index{NetworkClient@{NetworkClient}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!NetworkClient@{NetworkClient}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classNetworkClient}{Network\+Client}} \& Network\+Client\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Метод для получения экземпляра синглтона. 
+
+\begin{DoxyReturn}{Возвращает}
+Экземпляр класса \doxylink{classNetworkClient}{Network\+Client}. 
+\end{DoxyReturn}
+\Hypertarget{classNetworkClient_a3cbe207ef90b98c9de737786b4357842}\label{classNetworkClient_a3cbe207ef90b98c9de737786b4357842} 
+\index{NetworkClient@{NetworkClient}!getLogin@{getLogin}}
+\index{getLogin@{getLogin}!NetworkClient@{NetworkClient}}
+\doxysubsubsection{\texorpdfstring{getLogin()}{getLogin()}}
+{\footnotesize\ttfamily QString Network\+Client\+::get\+Login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Метод для получения логина текущего пользователя. 
+
+\begin{DoxyReturn}{Возвращает}
+Логин текущего пользователя. 
+\end{DoxyReturn}
+\Hypertarget{classNetworkClient_a60a5d47b96c16d854185f9120e80ea2e}\label{classNetworkClient_a60a5d47b96c16d854185f9120e80ea2e} 
+\index{NetworkClient@{NetworkClient}!operator=@{operator=}}
+\index{operator=@{operator=}!NetworkClient@{NetworkClient}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void Network\+Client\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNetworkClient}{Network\+Client}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classNetworkClient_ad8b93f513be55936a097393dfa567604}\label{classNetworkClient_ad8b93f513be55936a097393dfa567604} 
+\index{NetworkClient@{NetworkClient}!readyRead@{readyRead}}
+\index{readyRead@{readyRead}!NetworkClient@{NetworkClient}}
+\doxysubsubsection{\texorpdfstring{readyRead}{readyRead}}
+{\footnotesize\ttfamily void Network\+Client\+::ready\+Read (\begin{DoxyParamCaption}\item[{const QString \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал для получения сообщения от сервера. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Сообщение. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classNetworkClient_a385977696d6bf75c319619e661113b58}\label{classNetworkClient_a385977696d6bf75c319619e661113b58} 
+\index{NetworkClient@{NetworkClient}!regFailed@{regFailed}}
+\index{regFailed@{regFailed}!NetworkClient@{NetworkClient}}
+\doxysubsubsection{\texorpdfstring{regFailed}{regFailed}}
+{\footnotesize\ttfamily void Network\+Client\+::reg\+Failed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал о неудачной регистрации. 
+
+\Hypertarget{classNetworkClient_a80557e4d0542b79173fffb579038500c}\label{classNetworkClient_a80557e4d0542b79173fffb579038500c} 
+\index{NetworkClient@{NetworkClient}!regSuccess@{regSuccess}}
+\index{regSuccess@{regSuccess}!NetworkClient@{NetworkClient}}
+\doxysubsubsection{\texorpdfstring{regSuccess}{regSuccess}}
+{\footnotesize\ttfamily void Network\+Client\+::reg\+Success (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал об успешной регистрации. 
+
+\Hypertarget{classNetworkClient_ac55e43713a29b4fbcef0dfddd9320c45}\label{classNetworkClient_ac55e43713a29b4fbcef0dfddd9320c45} 
+\index{NetworkClient@{NetworkClient}!sendMessage@{sendMessage}}
+\index{sendMessage@{sendMessage}!NetworkClient@{NetworkClient}}
+\doxysubsubsection{\texorpdfstring{sendMessage()}{sendMessage()}}
+{\footnotesize\ttfamily void Network\+Client\+::send\+Message (\begin{DoxyParamCaption}\item[{const QString \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Метод для отправки сообщения на сервер. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Сообщение для отправки. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classNetworkClient_a0539ef0e17cf9dd07dbcc0fbd3878099}\label{classNetworkClient_a0539ef0e17cf9dd07dbcc0fbd3878099} 
+\index{NetworkClient@{NetworkClient}!socketError@{socketError}}
+\index{socketError@{socketError}!NetworkClient@{NetworkClient}}
+\doxysubsubsection{\texorpdfstring{socketError}{socketError}}
+{\footnotesize\ttfamily void Network\+Client\+::socket\+Error (\begin{DoxyParamCaption}\item[{QAbstract\+Socket\+::\+Socket\+Error}]{socket\+Error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Слот для обработки ошибки сокета. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em socket\+Error} & Тип ошибки сокета. \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+client/\mbox{\hyperlink{networkclient_8h}{networkclient.\+h}}\item 
+client/\mbox{\hyperlink{networkclient_8cpp}{networkclient.\+cpp}}\end{DoxyCompactItemize}

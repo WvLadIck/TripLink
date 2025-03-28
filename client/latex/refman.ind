@@ -1,0 +1,269 @@
+\begin{theindex}
+
+  \item {\_readyRead}
+    \subitem {NetworkClient}, \hyperpage{31}
+  \item {\texorpdfstring{$\sim$}{\string~}CarWindow}
+    \subitem {CarWindow}, \hyperpage{12}
+  \item {\texorpdfstring{$\sim$}{\string~}CompanionWindow}
+    \subitem {CompanionWindow}, \hyperpage{16}
+  \item {\texorpdfstring{$\sim$}{\string~}DriverCompanionWindow}
+    \subitem {DriverCompanionWindow}, \hyperpage{19}
+  \item {\texorpdfstring{$\sim$}{\string~}DriverWindow}
+    \subitem {DriverWindow}, \hyperpage{22}
+  \item {\texorpdfstring{$\sim$}{\string~}FinishWindow}
+    \subitem {FinishWindow}, \hyperpage{24}
+  \item {\texorpdfstring{$\sim$}{\string~}LoginWindow}
+    \subitem {LoginWindow}, \hyperpage{25}
+  \item {\texorpdfstring{$\sim$}{\string~}MainWindow}
+    \subitem {MainWindow}, \hyperpage{27}
+  \item {\texorpdfstring{$\sim$}{\string~}RegistrationWindow}
+    \subitem {RegistrationWindow}, \hyperpage{35}
+  \item {\texorpdfstring{$\sim$}{\string~}Tpips}
+    \subitem {Tpips}, \hyperpage{37}
+
+  \indexspace
+
+  \item {authFailed}
+    \subitem {NetworkClient}, \hyperpage{31}
+  \item {authSuccess}
+    \subitem {NetworkClient}, \hyperpage{31}
+
+  \indexspace
+
+  \item {bookTripResponse}
+    \subitem {NetworkClient}, \hyperpage{31}
+
+  \indexspace
+
+  \item {CarWindow}, \hyperpage{11}
+    \subitem {\texorpdfstring{$\sim$}{\string~}CarWindow}, 
+		\hyperpage{12}
+    \subitem {CarWindow}, \hyperpage{12}
+    \subitem {displayTripInfo}, \hyperpage{13}
+    \subitem {goToFinishWindow}, \hyperpage{13}
+    \subitem {on\_toolButton\_then0\_clicked}, \hyperpage{13}
+    \subitem {on\_toolButton\_then1\_clicked}, \hyperpage{13}
+    \subitem {returnToPreviousWindow}, \hyperpage{13}
+    \subitem {setTripId}, \hyperpage{13}
+  \item {client/carwindow.cpp}, \hyperpage{39}
+  \item {client/carwindow.h}, \hyperpage{39}, \hyperpage{41}
+  \item {client/companionwindow.cpp}, \hyperpage{41}
+  \item {client/companionwindow.h}, \hyperpage{42, 43}
+  \item {client/drivercompanionwindow.cpp}, \hyperpage{43}
+  \item {client/drivercompanionwindow.h}, \hyperpage{44, 45}
+  \item {client/driverwindow.cpp}, \hyperpage{46}
+  \item {client/driverwindow.h}, \hyperpage{47, 48}
+  \item {client/feetback.cpp}, \hyperpage{48}
+  \item {client/feetback.h}, \hyperpage{49, 50}
+  \item {client/finishwindow.cpp}, \hyperpage{51}
+  \item {client/finishwindow.h}, \hyperpage{51}, \hyperpage{53}
+  \item {client/loginwindow.cpp}, \hyperpage{53}
+  \item {client/loginwindow.h}, \hyperpage{54, 55}
+  \item {client/main.cpp}, \hyperpage{55}
+  \item {client/mainwindow.cpp}, \hyperpage{56}
+  \item {client/mainwindow.h}, \hyperpage{57, 58}
+  \item {client/managerform.cpp}, \hyperpage{58}
+  \item {client/managerform.h}, \hyperpage{59}
+  \item {client/networkclient.cpp}, \hyperpage{60}
+  \item {client/networkclient.h}, \hyperpage{61, 62}
+  \item {client/registrationwindow.cpp}, \hyperpage{63}
+  \item {client/registrationwindow.h}, \hyperpage{63, 64}
+  \item {CompanionWindow}, \hyperpage{14}
+    \subitem {\texorpdfstring{$\sim$}{\string~}CompanionWindow}, 
+		\hyperpage{16}
+    \subitem {CompanionWindow}, \hyperpage{15}
+    \subitem {getAvailableTrips}, \hyperpage{16}
+    \subitem {goToCarWindow}, \hyperpage{16}
+    \subitem {goToDriverCompanionWindow}, \hyperpage{16}
+    \subitem {handleBookTripResponse}, \hyperpage{16}
+    \subitem {handleFindTripResponse}, \hyperpage{17}
+    \subitem {on\_listWidget\_info\_itemClicked}, \hyperpage{17}
+    \subitem {on\_toolButton\_then0\_clicked}, \hyperpage{17}
+    \subitem {on\_toolButton\_then1\_clicked}, \hyperpage{17}
+    \subitem {returnToPreviousWindow}, \hyperpage{17}
+    \subitem {tripNotFound}, \hyperpage{17}
+  \item {connectedToServer}
+    \subitem {NetworkClient}, \hyperpage{31}
+  \item {connectionStatusChanged}
+    \subitem {NetworkClient}, \hyperpage{31}
+  \item {connectToServer}
+    \subitem {NetworkClient}, \hyperpage{32}
+
+  \indexspace
+
+  \item {disconnectedFromServer}
+    \subitem {NetworkClient}, \hyperpage{32}
+  \item {displayTripInfo}
+    \subitem {CarWindow}, \hyperpage{13}
+  \item {DriverCompanionWindow}, \hyperpage{18}
+    \subitem {\texorpdfstring{$\sim$}{\string~}DriverCompanionWindow}, 
+		\hyperpage{19}
+    \subitem {DriverCompanionWindow}, \hyperpage{19}
+    \subitem {goToCompanionWindow}, \hyperpage{19}
+    \subitem {goToDriverWindow}, \hyperpage{19}
+    \subitem {goToFeedbackWindow}, \hyperpage{20}
+    \subitem {returnToPreviousWindow}, \hyperpage{20}
+  \item {DriverWindow}, \hyperpage{20}
+    \subitem {\texorpdfstring{$\sim$}{\string~}DriverWindow}, 
+		\hyperpage{22}
+    \subitem {DriverWindow}, \hyperpage{21}
+    \subitem {goToFinishWindow}, \hyperpage{22}
+    \subitem {returnToPreviousWindow}, \hyperpage{22}
+
+  \indexspace
+
+  \item {error}
+    \subitem {NetworkClient}, \hyperpage{32}
+
+  \indexspace
+
+  \item {finished}
+    \subitem {Tpips}, \hyperpage{37}
+  \item {FinishWindow}, \hyperpage{22}
+    \subitem {\texorpdfstring{$\sim$}{\string~}FinishWindow}, 
+		\hyperpage{24}
+    \subitem {FinishWindow}, \hyperpage{23}
+    \subitem {returnToMainWindow}, \hyperpage{24}
+
+  \indexspace
+
+  \item {getAvailableTrips}
+    \subitem {CompanionWindow}, \hyperpage{16}
+  \item {getInstance}
+    \subitem {NetworkClient}, \hyperpage{32}
+  \item {getLogin}
+    \subitem {NetworkClient}, \hyperpage{32}
+  \item {goToCarWindow}
+    \subitem {CompanionWindow}, \hyperpage{16}
+  \item {goToCompanionWindow}
+    \subitem {DriverCompanionWindow}, \hyperpage{19}
+  \item {goToDriverCompanionWindow}
+    \subitem {CompanionWindow}, \hyperpage{16}
+    \subitem {LoginWindow}, \hyperpage{25}
+    \subitem {RegistrationWindow}, \hyperpage{35}
+    \subitem {Tpips}, \hyperpage{37}
+  \item {goToDriverWindow}
+    \subitem {DriverCompanionWindow}, \hyperpage{19}
+  \item {goToFeedbackWindow}
+    \subitem {DriverCompanionWindow}, \hyperpage{20}
+  \item {goToFinishWindow}
+    \subitem {CarWindow}, \hyperpage{13}
+    \subitem {DriverWindow}, \hyperpage{22}
+
+  \indexspace
+
+  \item {handleBookTripResponse}
+    \subitem {CompanionWindow}, \hyperpage{16}
+  \item {handleFindTripResponse}
+    \subitem {CompanionWindow}, \hyperpage{17}
+
+  \indexspace
+
+  \item {loginButtonClicked}
+    \subitem {MainWindow}, \hyperpage{28}
+  \item {LoginWindow}, \hyperpage{24}
+    \subitem {\texorpdfstring{$\sim$}{\string~}LoginWindow}, 
+		\hyperpage{25}
+    \subitem {goToDriverCompanionWindow}, \hyperpage{25}
+    \subitem {LoginWindow}, \hyperpage{25}
+    \subitem {returnToMainWindow}, \hyperpage{25}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{56}
+  \item {main.cpp}
+    \subitem {main}, \hyperpage{56}
+  \item {MainWindow}, \hyperpage{26}
+    \subitem {\texorpdfstring{$\sim$}{\string~}MainWindow}, 
+		\hyperpage{27}
+    \subitem {loginButtonClicked}, \hyperpage{28}
+    \subitem {MainWindow}, \hyperpage{27}
+    \subitem {registrationButtonClicked}, \hyperpage{28}
+  \item {ManagerForm}, \hyperpage{28}
+
+  \indexspace
+
+  \item {NetworkClient}, \hyperpage{29}
+    \subitem {\_readyRead}, \hyperpage{31}
+    \subitem {authFailed}, \hyperpage{31}
+    \subitem {authSuccess}, \hyperpage{31}
+    \subitem {bookTripResponse}, \hyperpage{31}
+    \subitem {connectedToServer}, \hyperpage{31}
+    \subitem {connectionStatusChanged}, \hyperpage{31}
+    \subitem {connectToServer}, \hyperpage{32}
+    \subitem {disconnectedFromServer}, \hyperpage{32}
+    \subitem {error}, \hyperpage{32}
+    \subitem {getInstance}, \hyperpage{32}
+    \subitem {getLogin}, \hyperpage{32}
+    \subitem {NetworkClient}, \hyperpage{30}
+    \subitem {operator=}, \hyperpage{32}
+    \subitem {readyRead}, \hyperpage{33}
+    \subitem {regFailed}, \hyperpage{33}
+    \subitem {regSuccess}, \hyperpage{33}
+    \subitem {sendMessage}, \hyperpage{33}
+    \subitem {socketError}, \hyperpage{33}
+
+  \indexspace
+
+  \item {on\_listWidget\_info\_itemClicked}
+    \subitem {CompanionWindow}, \hyperpage{17}
+  \item {on\_toolButton\_then0\_clicked}
+    \subitem {CarWindow}, \hyperpage{13}
+    \subitem {CompanionWindow}, \hyperpage{17}
+  \item {on\_toolButton\_then1\_clicked}
+    \subitem {CarWindow}, \hyperpage{13}
+    \subitem {CompanionWindow}, \hyperpage{17}
+  \item {operator=}
+    \subitem {NetworkClient}, \hyperpage{32}
+
+  \indexspace
+
+  \item {readyRead}
+    \subitem {NetworkClient}, \hyperpage{33}
+  \item {regFailed}
+    \subitem {NetworkClient}, \hyperpage{33}
+  \item {registrationButtonClicked}
+    \subitem {MainWindow}, \hyperpage{28}
+  \item {RegistrationWindow}, \hyperpage{34}
+    \subitem {\texorpdfstring{$\sim$}{\string~}RegistrationWindow}, 
+		\hyperpage{35}
+    \subitem {goToDriverCompanionWindow}, \hyperpage{35}
+    \subitem {RegistrationWindow}, \hyperpage{35}
+    \subitem {returnToMainWindow}, \hyperpage{35}
+  \item {regSuccess}
+    \subitem {NetworkClient}, \hyperpage{33}
+  \item {returnToMainWindow}
+    \subitem {FinishWindow}, \hyperpage{24}
+    \subitem {LoginWindow}, \hyperpage{25}
+    \subitem {RegistrationWindow}, \hyperpage{35}
+  \item {returnToPreviousWindow}
+    \subitem {CarWindow}, \hyperpage{13}
+    \subitem {CompanionWindow}, \hyperpage{17}
+    \subitem {DriverCompanionWindow}, \hyperpage{20}
+    \subitem {DriverWindow}, \hyperpage{22}
+
+  \indexspace
+
+  \item {sendMessage}
+    \subitem {NetworkClient}, \hyperpage{33}
+  \item {setTripId}
+    \subitem {CarWindow}, \hyperpage{13}
+  \item {socketError}
+    \subitem {NetworkClient}, \hyperpage{33}
+
+  \indexspace
+
+  \item {Tpips}, \hyperpage{36}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Tpips}, \hyperpage{37}
+    \subitem {finished}, \hyperpage{37}
+    \subitem {goToDriverCompanionWindow}, \hyperpage{37}
+    \subitem {Tpips}, \hyperpage{37}
+  \item {tripNotFound}
+    \subitem {CompanionWindow}, \hyperpage{17}
+
+  \indexspace
+
+  \item {Ui}, \hyperpage{9}
+
+\end{theindex}

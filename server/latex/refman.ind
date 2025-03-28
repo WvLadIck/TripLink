@@ -1,0 +1,112 @@
+\begin{theindex}
+
+  \item {addUser}
+    \subitem {Database}, \hyperpage{8}
+
+  \indexspace
+
+  \item {bookTrip}
+    \subitem {Database}, \hyperpage{9}
+
+  \indexspace
+
+  \item {checkUser}
+    \subitem {Database}, \hyperpage{9}
+  \item {createTable}
+    \subitem {Database}, \hyperpage{9}
+
+  \indexspace
+
+  \item {Database}, \hyperpage{7}
+    \subitem {addUser}, \hyperpage{8}
+    \subitem {bookTrip}, \hyperpage{9}
+    \subitem {checkUser}, \hyperpage{9}
+    \subitem {createTable}, \hyperpage{9}
+    \subitem {findTrips}, \hyperpage{9}
+    \subitem {getInstance}, \hyperpage{10}
+    \subitem {getTrips}, \hyperpage{10}
+    \subitem {getUserRating}, \hyperpage{10}
+    \subitem {saveRating}, \hyperpage{11}
+    \subitem {saveReview}, \hyperpage{11}
+    \subitem {saveTrip}, \hyperpage{11}
+
+  \indexspace
+
+  \item {findTrips}
+    \subitem {Database}, \hyperpage{9}
+
+  \indexspace
+
+  \item {getInstance}
+    \subitem {Database}, \hyperpage{10}
+  \item {getTrips}
+    \subitem {Database}, \hyperpage{10}
+  \item {getUserRating}
+    \subitem {Database}, \hyperpage{10}
+
+  \indexspace
+
+  \item {handleAuth}
+    \subitem {ServerFunction}, \hyperpage{15}
+  \item {handleBookTrip}
+    \subitem {ServerFunction}, \hyperpage{15}
+  \item {handleCheck}
+    \subitem {ServerFunction}, \hyperpage{15}
+  \item {handleFindTrip}
+    \subitem {ServerFunction}, \hyperpage{15}
+  \item {handleRating}
+    \subitem {ServerFunction}, \hyperpage{16}
+  \item {handleReg}
+    \subitem {ServerFunction}, \hyperpage{16}
+  \item {handleReview}
+    \subitem {ServerFunction}, \hyperpage{16}
+  \item {handleStat}
+    \subitem {ServerFunction}, \hyperpage{17}
+  \item {handleTrip}
+    \subitem {ServerFunction}, \hyperpage{17}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{22}
+  \item {main.cpp}
+    \subitem {main}, \hyperpage{22}
+  \item {MyTcpServer}, \hyperpage{12}
+    \subitem {MyTcpServer}, \hyperpage{13}
+    \subitem {slotClientDisconnected}, \hyperpage{14}
+    \subitem {slotNewConnection}, \hyperpage{14}
+    \subitem {slotServerRead}, \hyperpage{14}
+
+  \indexspace
+
+  \item {saveRating}
+    \subitem {Database}, \hyperpage{11}
+  \item {saveReview}
+    \subitem {Database}, \hyperpage{11}
+  \item {saveTrip}
+    \subitem {Database}, \hyperpage{11}
+  \item {server/database.cpp}, \hyperpage{19}
+  \item {server/database.h}, \hyperpage{19, 20}
+  \item {server/main.cpp}, \hyperpage{21}
+  \item {server/mytcpserver.cpp}, \hyperpage{22}
+  \item {server/mytcpserver.h}, \hyperpage{22, 23}
+  \item {server/serverfunction.cpp}, \hyperpage{24}
+  \item {server/serverfunction.h}, \hyperpage{24, 25}
+  \item {ServerFunction}, \hyperpage{14}
+    \subitem {handleAuth}, \hyperpage{15}
+    \subitem {handleBookTrip}, \hyperpage{15}
+    \subitem {handleCheck}, \hyperpage{15}
+    \subitem {handleFindTrip}, \hyperpage{15}
+    \subitem {handleRating}, \hyperpage{16}
+    \subitem {handleReg}, \hyperpage{16}
+    \subitem {handleReview}, \hyperpage{16}
+    \subitem {handleStat}, \hyperpage{17}
+    \subitem {handleTrip}, \hyperpage{17}
+  \item {slotClientDisconnected}
+    \subitem {MyTcpServer}, \hyperpage{14}
+  \item {slotNewConnection}
+    \subitem {MyTcpServer}, \hyperpage{14}
+  \item {slotServerRead}
+    \subitem {MyTcpServer}, \hyperpage{14}
+
+\end{theindex}

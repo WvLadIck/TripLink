@@ -1,0 +1,66 @@
+\doxysection{managerform.\+h}
+\hypertarget{managerform_8h_source}{}\label{managerform_8h_source}\index{client/managerform.h@{client/managerform.h}}
+\mbox{\hyperlink{managerform_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ MANAGERFORM\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ MANAGERFORM\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QVBoxLayout>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QMap>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{mainwindow_8h}{mainwindow.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{loginwindow_8h}{loginwindow.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{registrationwindow_8h}{registrationwindow.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{drivercompanionwindow_8h}{drivercompanionwindow.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{companionwindow_8h}{companionwindow.h}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{driverwindow_8h}{driverwindow.h}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{carwindow_8h}{carwindow.h}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{finishwindow_8h}{finishwindow.h}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{networkclient_8h}{networkclient.h}}"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{feetback_8h}{feetback.h}}"{}}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classManagerForm}{ManagerForm}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classManagerForm}{ManagerForm}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classManagerForm}{\string~ManagerForm}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ showLoginWindow();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ showRegistrationWindow();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ showDriverCompanionWindow();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ showCompanionWindow();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ showDriverWindow();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ showCarWindow(\textcolor{keywordtype}{int}\ tripId,\ QVariantMap\ tripInfo);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ handleReturnToPrevious();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ showFinishWindow();}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ showMainWindowFromFinish();}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ onConnectionStatusChanged(\textcolor{keywordtype}{bool}\ connected);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ showFeedbackWindow();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ showDriverCompanionWindowFromCompanion();}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{classMainWindow}{MainWindow}}\ *Main\_Window;\ }
+\DoxyCodeLine{00114\ \ \ \ \ \mbox{\hyperlink{classLoginWindow}{LoginWindow}}\ *Login\_Window;\ }
+\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{classRegistrationWindow}{RegistrationWindow}}\ *Reg\_Window;\ }
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{classDriverCompanionWindow}{DriverCompanionWindow}}\ *Drive\_Comp\_Window;\ }
+\DoxyCodeLine{00117\ \ \ \ \ \mbox{\hyperlink{classCompanionWindow}{CompanionWindow}}\ *Comp}
+
+\end{DoxyCode}

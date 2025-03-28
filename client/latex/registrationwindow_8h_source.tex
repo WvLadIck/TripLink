@@ -1,0 +1,43 @@
+\doxysection{registrationwindow.\+h}
+\hypertarget{registrationwindow_8h_source}{}\label{registrationwindow_8h_source}\index{client/registrationwindow.h@{client/registrationwindow.h}}
+\mbox{\hyperlink{registrationwindow_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ REGISTRATIONWINDOW\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ REGISTRATIONWINDOW\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}function\_for\_client.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{networkclient_8h}{networkclient.h}}"{}}\ \textcolor{comment}{//\ Добавляем\ заголовочный\ файл}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceUi}{Ui}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRegistrationWindow}{RegistrationWindow}};}
+\DoxyCodeLine{00014\ \}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRegistrationWindow}{RegistrationWindow}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classRegistrationWindow}{RegistrationWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classRegistrationWindow_acff90e767180d33a169745f5418b8eb1}{\string~RegistrationWindow}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ signals:}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRegistrationWindow_ad4f1825917c7b8551fc2263b163ee632}{returnToMainWindow}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRegistrationWindow_a2debfae9bfa16b33bec7431bef35ae7b}{goToDriverCompanionWindow}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_toolButton\_then0\_clicked();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_toolButton\_then1\_clicked();}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ onRegSuccess();\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ onRegFailed();}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ onError(\textcolor{keyword}{const}\ QString\&\ message);\ }
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00072\ \ \ \ \ Ui::RegistrationWindow\ *ui;\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ clear();}
+\DoxyCodeLine{00077\ \};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ REGISTRATIONWINDOW\_H}}
+
+\end{DoxyCode}

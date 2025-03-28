@@ -1,0 +1,73 @@
+\doxysection{networkclient.\+h}
+\hypertarget{networkclient_8h_source}{}\label{networkclient_8h_source}\index{client/networkclient.h@{client/networkclient.h}}
+\mbox{\hyperlink{networkclient_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ NETWORKCLIENT\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ NETWORKCLIENT\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QTcpSocket>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QHostAddress>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classNetworkClient}{NetworkClient}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classNetworkClient}{NetworkClient}}\&\ \mbox{\hyperlink{classNetworkClient_a9852760a84b2074043eba832071798d0}{getInstance}}()}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classNetworkClient}{NetworkClient}}\ instance;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Запрещаем\ создание\ копий\ и\ присваивание,\ чтобы\ гарантировать\ единственность\ экземпляра}}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classNetworkClient_ad18b6e8b1377abd789b4294df830282b}{NetworkClient}}(\mbox{\hyperlink{classNetworkClient}{NetworkClient}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetworkClient_a60a5d47b96c16d854185f9120e80ea2e}{operator=}}(\mbox{\hyperlink{classNetworkClient}{NetworkClient}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetworkClient_a5ff2605be8106593166e016519d9a0e7}{connectToServer}}(\textcolor{keyword}{const}\ QString\&\ host,\ quint16\ port);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetworkClient_ac55e43713a29b4fbcef0dfddd9320c45}{sendMessage}}(\textcolor{keyword}{const}\ QString\&\ message);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ QString\ \mbox{\hyperlink{classNetworkClient_a3cbe207ef90b98c9de737786b4357842}{getLogin}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ login;\ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ signals:}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetworkClient_a4144fba137fa52b99892853c7528bbe7}{connectionStatusChanged}}(\textcolor{keywordtype}{bool}\ connected);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetworkClient_add75bc92fa1a7d79ce818f91bf692de4}{error}}(\textcolor{keyword}{const}\ QString\&\ message);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetworkClient_aec57aaac8331db9d2dd2e953ab9d4434}{authSuccess}}();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetworkClient_a840913d5e36b404d4ae4f04dc18016fd}{authFailed}}();}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetworkClient_a80557e4d0542b79173fffb579038500c}{regSuccess}}();}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetworkClient_a385977696d6bf75c319619e661113b58}{regFailed}}();}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetworkClient_ad8b93f513be55936a097393dfa567604}{readyRead}}(\textcolor{keyword}{const}\ QString\&\ message);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetworkClient_aba098280cf27cab72b124d33f19f5285}{bookTripResponse}}(\textcolor{keyword}{const}\ QString\&\ response);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetworkClient_adebf692b4c60cae505178b2e7b5f5fbe}{connectedToServer}}();}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetworkClient_ad161fa522af4aac5ca3db380b945c255}{disconnectedFromServer}}();}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetworkClient_a0539ef0e17cf9dd07dbcc0fbd3878099}{socketError}}(QAbstractSocket::SocketError\ \mbox{\hyperlink{classNetworkClient_a0539ef0e17cf9dd07dbcc0fbd3878099}{socketError}});}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNetworkClient_a147cf730aad3c496ae7beefc82d4c640}{\_readyRead}}();}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{classNetworkClient}{NetworkClient}}();}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{classNetworkClient}{\string~NetworkClient}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ QTcpSocket*\ socket;\ }
+\DoxyCodeLine{00136\ \ \ \ \ QString\ serverHost;\ }
+\DoxyCodeLine{00137\ \ \ \ \ quint16\ serverPort;\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{bool}\ isConnected;\ }
+\DoxyCodeLine{00139\ \ \ \ \ QString\ login;\ }
+\DoxyCodeLine{00140\ \};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NETWORKCLIENT\_H}}
+
+\end{DoxyCode}
