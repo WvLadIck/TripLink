@@ -10,7 +10,7 @@ CompanionWindow::CompanionWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     connect(ui->toolButton_then0, &QToolButton::clicked, this, &CompanionWindow::on_toolButton_then0_clicked);
-    connect(ui->toolButton_then1, &QToolButton::clicked, this, &CompanionWindow::on_toolButton_then1_clicked);
+    //connect(ui->toolButton_then1, &QToolButton::clicked, this, &CompanionWindow::on_toolButton_then1_clicked);
 }
 
 CompanionWindow::~CompanionWindow()
@@ -31,20 +31,25 @@ void CompanionWindow::on_toolButton_then0_clicked()
 void CompanionWindow::on_toolButton_then1_clicked()
 {
     qDebug() << "on_toolButton_then1_clicked() called";
-    qDebug() << "Number of available trips: " << availableTrips.size();
+
+    QString from = ui->lineEdit_from->text().trimmed();
+    QString to = ui->lineEdit_to->text().trimmed();
+
+    if (from.isEmpty() || to.isEmpty()) {
+        QMessageBox::warning(this, "Ошибка", "Пожалуйста, заполните поля 'Откуда' и 'Куда'.");
+        return;
+    }
 
     if (!isSearchPerformed) {
         // Выполняем поиск поездок
-        QString from = ui->lineEdit_from->text();
-        QString to = ui->lineEdit_to->text();
         QString command = QString("find&%1&%2\r\n").arg(from, to);
         NetworkClient::getInstance().sendMessage(command);
         connect(&NetworkClient::getInstance(), &NetworkClient::readyRead, this, &CompanionWindow::handleFindTripResponse);
         isSearchPerformed = true; // Устанавливаем состояние
     } else {
-        // Проверяем доступность поездки перед бронированием
+        // Бронируем первую найденную поездку
         if (availableTrips.isEmpty()) {
-            QMessageBox::warning(this, "Error", "No trips available.");
+            QMessageBox::warning(this, "Ошибка", "Нет доступных поездок.");
             emit goToDriverCompanionWindow();
             return;
         }
@@ -52,10 +57,23 @@ void CompanionWindow::on_toolButton_then1_clicked()
         // Получаем ID первой поездки
         selectedTripId = availableTrips[0]["id"].toInt();
 
-        // Отправляем запрос на сервер для проверки доступности поездки
-        QString command = QString("check_trip&%1\r\n").arg(selectedTripId); // Добавляем новую команду
+        // Получаем логин текущего пользователя
+        QString login = NetworkClient::getInstance().getLogin();
+
+        if (login.isEmpty()) {
+            QMessageBox::warning(this, "Ошибка", "Не удалось получить логин пользователя. Пожалуйста, авторизуйтесь.");
+            return;
+        }
+
+        // Формируем команду для бронирования поездки
+        QString command = QString("book&%1&%2\r\n").arg(selectedTripId).arg(login);
+
+        // Отправляем команду на сервер
         NetworkClient::getInstance().sendMessage(command);
-        connect(&NetworkClient::getInstance(), &NetworkClient::readyRead, this, &CompanionWindow::handleCheckTripResponse);
+
+        // Подключаем сигнал readyRead к слоту обработки ответа о бронировании
+        disconnect(&NetworkClient::getInstance(), &NetworkClient::readyRead, this, &CompanionWindow::handleFindTripResponse);
+        connect(&NetworkClient::getInstance(), &NetworkClient::readyRead, this, &CompanionWindow::handleBookTripResponse);
     }
 }
 
@@ -65,7 +83,7 @@ void CompanionWindow::handleFindTripResponse(const QString& message)
     disconnect(&NetworkClient::getInstance(), &NetworkClient::readyRead, this, &CompanionWindow::handleFindTripResponse);
 
     if (message == "find-\r\n") {
-        QMessageBox::warning(this, "Trip not found", "No trips found for the specified locations.");
+        QMessageBox::warning(this, "Поездка не найдена", "Нет поездок по заданному направлению.");
         emit goToDriverCompanionWindow(); // Возвращаемся в DriverCompanionWindow
         availableTrips.clear();
         isSearchPerformed = false; // Сбрасываем состояние
@@ -87,7 +105,7 @@ void CompanionWindow::handleFindTripResponse(const QString& message)
         }
 
         if (availableTrips.isEmpty()) {
-            QMessageBox::warning(this, "Trip not found", "No trips found for the specified locations.");
+            QMessageBox::warning(this, "Поездка не найдена", "Нет поездок по заданному направлению.");
             emit goToDriverCompanionWindow(); // Возвращаемся в DriverCompanionWindow
             availableTrips.clear();
             isSearchPerformed = false; // Сбрасываем состояние
@@ -102,7 +120,7 @@ void CompanionWindow::handleBookTripResponse(const QString& message)
     disconnect(&NetworkClient::getInstance(), &NetworkClient::readyRead, this, &CompanionWindow::handleBookTripResponse);
 
     if (message == "book+\r\n") {
-        QMessageBox::information(this, "Success", "Trip booked successfully!");
+        QMessageBox::information(this, "Успех", "Поездка успешно забронирована!");
 
         // Находим информацию о забронированной поездке
         QVariantMap tripInfo;
@@ -116,33 +134,11 @@ void CompanionWindow::handleBookTripResponse(const QString& message)
         // Переходим в CarWindow и передаем информацию о поездке
         emit goToCarWindow(selectedTripId, tripInfo);
         isSearchPerformed = false; // Сбрасываем состояние
+    } else if (message == "book_already_booked\r\n") {
+        QMessageBox::warning(this, "Ошибка", "Эта поездка уже забронирована другим пользователем.");
+        isSearchPerformed = false;
     } else {
-        QMessageBox::warning(this, "Error", "Failed to book trip.");
-        isSearchPerformed = false; // Сбрасываем состояние
-    }
-}
-
-void CompanionWindow::handleCheckTripResponse(const QString& message)
-{
-    // Отключаем сигнал readyRead, чтобы избежать повторной обработки
-    disconnect(&NetworkClient::getInstance(), &NetworkClient::readyRead, this, &CompanionWindow::handleCheckTripResponse);
-
-    if (message == "check_trip+\r\n") {
-        // Поездка доступна, бронируем
-        // Получаем логин текущего пользователя
-        QString login = NetworkClient::getInstance().getLogin();
-
-        // Формируем команду для бронирования поездки
-        QString command = QString("book&%1&%2\r\n").arg(selectedTripId).arg(login);
-
-        // Отправляем команду на сервер
-        NetworkClient::getInstance().sendMessage(command);
-
-        // Подключаем сигнал readyRead к слоту обработки ответа о бронировании
-        connect(&NetworkClient::getInstance(), &NetworkClient::readyRead, this, &CompanionWindow::handleBookTripResponse);
-    } else {
-        // Поездка уже забронирована
-        QMessageBox::warning(this, "Error", "This trip is already booked by another user.");
+        QMessageBox::warning(this, "Ошибка", "Не удалось забронировать поездку.");
         isSearchPerformed = false; // Сбрасываем состояние
     }
 }

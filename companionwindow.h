@@ -30,7 +30,6 @@ public slots:
     void on_toolButton_then1_clicked();
     void handleFindTripResponse(const QString& message);
     void handleBookTripResponse(const QString& message); // Новый слот для обработки ответа о бронировании
-    void handleCheckTripResponse(const QString& message); // Новый слот для проверки поездки
 
 private:
     Ui::CompanionWindow *ui;
