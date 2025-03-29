@@ -12,7 +12,7 @@ DriverWindow::DriverWindow(QWidget *parent) :
     ui->setupUi(this);
 
     connect(ui->toolButton_then0, &QToolButton::clicked, this, &DriverWindow::on_toolButton_then0_clicked);
-    connect(ui->toolButton_then1, &QToolButton::clicked, this, &DriverWindow::on_toolButton_then1_clicked); // Подключаем кнопку
+    //connect(ui->toolButton_then1, &QToolButton::clicked, this, &DriverWindow::on_toolButton_then1_clicked); // Подключаем кнопку
 }
 
 DriverWindow::~DriverWindow()
