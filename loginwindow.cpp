@@ -9,6 +9,7 @@ LoginWindow::LoginWindow(QWidget *parent) :
     ui(new Ui::LoginWindow)
 {
     ui->setupUi(this);
+    ui->lineEdit_password->setEchoMode(QLineEdit::Password);
     connect(ui->toolButton_then0, &QToolButton::clicked, this, &LoginWindow::on_toolButton_then0_clicked);
     //connect(ui->toolButton_then1, &QToolButton::clicked, this, &LoginWindow::on_toolButton_then1_clicked);
     // Подключаемся к сигналам NetworkClient
