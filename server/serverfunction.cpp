@@ -1,22 +1,22 @@
-/**
- * @file serverfunction.cpp
- * @brief Реализация класса ServerFunction, содержащего обработчики команд сервера.
- */
-
+// serverfunction.cpp
 #include "serverfunction.h"
 #include "database.h"
 #include <QStringList>
+#include <QRegularExpression>
+
+bool ServerFunction::isValidEmail(const QString& email) {
+    QRegularExpression regex("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$");
+    return regex.match(email).hasMatch();
+}
 
 void ServerFunction::handleAuth(QTcpSocket* socket, const QString& message)
 {
-    QString trimmedMessage = message.trimmed(); // Убираем лишние пробелы и переводы строк
+    QString trimmedMessage = message.trimmed();
     QStringList parts = trimmedMessage.split("&");
-
     if (parts.size() == 3) {
         QString login = parts[1];
         QString password = parts[2];
         bool authSuccess = Database::getInstance().checkUser(login, password);
-
         if (authSuccess) {
             socket->write(QString("auth+&%1\r\n").arg(login).toUtf8());
         } else {
@@ -30,12 +30,20 @@ void ServerFunction::handleAuth(QTcpSocket* socket, const QString& message)
 void ServerFunction::handleReg(QTcpSocket* socket, const QString& message)
 {
     QStringList parts = message.split("&");
-    if (parts.size() == 4) {
+    if (parts.size() == 5) { // Ожидаем 5 частей: команда, логин, пароль, email, имя
         QString login = parts[1];
         QString password = parts[2];
         QString email = parts[3];
-        QStringList userData = {login, password, email};
-        bool regSuccess = Database::getInstance().addUser(userData);
+        QString name = parts[4]; // Получаем имя
+
+        // Проверка email
+        if (!isValidEmail(email)) {
+            socket->write("reg_invalid_email\r\n");
+            return;
+        }
+
+        QStringList userData = {login, password, email, name};
+        bool regSuccess = Database::getInstance().addUser(userData); // Передаем имя
         if (regSuccess) {
             socket->write(QString("reg+&%1\r\n").arg(login).toUtf8());
         } else {
@@ -77,6 +85,7 @@ void ServerFunction::handleCheck(QTcpSocket* socket, const QString& message)
         socket->write("check-\r\n");
     }
 }
+
 void ServerFunction::handleTrip(QTcpSocket* socket, const QString& message)
 {
     QStringList parts = message.split("&");
@@ -90,7 +99,6 @@ void ServerFunction::handleTrip(QTcpSocket* socket, const QString& message)
         QSqlQuery query;
         query.prepare("SELECT id FROM users WHERE login = :login");
         query.bindValue(":login", login);
-
         if (!query.exec()) {
             qDebug() << "Error getting user ID:" << query.lastError();
             socket->write("trip-\r\n");
@@ -100,7 +108,6 @@ void ServerFunction::handleTrip(QTcpSocket* socket, const QString& message)
         if (query.next()) {
             int userId = query.value(0).toInt();
             bool success = Database::getInstance().saveTrip(userId, from, to, time);  // Передаем время
-
             if (success) {
                 socket->write("trip+\r\n");
             } else {
@@ -113,19 +120,16 @@ void ServerFunction::handleTrip(QTcpSocket* socket, const QString& message)
         socket->write("trip-\r\n");
     }
 }
+
 void ServerFunction::handleRating(QTcpSocket* socket, const QString& message)
 {
     QString trimmedMessage = message.trimmed(); // Убираем лишние пробелы и переводы строк
     QStringList parts = trimmedMessage.split("&");
-
     if (parts.size() == 3) {  // Ожидаем команду, ID поездки и рейтинг
         int tripId = parts[1].toInt();
         int rating = parts[2].toInt();
-
         qDebug() << "Parsed tripId:" << tripId << "and rating:" << rating;
-
         bool success = Database::getInstance().saveRating(tripId, rating);
-
         if (success) {
             socket->write("rating+\r\n");
         } else {
@@ -135,17 +139,15 @@ void ServerFunction::handleRating(QTcpSocket* socket, const QString& message)
         socket->write("rating-\r\n");
     }
 }
+
 void ServerFunction::handleReview(QTcpSocket* socket, const QString& message)
 {
     QStringList parts = message.split("&");
     if (parts.size() == 3) {  // Ожидаем команду, ID поездки и отзыв
         int tripId = parts[1].toInt();
         QString review = parts[2];
-
         qDebug() << "Parsed tripId:" << tripId << "and review:" << review;
-
         bool success = Database::getInstance().saveReview(tripId, review);
-
         if (success) {
             socket->write("review+\r\n");
         } else {
@@ -155,15 +157,14 @@ void ServerFunction::handleReview(QTcpSocket* socket, const QString& message)
         socket->write("review-\r\n");
     }
 }
+
 void ServerFunction::handleFindTrip(QTcpSocket* socket, const QString& message)
 {
     QStringList parts = message.split("&");
     if (parts.size() == 3) {
         QString from = parts[1];
         QString to = parts[2];
-
         auto trips = Database::getInstance().findTrips(from, to);
-
         if (trips.isEmpty()) {
             socket->write("find-\r\n");
         } else {
@@ -189,9 +190,7 @@ void ServerFunction::handleBookTrip(QTcpSocket* socket, const QString& message)
     if (parts.size() == 3) {
         int tripId = parts[1].toInt();
         QString passengerLogin = parts[2]; // Логин пассажира из сообщения
-
         bool success = Database::getInstance().bookTrip(tripId, passengerLogin);
-
         if (success) {
             socket->write("book+\r\n");
         } else {
@@ -199,7 +198,6 @@ void ServerFunction::handleBookTrip(QTcpSocket* socket, const QString& message)
             QSqlQuery checkQuery;
             checkQuery.prepare("SELECT passenger_login FROM trips WHERE id = :tripId");
             checkQuery.bindValue(":tripId", tripId);
-
             if (checkQuery.exec() && checkQuery.next()) {
                 QString currentPassenger = checkQuery.value(0).toString();
                 if (!currentPassenger.isEmpty()) {
@@ -211,5 +209,27 @@ void ServerFunction::handleBookTrip(QTcpSocket* socket, const QString& message)
         }
     } else {
         socket->write("book-\r\n");
+    }
+}
+
+void ServerFunction::handleProfile(QTcpSocket* socket, const QString& message)
+{
+    QStringList parts = message.split("&");
+    if (parts.size() == 2) {
+        QString login = parts[1];
+        // Запрос к базе данных для получения ФИО и e-mail
+        QList<QString> profileData = Database::getInstance().getUserProfile(login);
+        if (!profileData.isEmpty()) {
+            // Формируем ответ с ФИО и e-mail
+            QString fullName = profileData[0];
+            QString email = profileData[1];
+            socket->write(QString("profile+&%1&%2\r\n").arg(fullName).arg(email).toUtf8());
+        } else {
+            // Пользователь не найден
+            socket->write("profile_not_found\r\n");
+        }
+    } else {
+        // Неверный формат запроса
+        socket->write("profile_invalid_format\r\n");
     }
 }
