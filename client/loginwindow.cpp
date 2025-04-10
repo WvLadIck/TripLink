@@ -1,19 +1,16 @@
-/**
- * @file loginwindow.cpp
- * @brief Файл реализации класса LoginWindow.
- */
-
 #include "loginwindow.h"
 #include "function_for_client.h"
 #include "ui_loginwindow.h"
 #include "networkclient.h"
 #include <QMessageBox>
 
+
 LoginWindow::LoginWindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::LoginWindow)
 {
     ui->setupUi(this);
+    ui->lineEdit_password->setEchoMode(QLineEdit::Password);
     connect(ui->toolButton_then0, &QToolButton::clicked, this, &LoginWindow::on_toolButton_then0_clicked);
     //connect(ui->toolButton_then1, &QToolButton::clicked, this, &LoginWindow::on_toolButton_then1_clicked);
     // Подключаемся к сигналам NetworkClient
@@ -37,8 +34,9 @@ void LoginWindow::on_toolButton_then1_clicked()
 {
     QString login = ui->lineEdit_login->text();
     QString password = ui->lineEdit_password->text();
-    QString command = QString("auth&%1&%2\r\n").arg(login, password); // Добавляем \r\n
+    QString command = QString("auth&%1&%2\r\n").arg(login, password);
     NetworkClient::getInstance().sendMessage(command);
+
 }
 
 void LoginWindow::onAuthSuccess()
@@ -63,3 +61,4 @@ void LoginWindow::clear()
     ui->lineEdit_login->setText("");
     ui->lineEdit_password->setText("");
 }
+

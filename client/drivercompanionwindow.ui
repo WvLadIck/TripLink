@@ -32,6 +32,13 @@ font: 700 14pt &quot;Linux Libertine G&quot;;</string>
      </item>
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="pushButton_profile">
+         <property name="text">
+          <string>Профиль</string>
+         </property>
+        </widget>
+       </item>
        <item alignment="Qt::AlignHCenter">
         <widget class="QLabel" name="label_whois">
          <property name="styleSheet">

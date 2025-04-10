@@ -1,9 +1,3 @@
-/**
- * @file finishwindow.cpp
- * @brief Файл реализации класса FinishWindow.
- */
-
-
 #include "finishwindow.h"
 #include "ui_finishwindow.h"
 
@@ -21,5 +15,5 @@ FinishWindow::~FinishWindow()
 
 void FinishWindow::on_pushButton_home_clicked()
 {
-    emit returnToMainWindow();
+    emit returnToMainWindow(); //  Испускаем сигнал
 }

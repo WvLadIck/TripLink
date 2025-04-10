@@ -1,7 +1,3 @@
-/**
- * @file registrationwindow.cpp
- * @brief Файл реализации класса RegistrationWindow.
- */
 #include "registrationwindow.h"
 #include "ui_registrationwindow.h"
 #include "function_for_client.h"
@@ -38,7 +34,8 @@ void RegistrationWindow::on_toolButton_then1_clicked()
     QString login = ui->lineEdit_login->text();
     QString password = ui->lineEdit_password->text();
     QString email = ui->lineEdit_phone->text(); // Используем поле email
-    QString command = QString("reg&%1&%2&%3\r\n").arg(login, password, email); // Добавляем \r\n
+    QString name = ui->lineEdit_name->text();
+    QString command = QString("reg&%1&%2&%3&%4\r\n").arg(login, password, email, name); // Добавляем \r\n
     NetworkClient::getInstance().sendMessage(command);
 }
 

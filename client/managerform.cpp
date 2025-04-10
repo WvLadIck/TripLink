@@ -1,8 +1,3 @@
-/**
- * @file managerform.cpp
- * @brief Файл реализации класса ManagerForm.
- */
-
 #include "managerform.h"
 #include "networkclient.h"
 
@@ -19,6 +14,8 @@ ManagerForm::ManagerForm(QWidget *parent)
     this->Car_Window = new CarWindow;
     this->Finish_Window = new FinishWindow;
     this->Feedback_Window = new Tpips; // Инициализация окна отзывов
+    QString login = NetworkClient::getInstance().getLogin();
+    this->Profile_Window = new Profile(login);
 
     // Подключения сигналов и слотов
     connect(Main_Window, &MainWindow::loginButtonClicked, this, &ManagerForm::showLoginWindow);
@@ -30,6 +27,7 @@ ManagerForm::ManagerForm(QWidget *parent)
     connect(Drive_Comp_Window, &DriverCompanionWindow::goToCompanionWindow, this, &ManagerForm::showCompanionWindow);
     connect(Drive_Comp_Window, &DriverCompanionWindow::goToDriverWindow, this, &ManagerForm::showDriverWindow);
     connect(Drive_Comp_Window, &DriverCompanionWindow::goToFeedbackWindow, this, &ManagerForm::showFeedbackWindow); // Подключение сигнала для окна отзывов
+    connect(Drive_Comp_Window, &DriverCompanionWindow::goToProfileWindow, this, &ManagerForm::showProfileWindow);
 
     // Добавляем обработку сигнала returnToPreviousWindow для каждого окна
     connect(Drive_Comp_Window, &DriverCompanionWindow::returnToPreviousWindow, this, &ManagerForm::handleReturnToPrevious);
@@ -38,6 +36,8 @@ ManagerForm::ManagerForm(QWidget *parent)
     connect(Car_Window, &CarWindow::returnToPreviousWindow, this, &ManagerForm::handleReturnToPrevious);
     connect(Feedback_Window, &Tpips::finished, this, &ManagerForm::handleReturnToPrevious); // Подключение сигнала finished для окна отзывов
     connect(Feedback_Window, &Tpips::goToDriverCompanionWindow, this, &ManagerForm::showDriverCompanionWindow); // Подключение сигнала для перехода в DriverCompanionWindow
+    connect(Profile_Window, &Profile::finished, this, &ManagerForm::handleReturnToPrevious);
+    connect(Profile_Window, &Profile::goToDriverCompanionWindow, this, &ManagerForm::showDriverCompanionWindow);
 
     connect(&NetworkClient::getInstance(), &NetworkClient::readyRead, Companion_Window, &CompanionWindow::handleFindTripResponse);
 
@@ -63,6 +63,7 @@ ManagerForm::ManagerForm(QWidget *parent)
     windowMap[Driver_Window] = Drive_Comp_Window;
     windowMap[Car_Window] = Companion_Window;
     windowMap[Feedback_Window] = Drive_Comp_Window; // Устанавливаем предыдущее окно для окна отзывов
+    windowMap[Profile_Window] = Drive_Comp_Window;
     windowMap[Finish_Window] = nullptr;
 
     // Скрытие окон при запуске (кроме главного)
@@ -74,6 +75,7 @@ ManagerForm::ManagerForm(QWidget *parent)
     Car_Window->hide();
     Finish_Window->hide(); // Скрываем FinishWindow
     Feedback_Window->hide(); // Скрываем окно отзывов
+    Profile_Window->hide();
     this->Main_Window->show(); // Отображаем главное окно
 
     // Инициализация и подключение NetworkClient
@@ -112,7 +114,11 @@ void ManagerForm::showDriverCompanionWindow()
     } else if (senderWidget == Feedback_Window) {
         Feedback_Window->hide();
         windowMap[Drive_Comp_Window] = Feedback_Window; // Запоминаем предыдущее окно
+    } else if (senderWidget == Profile_Window) {
+        Profile_Window->hide();
+        windowMap[Drive_Comp_Window] = Profile_Window; // Запоминаем предыдущее окно
     }
+
     Drive_Comp_Window->show();
 }
 
@@ -186,6 +192,13 @@ void ManagerForm::showFeedbackWindow()
     Drive_Comp_Window->hide();
     Feedback_Window->show();
     windowMap[Feedback_Window] = Drive_Comp_Window; // Запоминаем предыдущее окно
+}
+
+void ManagerForm::showProfileWindow()
+{
+    Drive_Comp_Window->hide();
+    Profile_Window->show();
+    windowMap[Profile_Window] = Drive_Comp_Window; // Запоминаем предыдущее окно
 }
 
 

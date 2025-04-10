@@ -1,11 +1,6 @@
-/**
- * @file feetback.cpp
- * @brief Файл реализации класса Tpips.
- */
-
 #include "feetback.h"
 #include "ui_feetback.h"
-#include "networkclient.h"
+#include "networkclient.h" // Подключаем NetworkClient
 
 #include <QMessageBox>
 #include <QTimer>

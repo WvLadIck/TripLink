@@ -21,6 +21,7 @@ SOURCES += \
     mainwindow.cpp \
     managerform.cpp \
     networkclient.cpp \
+    profile.cpp \
     registrationwindow.cpp
 
 HEADERS += \
@@ -35,6 +36,7 @@ HEADERS += \
     mainwindow.h \
     managerform.h \
     networkclient.h \
+    profile.h \
     registrationwindow.h
 
 # Default rules for deployment.
@@ -51,4 +53,5 @@ FORMS += \
     finishwindow.ui \
     loginwindow.ui \
     mainwindow.ui \
+    profile.ui \
     registrationwindow.ui

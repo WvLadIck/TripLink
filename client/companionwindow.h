@@ -1,103 +1,43 @@
-/**
- * @file companionwindow.h
- * @brief Заголовочный файл класса CompanionWindow, реализующего окно для выбора и бронирования поездок пассажиром.
- */
-
 #ifndef COMPANIONWINDOW_H
 #define COMPANIONWINDOW_H
 
 #include <QDialog>
 #include <QVector>
 #include <QVariantMap>
-#include <QListWidgetItem> 
+#include <QListWidgetItem> // Добавляем этот заголовочный файл
 
 namespace Ui {
 class CompanionWindow;
 }
 
-/**
- * @brief Класс CompanionWindow представляет окно для выбора и бронирования поездок пассажиром.
- * Окно позволяет искать доступные поездки, выбирать их и бронировать.
- */
 class CompanionWindow : public QDialog
 {
     Q_OBJECT
 
 public:
-    /**
-     * @brief Конструктор CompanionWindow.
-     * @param parent Указатель на родительский виджет.
-     */
     explicit CompanionWindow(QWidget *parent = nullptr);
-
-    /**
-     * @brief Деструктор CompanionWindow.
-     */
     ~CompanionWindow();
 
-    /**
-     * @brief Получить доступные поездки.
-     * @return Вектор с данными доступных поездок.
-     */
-    QVector<QVariantMap> getAvailableTrips() const;
+    QVector<QVariantMap> getAvailableTrips() const; // Добавляем геттер
 
 signals:
-    /**
-     * @brief Сигнал для возврата на предыдущий экран.
-     */
     void returnToPreviousWindow();
-
-    /**
-     * @brief Сигнал для перехода на экран с информацией о выбранной поездке.
-     * @param tripId ID выбранной поездки.
-     * @param tripInfo Информация о поездке.
-     */
-    void goToCarWindow(int tripId, QVariantMap tripInfo);
-
-    /**
-     * @brief Сигнал, если поездка не найдена.
-     */
+    void goToCarWindow(int tripId, QVariantMap tripInfo); // Передаем ID поездки и информацию о поездке
     void tripNotFound();
-
-    /**
-     * @brief Сигнал для возврата на экран DriverCompanionWindow.
-     */
-    void goToDriverCompanionWindow();
+    void goToDriverCompanionWindow(); // Сигнал для возврата в DriverCompanionWindow
 
 public slots:
-    /**
-     * @brief Обработчик события нажатия на кнопку "then0".
-     */
     void on_toolButton_then0_clicked();
-
-    /**
-     * @brief Обработчик события нажатия на кнопку "then1".
-     */
     void on_toolButton_then1_clicked();
-
-    /**
-     * @brief Слот для обработки ответа на запрос о поиске поездки.
-     * @param message Ответ от сервера.
-     */
     void handleFindTripResponse(const QString& message);
-
-    /**
-     * @brief Слот для обработки ответа на запрос о бронировании поездки.
-     * @param message Ответ от сервера.
-     */
-    void handleBookTripResponse(const QString& message);
-
-    /**
-     * @brief Обработчик события выбора поездки из списка.
-     * @param item Элемент списка, соответствующий выбранной поездке.
-     */
-    void on_listWidget_info_itemClicked(QListWidgetItem *item);
+    void handleBookTripResponse(const QString& message); // Новый слот для обработки ответа о бронировании
+    void on_listWidget_info_itemClicked(QListWidgetItem *item); // Новый слот для выбора поездки
 
 private:
-    Ui::CompanionWindow *ui; ///< Указатель на пользовательский интерфейс.
-    QVector<QVariantMap> availableTrips; ///< Список доступных поездок.
-    int selectedTripId = -1; ///< ID выбранной поездки.
-    bool isSearchPerformed = false; ///< Состояние выполнения поиска.
+    Ui::CompanionWindow *ui;
+    QVector<QVariantMap> availableTrips; // Список доступных поездок
+    int selectedTripId = -1; // ID выбранной поездки
+    bool isSearchPerformed = false; // Добавляем состояние
 };
 
 #endif // COMPANIONWINDOW_H

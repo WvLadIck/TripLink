@@ -1,8 +1,3 @@
-/**
- * @file networkclient.cpp
- * @brief Файл реализации класса RegistrationWindow.
- */
-
 #include "networkclient.h"
 #include <QDebug>
 
@@ -45,6 +40,7 @@ void NetworkClient::connectToServer(const QString& host, quint16 port)
     serverPort = port;
     socket->connectToHost(host, port);
 }
+
 
 // Реализация метода отправки сообщения на сервер
 void NetworkClient::sendMessage(const QString& message)

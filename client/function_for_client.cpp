@@ -1,8 +1,3 @@
-/**
- * @file function_for_client.cpp
- * @brief Файл реализации функций авторизации и регистрации.
- */
-
 #include "function_for_client.h"
 
 bool auth(QString login, QString password) {

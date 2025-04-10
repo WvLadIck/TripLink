@@ -1,11 +1,7 @@
-/**
- * @file mainwindow.cpp
- * @brief Файл реализации класса MainWindow.
- */
-
+// mainwindow.cpp
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "networkclient.h" // Убедитесь, что эта строка есть
+#include "NetworkClient.h" // Убедитесь, что эта строка есть
 
 MainWindow::MainWindow(QWidget *parent)
     : QDialog(parent)

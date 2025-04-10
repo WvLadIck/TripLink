@@ -1,8 +1,3 @@
-/**
- * @file carwindow.cpp
- * @brief Файл реализации класса CarWindow.
- */
-
 #include "carwindow.h"
 #include "ui_carwindow.h"
 #include "networkclient.h"

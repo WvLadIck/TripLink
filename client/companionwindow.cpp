@@ -1,8 +1,3 @@
-/**
- * @file companionwindow.cpp
- * @brief Файл реализации класса CompanionWindow.
- */
-
 #include "companionwindow.h"
 #include "ui_companionwindow.h"
 #include "networkclient.h"
