@@ -1,9 +1,0 @@
-<map id="server/database.h" name="server/database.h">
-<area shape="rect" id="Node000001" title="Заголовочный файл класса Database для работы с базой данных." alt="" coords="203,5,341,31"/>
-<area shape="rect" id="Node000002" href="$database_8cpp.html" title="Реализация класса Database для работы с базой данных." alt="" coords="5,79,160,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,38,115,81,113,76,228,33"/>
-<area shape="rect" id="Node000003" href="$mytcpserver_8cpp.html" title="Реализация класса MyTcpServer, реализующего TCP&#45;сервер." alt="" coords="185,79,359,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="275,44,275,79,269,79,269,44"/>
-<area shape="rect" id="Node000004" href="$serverfunction_8cpp.html" title="Реализация класса ServerFunction, содержащего обработчики команд сервера." alt="" coords="383,79,571,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="319,33,445,76,443,81,317,38"/>
-</map>

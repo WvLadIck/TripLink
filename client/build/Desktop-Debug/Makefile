@@ -17,7 +17,7 @@ CXX           = clang++
 DEFINES       = -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -g -std=gnu++1z -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I../../../Клиент -I. -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang
+INCPATH       = -I../../../client -I. -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang
 QMAKE         = /usr/lib/qt5/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = WindowInterface1.0.0
-DISTDIR = /home/xsenia/Загрузки/triplink/Клиент/build/Desktop-Debug/.tmp/WindowInterface1.0.0
+DISTDIR = /home/xsenia/TripLink/client/build/Desktop-Debug/.tmp/WindowInterface1.0.0
 LINK          = clang++
 LFLAGS        = -ccc-gcc-name g++
 LIBS          = $(SUBLIBS) /usr/lib/x86_64-linux-gnu/libQt5Widgets.so /usr/lib/x86_64-linux-gnu/libQt5Gui.so /usr/lib/x86_64-linux-gnu/libQt5Network.so /usr/lib/x86_64-linux-gnu/libQt5Core.so -lGL -lpthread   
@@ -52,7 +52,9 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../../carwindow.cpp \
+SOURCES       = ../../blacklist.cpp \
+		../../blacklistadd.cpp \
+		../../carwindow.cpp \
 		../../companionwindow.cpp \
 		../../drivercompanionwindow.cpp \
 		../../driverwindow.cpp \
@@ -64,7 +66,10 @@ SOURCES       = ../../carwindow.cpp \
 		../../mainwindow.cpp \
 		../../managerform.cpp \
 		../../networkclient.cpp \
-		../../registrationwindow.cpp moc_carwindow.cpp \
+		../../profile.cpp \
+		../../registrationwindow.cpp moc_blacklist.cpp \
+		moc_blacklistadd.cpp \
+		moc_carwindow.cpp \
 		moc_companionwindow.cpp \
 		moc_drivercompanionwindow.cpp \
 		moc_driverwindow.cpp \
@@ -74,8 +79,11 @@ SOURCES       = ../../carwindow.cpp \
 		moc_mainwindow.cpp \
 		moc_managerform.cpp \
 		moc_networkclient.cpp \
+		moc_profile.cpp \
 		moc_registrationwindow.cpp
-OBJECTS       = carwindow.o \
+OBJECTS       = blacklist.o \
+		blacklistadd.o \
+		carwindow.o \
 		companionwindow.o \
 		drivercompanionwindow.o \
 		driverwindow.o \
@@ -87,7 +95,10 @@ OBJECTS       = carwindow.o \
 		mainwindow.o \
 		managerform.o \
 		networkclient.o \
+		profile.o \
 		registrationwindow.o \
+		moc_blacklist.o \
+		moc_blacklistadd.o \
 		moc_carwindow.o \
 		moc_companionwindow.o \
 		moc_drivercompanionwindow.o \
@@ -98,6 +109,7 @@ OBJECTS       = carwindow.o \
 		moc_mainwindow.o \
 		moc_managerform.o \
 		moc_networkclient.o \
+		moc_profile.o \
 		moc_registrationwindow.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
@@ -155,6 +167,7 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_config.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang/qmake.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_post.prf \
+		../../.qmake.stash \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exclusive_builds.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/toolchain.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_pre.prf \
@@ -175,7 +188,9 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exceptions.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
-		../../../../WindowInterface.pro ../../carwindow.h \
+		../../../../WindowInterface.pro ../../blacklist.h \
+		../../blacklistadd.h \
+		../../carwindow.h \
 		../../companionwindow.h \
 		../../drivercompanionwindow.h \
 		../../driverwindow.h \
@@ -186,7 +201,10 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		../../mainwindow.h \
 		../../managerform.h \
 		../../networkclient.h \
-		../../registrationwindow.h ../../carwindow.cpp \
+		../../profile.h \
+		../../registrationwindow.h ../../blacklist.cpp \
+		../../blacklistadd.cpp \
+		../../carwindow.cpp \
 		../../companionwindow.cpp \
 		../../drivercompanionwindow.cpp \
 		../../driverwindow.cpp \
@@ -198,6 +216,7 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		../../mainwindow.cpp \
 		../../managerform.cpp \
 		../../networkclient.cpp \
+		../../profile.cpp \
 		../../registrationwindow.cpp
 QMAKE_TARGET  = WindowInterface
 DESTDIR       = 
@@ -207,7 +226,7 @@ TARGET        = WindowInterface
 first: all
 ####### Build rules
 
-WindowInterface: ui_carwindow.h ui_companionwindow.h ui_drivercompanionwindow.h ui_driverwindow.h ui_feetback.h ui_finishwindow.h ui_loginwindow.h ui_mainwindow.h ui_registrationwindow.h $(OBJECTS)  
+WindowInterface: ui_blacklist.h ui_blacklistadd.h ui_carwindow.h ui_companionwindow.h ui_drivercompanionwindow.h ui_driverwindow.h ui_feetback.h ui_finishwindow.h ui_loginwindow.h ui_mainwindow.h ui_profile.h ui_registrationwindow.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: ../../WindowInterface.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang/qmake.conf /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
@@ -266,6 +285,7 @@ Makefile: ../../WindowInterface.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_config.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang/qmake.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exclusive_builds.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/toolchain.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_pre.prf \
@@ -344,6 +364,7 @@ Makefile: ../../WindowInterface.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_config.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang/qmake.conf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exclusive_builds.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/toolchain.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_pre.prf:
@@ -380,9 +401,9 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../../carwindow.h ../../companionwindow.h ../../drivercompanionwindow.h ../../driverwindow.h ../../feetback.h ../../finishwindow.h ../../function_for_client.h ../../loginwindow.h ../../mainwindow.h ../../managerform.h ../../networkclient.h ../../registrationwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../../carwindow.cpp ../../companionwindow.cpp ../../drivercompanionwindow.cpp ../../driverwindow.cpp ../../feetback.cpp ../../finishwindow.cpp ../../function_for_client.cpp ../../loginwindow.cpp ../../main.cpp ../../mainwindow.cpp ../../managerform.cpp ../../networkclient.cpp ../../registrationwindow.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../../carwindow.ui ../../companionwindow.ui ../../drivercompanionwindow.ui ../../driverwindow.ui ../../feetback.ui ../../finishwindow.ui ../../loginwindow.ui ../../mainwindow.ui ../../registrationwindow.ui $(DISTDIR)/
+	$(COPY_FILE) --parents ../../blacklist.h ../../blacklistadd.h ../../carwindow.h ../../companionwindow.h ../../drivercompanionwindow.h ../../driverwindow.h ../../feetback.h ../../finishwindow.h ../../function_for_client.h ../../loginwindow.h ../../mainwindow.h ../../managerform.h ../../networkclient.h ../../profile.h ../../registrationwindow.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../../blacklist.cpp ../../blacklistadd.cpp ../../carwindow.cpp ../../companionwindow.cpp ../../drivercompanionwindow.cpp ../../driverwindow.cpp ../../feetback.cpp ../../finishwindow.cpp ../../function_for_client.cpp ../../loginwindow.cpp ../../main.cpp ../../mainwindow.cpp ../../managerform.cpp ../../networkclient.cpp ../../profile.cpp ../../registrationwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../../blacklist.ui ../../blacklistadd.ui ../../carwindow.ui ../../companionwindow.ui ../../drivercompanionwindow.ui ../../driverwindow.ui ../../feetback.ui ../../finishwindow.ui ../../loginwindow.ui ../../mainwindow.ui ../../profile.ui ../../registrationwindow.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -414,57 +435,69 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 	clang++ -pipe -g -std=gnu++1z -Wall -Wextra -dM -E -o moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_carwindow.cpp moc_companionwindow.cpp moc_drivercompanionwindow.cpp moc_driverwindow.cpp moc_feetback.cpp moc_finishwindow.cpp moc_loginwindow.cpp moc_mainwindow.cpp moc_managerform.cpp moc_networkclient.cpp moc_registrationwindow.cpp
+compiler_moc_header_make_all: moc_blacklist.cpp moc_blacklistadd.cpp moc_carwindow.cpp moc_companionwindow.cpp moc_drivercompanionwindow.cpp moc_driverwindow.cpp moc_feetback.cpp moc_finishwindow.cpp moc_loginwindow.cpp moc_mainwindow.cpp moc_managerform.cpp moc_networkclient.cpp moc_profile.cpp moc_registrationwindow.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_carwindow.cpp moc_companionwindow.cpp moc_drivercompanionwindow.cpp moc_driverwindow.cpp moc_feetback.cpp moc_finishwindow.cpp moc_loginwindow.cpp moc_mainwindow.cpp moc_managerform.cpp moc_networkclient.cpp moc_registrationwindow.cpp
+	-$(DEL_FILE) moc_blacklist.cpp moc_blacklistadd.cpp moc_carwindow.cpp moc_companionwindow.cpp moc_drivercompanionwindow.cpp moc_driverwindow.cpp moc_feetback.cpp moc_finishwindow.cpp moc_loginwindow.cpp moc_mainwindow.cpp moc_managerform.cpp moc_networkclient.cpp moc_profile.cpp moc_registrationwindow.cpp
+moc_blacklist.cpp: ../../blacklist.h \
+		moc_predefs.h \
+		/usr/lib/qt5/bin/moc
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/TripLink/client/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/TripLink/client -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../blacklist.h -o moc_blacklist.cpp
+
+moc_blacklistadd.cpp: ../../blacklistadd.h \
+		moc_predefs.h \
+		/usr/lib/qt5/bin/moc
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/TripLink/client/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/TripLink/client -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../blacklistadd.h -o moc_blacklistadd.cpp
+
 moc_carwindow.cpp: ../../carwindow.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/Загрузки/triplink/Клиент/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/Загрузки/triplink/Клиент -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../carwindow.h -o moc_carwindow.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/TripLink/client/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/TripLink/client -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../carwindow.h -o moc_carwindow.cpp
 
 moc_companionwindow.cpp: ../../companionwindow.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/Загрузки/triplink/Клиент/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/Загрузки/triplink/Клиент -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../companionwindow.h -o moc_companionwindow.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/TripLink/client/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/TripLink/client -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../companionwindow.h -o moc_companionwindow.cpp
 
 moc_drivercompanionwindow.cpp: ../../drivercompanionwindow.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/Загрузки/triplink/Клиент/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/Загрузки/triplink/Клиент -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../drivercompanionwindow.h -o moc_drivercompanionwindow.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/TripLink/client/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/TripLink/client -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../drivercompanionwindow.h -o moc_drivercompanionwindow.cpp
 
 moc_driverwindow.cpp: ../../driverwindow.h \
 		../../networkclient.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/Загрузки/triplink/Клиент/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/Загрузки/triplink/Клиент -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../driverwindow.h -o moc_driverwindow.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/TripLink/client/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/TripLink/client -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../driverwindow.h -o moc_driverwindow.cpp
 
 moc_feetback.cpp: ../../feetback.h \
 		../../networkclient.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/Загрузки/triplink/Клиент/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/Загрузки/triplink/Клиент -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../feetback.h -o moc_feetback.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/TripLink/client/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/TripLink/client -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../feetback.h -o moc_feetback.cpp
 
 moc_finishwindow.cpp: ../../finishwindow.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/Загрузки/triplink/Клиент/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/Загрузки/triplink/Клиент -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../finishwindow.h -o moc_finishwindow.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/TripLink/client/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/TripLink/client -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../finishwindow.h -o moc_finishwindow.cpp
 
 moc_loginwindow.cpp: ../../loginwindow.h \
 		../../function_for_client.h \
+		../../profile.h \
 		../../networkclient.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/Загрузки/triplink/Клиент/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/Загрузки/triplink/Клиент -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../loginwindow.h -o moc_loginwindow.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/TripLink/client/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/TripLink/client -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../loginwindow.h -o moc_loginwindow.cpp
 
 moc_mainwindow.cpp: ../../mainwindow.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/Загрузки/triplink/Клиент/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/Загрузки/triplink/Клиент -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../mainwindow.h -o moc_mainwindow.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/TripLink/client/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/TripLink/client -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../mainwindow.h -o moc_mainwindow.cpp
 
 moc_managerform.cpp: ../../managerform.h \
 		../../mainwindow.h \
 		../../loginwindow.h \
 		../../function_for_client.h \
+		../../profile.h \
 		../../networkclient.h \
 		../../registrationwindow.h \
 		../../drivercompanionwindow.h \
@@ -475,27 +508,40 @@ moc_managerform.cpp: ../../managerform.h \
 		../../feetback.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/Загрузки/triplink/Клиент/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/Загрузки/triplink/Клиент -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../managerform.h -o moc_managerform.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/TripLink/client/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/TripLink/client -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../managerform.h -o moc_managerform.cpp
 
 moc_networkclient.cpp: ../../networkclient.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/Загрузки/triplink/Клиент/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/Загрузки/triplink/Клиент -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../networkclient.h -o moc_networkclient.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/TripLink/client/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/TripLink/client -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../networkclient.h -o moc_networkclient.cpp
+
+moc_profile.cpp: ../../profile.h \
+		moc_predefs.h \
+		/usr/lib/qt5/bin/moc
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/TripLink/client/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/TripLink/client -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../profile.h -o moc_profile.cpp
 
 moc_registrationwindow.cpp: ../../registrationwindow.h \
 		../../function_for_client.h \
 		../../networkclient.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/Загрузки/triplink/Клиент/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/Загрузки/triplink/Клиент -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../registrationwindow.h -o moc_registrationwindow.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xsenia/TripLink/client/build/Desktop-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-clang -I/home/xsenia/TripLink/client -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/llvm-18/lib/clang/18/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../registrationwindow.h -o moc_registrationwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_carwindow.h ui_companionwindow.h ui_drivercompanionwindow.h ui_driverwindow.h ui_feetback.h ui_finishwindow.h ui_loginwindow.h ui_mainwindow.h ui_registrationwindow.h
+compiler_uic_make_all: ui_blacklist.h ui_blacklistadd.h ui_carwindow.h ui_companionwindow.h ui_drivercompanionwindow.h ui_driverwindow.h ui_feetback.h ui_finishwindow.h ui_loginwindow.h ui_mainwindow.h ui_profile.h ui_registrationwindow.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_carwindow.h ui_companionwindow.h ui_drivercompanionwindow.h ui_driverwindow.h ui_feetback.h ui_finishwindow.h ui_loginwindow.h ui_mainwindow.h ui_registrationwindow.h
+	-$(DEL_FILE) ui_blacklist.h ui_blacklistadd.h ui_carwindow.h ui_companionwindow.h ui_drivercompanionwindow.h ui_driverwindow.h ui_feetback.h ui_finishwindow.h ui_loginwindow.h ui_mainwindow.h ui_profile.h ui_registrationwindow.h
+ui_blacklist.h: ../../blacklist.ui \
+		/usr/lib/qt5/bin/uic
+	/usr/lib/qt5/bin/uic ../../blacklist.ui -o ui_blacklist.h
+
+ui_blacklistadd.h: ../../blacklistadd.ui \
+		/usr/lib/qt5/bin/uic
+	/usr/lib/qt5/bin/uic ../../blacklistadd.ui -o ui_blacklistadd.h
+
 ui_carwindow.h: ../../carwindow.ui \
 		/usr/lib/qt5/bin/uic
 	/usr/lib/qt5/bin/uic ../../carwindow.ui -o ui_carwindow.h
@@ -528,6 +574,10 @@ ui_mainwindow.h: ../../mainwindow.ui \
 		/usr/lib/qt5/bin/uic
 	/usr/lib/qt5/bin/uic ../../mainwindow.ui -o ui_mainwindow.h
 
+ui_profile.h: ../../profile.ui \
+		/usr/lib/qt5/bin/uic
+	/usr/lib/qt5/bin/uic ../../profile.ui -o ui_profile.h
+
 ui_registrationwindow.h: ../../registrationwindow.ui \
 		/usr/lib/qt5/bin/uic
 	/usr/lib/qt5/bin/uic ../../registrationwindow.ui -o ui_registrationwindow.h
@@ -541,6 +591,17 @@ compiler_lex_clean:
 compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_uic_clean 
 
 ####### Compile
+
+blacklist.o: ../../blacklist.cpp ../../blacklist.h \
+		ui_blacklist.h \
+		../../networkclient.h \
+		../../blacklistadd.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o blacklist.o ../../blacklist.cpp
+
+blacklistadd.o: ../../blacklistadd.cpp ../../blacklistadd.h \
+		ui_blacklistadd.h \
+		../../networkclient.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o blacklistadd.o ../../blacklistadd.cpp
 
 carwindow.o: ../../carwindow.cpp ../../carwindow.h \
 		ui_carwindow.h \
@@ -575,6 +636,7 @@ function_for_client.o: ../../function_for_client.cpp ../../function_for_client.h
 
 loginwindow.o: ../../loginwindow.cpp ../../loginwindow.h \
 		../../function_for_client.h \
+		../../profile.h \
 		../../networkclient.h \
 		ui_loginwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o loginwindow.o ../../loginwindow.cpp
@@ -583,6 +645,7 @@ main.o: ../../main.cpp ../../managerform.h \
 		../../mainwindow.h \
 		../../loginwindow.h \
 		../../function_for_client.h \
+		../../profile.h \
 		../../networkclient.h \
 		../../registrationwindow.h \
 		../../drivercompanionwindow.h \
@@ -594,13 +657,15 @@ main.o: ../../main.cpp ../../managerform.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../../main.cpp
 
 mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		../../networkclient.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../../mainwindow.cpp
 
 managerform.o: ../../managerform.cpp ../../managerform.h \
 		../../mainwindow.h \
 		../../loginwindow.h \
 		../../function_for_client.h \
+		../../profile.h \
 		../../networkclient.h \
 		../../registrationwindow.h \
 		../../drivercompanionwindow.h \
@@ -614,11 +679,23 @@ managerform.o: ../../managerform.cpp ../../managerform.h \
 networkclient.o: ../../networkclient.cpp ../../networkclient.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o networkclient.o ../../networkclient.cpp
 
+profile.o: ../../profile.cpp ../../profile.h \
+		ui_profile.h \
+		../../networkclient.h \
+		../../blacklist.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o profile.o ../../profile.cpp
+
 registrationwindow.o: ../../registrationwindow.cpp ../../registrationwindow.h \
 		../../function_for_client.h \
 		../../networkclient.h \
 		ui_registrationwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o registrationwindow.o ../../registrationwindow.cpp
+
+moc_blacklist.o: moc_blacklist.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_blacklist.o moc_blacklist.cpp
+
+moc_blacklistadd.o: moc_blacklistadd.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_blacklistadd.o moc_blacklistadd.cpp
 
 moc_carwindow.o: moc_carwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_carwindow.o moc_carwindow.cpp
@@ -649,6 +726,9 @@ moc_managerform.o: moc_managerform.cpp
 
 moc_networkclient.o: moc_networkclient.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_networkclient.o moc_networkclient.cpp
+
+moc_profile.o: moc_profile.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_profile.o moc_profile.cpp
 
 moc_registrationwindow.o: moc_registrationwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_registrationwindow.o moc_registrationwindow.cpp

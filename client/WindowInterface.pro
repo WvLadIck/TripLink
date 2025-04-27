@@ -9,6 +9,8 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    blacklist.cpp \
+    blacklistadd.cpp \
     carwindow.cpp \
     companionwindow.cpp \
     drivercompanionwindow.cpp \
@@ -25,6 +27,8 @@ SOURCES += \
     registrationwindow.cpp
 
 HEADERS += \
+    blacklist.h \
+    blacklistadd.h \
     carwindow.h \
     companionwindow.h \
     drivercompanionwindow.h \
@@ -45,6 +49,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 FORMS += \
+    blacklist.ui \
+    blacklistadd.ui \
     carwindow.ui \
     companionwindow.ui \
     drivercompanionwindow.ui \

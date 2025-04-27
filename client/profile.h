@@ -19,11 +19,13 @@ public:
 signals:
     void finished();
     void goToDriverCompanionWindow();
+    void goToBlacklistWindow();
 
 private slots:
     void on_toolButton_0_clicked();
     void on_pushButton_clicked();
     void ProfileResponse(const QString& message);
+    void on_pushButton_2_clicked();
 
 private:
     Ui::Profile *ui;

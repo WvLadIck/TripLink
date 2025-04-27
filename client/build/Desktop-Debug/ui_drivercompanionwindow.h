@@ -27,6 +27,7 @@ public:
     QHBoxLayout *horizontalLayout;
     QToolButton *toolButton_then0;
     QVBoxLayout *verticalLayout;
+    QPushButton *pushButton_profile;
     QLabel *label_whois;
     QPushButton *pushButton_companion;
     QPushButton *pushButton_driver;
@@ -52,6 +53,11 @@ public:
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        pushButton_profile = new QPushButton(DriverCompanionWindow);
+        pushButton_profile->setObjectName(QString::fromUtf8("pushButton_profile"));
+
+        verticalLayout->addWidget(pushButton_profile);
+
         label_whois = new QLabel(DriverCompanionWindow);
         label_whois->setObjectName(QString::fromUtf8("label_whois"));
         label_whois->setStyleSheet(QString::fromUtf8("font: 700 20pt \"Linux Libertine G\";"));
@@ -98,6 +104,7 @@ public:
     {
         DriverCompanionWindow->setWindowTitle(QCoreApplication::translate("DriverCompanionWindow", "Dialog", nullptr));
         toolButton_then0->setText(QCoreApplication::translate("DriverCompanionWindow", "<", nullptr));
+        pushButton_profile->setText(QCoreApplication::translate("DriverCompanionWindow", "\320\237\321\200\320\276\321\204\320\270\320\273\321\214", nullptr));
         label_whois->setText(QCoreApplication::translate("DriverCompanionWindow", "\320\232\320\265\320\274 \320\262\321\213 \321\217\320\262\320\273\321\217\320\265\321\202\320\265\321\201\321\214?", nullptr));
         pushButton_companion->setText(QCoreApplication::translate("DriverCompanionWindow", "\320\237\320\260\321\201\321\201\320\260\320\266\320\270\321\200", nullptr));
         pushButton_driver->setText(QCoreApplication::translate("DriverCompanionWindow", "\320\222\320\276\320\264\320\270\321\202\320\265\320\273\321\214", nullptr));

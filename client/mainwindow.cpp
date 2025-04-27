@@ -1,7 +1,7 @@
 // mainwindow.cpp
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "NetworkClient.h" // Убедитесь, что эта строка есть
+#include "networkclient.h" // Убедитесь, что эта строка есть
 
 MainWindow::MainWindow(QWidget *parent)
     : QDialog(parent)

@@ -1,7 +1,0 @@
-<map id="server/serverfunction.h" name="server/serverfunction.h">
-<area shape="rect" id="Node000001" title="Объявление класса ServerFunction, содержащего обработчики команд сервера." alt="" coords="109,5,282,31"/>
-<area shape="rect" id="Node000002" href="$mytcpserver_8cpp.html" title="Реализация класса MyTcpServer, реализующего TCP&#45;сервер." alt="" coords="5,79,180,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,41,111,81,108,76,166,36"/>
-<area shape="rect" id="Node000003" href="$serverfunction_8cpp.html" title="Реализация класса ServerFunction, содержащего обработчики команд сервера." alt="" coords="204,79,392,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="225,36,283,76,280,81,222,41"/>
-</map>

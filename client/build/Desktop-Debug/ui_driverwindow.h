@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QDateTimeEdit>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QFormLayout>
 #include <QtWidgets/QHBoxLayout>
@@ -35,7 +36,7 @@ public:
     QLabel *label_from;
     QLineEdit *lineEdit_from;
     QLabel *label_time;
-    QLineEdit *lineEdit_time;
+    QDateTimeEdit *dateTimeEdit;
     QToolButton *toolButton_then1;
 
     void setupUi(QDialog *DriverWindow)
@@ -93,11 +94,10 @@ public:
 
         formLayout->setWidget(2, QFormLayout::LabelRole, label_time);
 
-        lineEdit_time = new QLineEdit(DriverWindow);
-        lineEdit_time->setObjectName(QString::fromUtf8("lineEdit_time"));
-        lineEdit_time->setStyleSheet(QString::fromUtf8("background-color: rgb(224, 202, 180);"));
+        dateTimeEdit = new QDateTimeEdit(DriverWindow);
+        dateTimeEdit->setObjectName(QString::fromUtf8("dateTimeEdit"));
 
-        formLayout->setWidget(2, QFormLayout::FieldRole, lineEdit_time);
+        formLayout->setWidget(2, QFormLayout::FieldRole, dateTimeEdit);
 
 
         verticalLayout->addLayout(formLayout);
