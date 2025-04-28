@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Tpips</class>
+ <widget class="QDialog" name="Tpips">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 700 14pt &quot;Linux Libertine G&quot;;
+background-color: rgb(235, 220, 206);</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QToolButton" name="toolButton_0">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(235, 220, 206);</string>
+       </property>
+       <property name="text">
+        <string>&lt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item alignment="Qt::AlignHCenter">
+        <widget class="QLabel" name="label_ratingfeetback">
+         <property name="styleSheet">
+          <string notr="true">font: 700 20pt &quot;Linux Libertine G&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Рейтинг и отзыв</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QFormLayout" name="formLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_name">
+           <property name="text">
+            <string>ФИО</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEdit_name">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(224, 202, 180);</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_feetback">
+           <property name="text">
+            <string>Отзыв</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_feetback">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(224, 202, 180);</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_rating">
+           <property name="text">
+            <string>Рейтинг</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QSpinBox" name="spinBox_rating">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(224, 202, 180);</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButton_1">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(235, 220, 206);</string>
+       </property>
+       <property name="text">
+        <string>&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
